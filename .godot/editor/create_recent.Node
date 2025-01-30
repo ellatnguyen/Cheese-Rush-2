@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Timer
 NavigationAgent2D
 CollisionShape2D
@@ -11,8 +12,18 @@ Node
 NavigationAgent2D
 CollisionShape2D
 Sprite2D
+=======
+Marker2D
+Node
+NavigationAgent2D
+CollisionShape2D
+Sprite2D
+>>>>>>> Stashed changes
 Area2D
 CharacterBody2D
 Camera2D
 TileMap
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes

@@ -1,6 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ::res://::1738274238
 default_env.tres::Environment::265446521816995477::1738274220::0::1::::<><>::
 icon.png::CompressedTexture2D::6402415961997281486::1738206254::1738274208::1::::<><>::
@@ -118,6 +119,8 @@ pacman.gd::GDScript::-1::1738268957::0::1::::Player<>CharacterBody2D<>::
 pacman.tscn::PackedScene::2080128608872743676::1738268957::0::1::::<><>::res://Scenes/pacman.gd<>uid://ncpf25uctg5b::::res://Assets/Pacman/Pacman_02.png
 >>>>>>> Stashed changes
 =======
+=======
+>>>>>>> Stashed changes
 ::res://::1738275917
 default_env.tres::Environment::265446521816995477::1738275844::0::1::::<><>::
 icon.png::CompressedTexture2D::4739273742389358977::1738206254::1738274787::1::::<><>::
@@ -222,4 +225,7 @@ ghost.tscn::PackedScene::5514353878489132123::1738275837::0::1::::<><>::uid://dp
 main.tscn::PackedScene::4906911432663299270::1738275844::0::1::::<><>::uid://drpdpip3qludd::::res://Assets/Walls/wall_atlas_test.png<>uid://cvlap2s66h85y::::res://map_sketch.jpg<>uid://4vvoc508yu65::::res://Scenes/pacman.tscn
 pacman.gd::GDScript::-1::1738274763::0::1::::Player<>CharacterBody2D<>::
 pacman.tscn::PackedScene::2080128608872743676::1738274799::0::1::::<><>::res://Scenes/pacman.gd<>uid://ncpf25uctg5b::::res://Assets/Pacman/Pacman_02.png
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
