@@ -2,8 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://drpdpip3qludd" path="res://Assets/Walls/wall_atlas_test.png" id="1_fh24l"]
 [ext_resource type="Texture2D" uid="uid://cvlap2s66h85y" path="res://map_sketch.jpg" id="2_vfua3"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://4vvoc508yu65" path="res://Scenes/pacman.tscn" id="3_elt41"]
 [ext_resource type="PackedScene" uid="uid://cktguq0mqlthj" path="res://Scenes/ghost.tscn" id="4_yb7b2"]
+=======
+[ext_resource type="PackedScene" uid="uid://4vvoc508yu65" path="res://scenes/pacman.tscn" id="3_elt41"]
+>>>>>>> Stashed changes
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ymes1"]
 texture = ExtResource("1_fh24l")
