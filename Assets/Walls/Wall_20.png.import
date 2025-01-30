@@ -1,0 +1,19 @@
+[remap]
+
+importer="texture_atlas"
+type="Texture"
+path="res://.import/Wall_20.png-f2f42b7f4f37a2ef8e50fd9e8becba3f.res"
+group_file="res://Assets/Walls/wall_atlas_test2.png"
+valid=true
+[deps]
+
+
+source_file="res://Assets/Walls/Wall_20.png"
+dest_files=[ "res://.import/Wall_20.png-f2f42b7f4f37a2ef8e50fd9e8becba3f.res" ]
+
+[params]
+
+atlas_file="res://Assets/Walls/wall_atlas_test2.png"
+import_mode=0
+crop_to_region=false
+trim_alpha_border_from_region=true
