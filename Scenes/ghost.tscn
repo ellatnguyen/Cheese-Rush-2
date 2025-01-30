@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cktguq0mqlthj"]
+
+[ext_resource type="Texture2D" uid="uid://dp5k2l5vvacbl" path="res://Assets/Ghost/Ghost_Body_01.png" id="1_74cle"]
+[ext_resource type="Texture2D" uid="uid://cr1syy53y0w5q" path="res://Assets/Ghost/Ghost_Eyes_Down.png" id="2_520dp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6efmn"]
+radius = 8.0
+
+[node name="Ghost" type="Area2D"]
+
+[node name="BodySprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_74cle")
+
+[node name="EyeSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_520dp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6efmn")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
