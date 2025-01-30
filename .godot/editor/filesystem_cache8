@@ -1,7 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1738263308
-default_env.tres::Environment::-1::1738263288::0::1::::<><>::
-icon.png::CompressedTexture2D::6402415961997281486::1738206254::1738263310::1::::<><>::
+::res://::1738274238
+default_env.tres::Environment::265446521816995477::1738274220::0::1::::<><>::
+icon.png::CompressedTexture2D::6402415961997281486::1738206254::1738274208::1::::<><>::
 README.md::TextFile::-1::1738206254::0::1::::<><>::
-::res://scenes/::1738263266
-::res://scripts/::1738263269
+::res://scenes/::1738274180
+enemy.tscn::PackedScene::7919362271587917931::1738274180::0::1::::<><>::
+main_scene.tscn::PackedScene::6567730477773338638::1738274180::0::1::::<><>::
+player.tscn::PackedScene::5160019367993579238::1738274180::0::1::::<><>::
+::res://scripts/::1738274180
+enemy.gd::GDScript::-1::1738274180::0::1::::<>Node<>::
+player.gd::GDScript::-1::1738274180::0::1::::<>Node<>::
