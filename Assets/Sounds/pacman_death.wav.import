@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/pacman_death.wav-db493aed53cfd85ec8b8c4ddc8bb975c.sample"
+type="AudioStreamWAV"
+uid="uid://tope0f8om0eg"
+path="res://.godot/imported/pacman_death.wav-db493aed53cfd85ec8b8c4ddc8bb975c.sample"
 
 [deps]
 
 source_file="res://Assets/Sounds/pacman_death.wav"
-dest_files=[ "res://.import/pacman_death.wav-db493aed53cfd85ec8b8c4ddc8bb975c.sample" ]
+dest_files=["res://.godot/imported/pacman_death.wav-db493aed53cfd85ec8b8c4ddc8bb975c.sample"]
 
 [params]
 

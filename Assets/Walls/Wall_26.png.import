@@ -1,15 +1,16 @@
 [remap]
 
 importer="texture_atlas"
-type="Texture"
-path="res://.import/Wall_26.png-88f71e22cf789a27291737ca1a667657.res"
+type="Texture2D"
+uid="uid://2yg1sqy13q3t"
+path="res://.godot/imported/Wall_26.png-88f71e22cf789a27291737ca1a667657.res"
 group_file="res://Assets/Walls/wall_atlas_test2.png"
 valid=true
 [deps]
 
 
 source_file="res://Assets/Walls/Wall_26.png"
-dest_files=[ "res://.import/Wall_26.png-88f71e22cf789a27291737ca1a667657.res" ]
+dest_files=["res://.godot/imported/Wall_26.png-88f71e22cf789a27291737ca1a667657.res"]
 
 [params]
 

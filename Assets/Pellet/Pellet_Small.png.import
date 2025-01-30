@@ -1,15 +1,16 @@
 [remap]
 
 importer="texture_atlas"
-type="Texture"
-path="res://.import/Pellet_Small.png-da2421a71012ed71addaacffa380fac9.res"
+type="Texture2D"
+uid="uid://bfmmwt8ptw5in"
+path="res://.godot/imported/Pellet_Small.png-da2421a71012ed71addaacffa380fac9.res"
 group_file="res://Assets/Pellet/pellets.png"
 valid=true
 [deps]
 
 
 source_file="res://Assets/Pellet/Pellet_Small.png"
-dest_files=[ "res://.import/Pellet_Small.png-da2421a71012ed71addaacffa380fac9.res" ]
+dest_files=["res://.godot/imported/Pellet_Small.png-da2421a71012ed71addaacffa380fac9.res"]
 
 [params]
 

@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/pacman_chomp.wav-757f694edfb770fc1e258cdea825b5f3.sample"
+type="AudioStreamWAV"
+uid="uid://cx7y8wmy841co"
+path="res://.godot/imported/pacman_chomp.wav-757f694edfb770fc1e258cdea825b5f3.sample"
 
 [deps]
 
 source_file="res://Assets/Sounds/pacman_chomp.wav"
-dest_files=[ "res://.import/pacman_chomp.wav-757f694edfb770fc1e258cdea825b5f3.sample" ]
+dest_files=["res://.godot/imported/pacman_chomp.wav-757f694edfb770fc1e258cdea825b5f3.sample"]
 
 [params]
 
