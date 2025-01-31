@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="MyResource" load_steps=2 format=3 uid="uid://cnvj24ph43qhq"]
+
+[ext_resource type="Script" path="res://Resources/movement_targets.gd" id="1_g0y8v"]
+
+[resource]
+script = ExtResource("1_g0y8v")
+scatter_targets = Array[NodePath]([NodePath("/root/main/MovementTargets/RedGhost/scatter/Red1"), NodePath("/root/main/MovementTargets/RedGhost/scatter/Red2"), NodePath("/root/main/MovementTargets/RedGhost/scatter/Red3"), NodePath("/root/main/MovementTargets/RedGhost/scatter/Red4")])
+at_home_targets = Array[NodePath]([])

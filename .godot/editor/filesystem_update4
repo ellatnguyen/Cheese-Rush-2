@@ -1,5 +1,7 @@
 res://default_env.tres
-res://placeholdertiles.tres
-res://Scenes/pacman.tscn
 res://Scenes/main.tscn
-res://Scenes/pacman.gd
+res://Resources/red_movement_targets.tres
+res://Scenes/pacman.tscn
+res://Scenes/ghost.tscn
+res://Scenes/ghost.gd
+res://cheese.gd
