@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_g0y8v")
-scatter_targets = Array[NodePath]([NodePath("MovementTargets/RedGhost/scatter/Red1"), NodePath("MovementTargets/RedGhost/scatter/Red2"), NodePath("MovementTargets/RedGhost/scatter/Red3"), NodePath("MovementTargets/RedGhost/scatter/Red4")])
+scatter_targets = Array[NodePath]([NodePath("/root/main/MovementTargets/RedGhost/scatter/Red1"), NodePath("/root/main/MovementTargets/RedGhost/scatter/Red2"), NodePath("/root/main/MovementTargets/RedGhost/scatter/Red3"), NodePath("MovementTargets/RedGhost/scatter/Red4")])
 at_home_targets = Array[NodePath]([])
