@@ -37,10 +37,12 @@ func setup():
 	scatter()
 
 func on_position_reached():
-	if current_scatter_index < 3:
-		current_scatter_index += 1
-	else:
-		current_scatter_index = 0
+	current_scatter_index +=1
+	if current_scatter_index >= movement_targets.scatter_targets.size():
+		current_scatter_index =0 # loop back to first scatter target
 	var node = get_node_or_null(movement_targets.scatter_targets[current_scatter_index])
 	if node is Node2D:
 		navigation_agent_2d.target_position = node.global_position
+		print("moving to next scatter target:", node.global_position)
+	else:
+		print("XXX Could not find scatter target at index:", current_scatter_index)
