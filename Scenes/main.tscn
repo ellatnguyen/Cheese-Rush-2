@@ -1,10 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://cb57d5h41nkfm"]
+[gd_scene load_steps=18 format=3 uid="uid://cb57d5h41nkfm"]
 
 [ext_resource type="Texture2D" uid="uid://drpdpip3qludd" path="res://Assets/Walls/wall_atlas_test.png" id="1_fh24l"]
 [ext_resource type="Texture2D" uid="uid://cvlap2s66h85y" path="res://map_sketch.jpg" id="2_vfua3"]
 [ext_resource type="PackedScene" uid="uid://4vvoc508yu65" path="res://Scenes/pacman.tscn" id="3_elt41"]
 [ext_resource type="PackedScene" uid="uid://23uepjxoqfxk" path="res://Scenes/ghost.tscn" id="4_tyfov"]
-[ext_resource type="Resource" uid="uid://cnvj24ph43qhq" path="res://Resources/red_movement_targets.tres" id="5_jsr7g"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_yeael"]
 vertices = PackedVector2Array(1.5, -0.75, 12, -0.75, 12, 0.75, 1.5, 0.75, 1.5, 12, 0, 12, 0, 0.75, 0, -0.75, -12, 0.75, -12, -0.75, 1.5, -12, 0, -12)
@@ -323,7 +322,7 @@ collision_mask = 14
 position = Vector2(-155.3, -156)
 
 [node name="Red2" type="Marker2D" parent="MovementTargets/RedGhost/scatter"]
-position = Vector2(-251.3, -156)
+position = Vector2(-251.2, -156)
 
 [node name="Red3" type="Marker2D" parent="MovementTargets/RedGhost/scatter"]
 position = Vector2(-251.3, -227.7)
@@ -336,5 +335,4 @@ position = Vector2(-155.4, -227.9)
 [node name="Ghost" parent="Ghosts" node_paths=PackedStringArray("tile_map") instance=ExtResource("4_tyfov")]
 position = Vector2(20, -84)
 scale = Vector2(2, 2)
-movement_targets = ExtResource("5_jsr7g")
 tile_map = NodePath("../../TileMap")
