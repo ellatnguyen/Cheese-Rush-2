@@ -1,7 +1,0 @@
-res://default_env.tres
-res://Scenes/main.tscn
-res://Resources/red_movement_targets.tres
-res://Scenes/pacman.tscn
-res://Scenes/ghost.tscn
-res://Scenes/ghost.gd
-res://cheese.gd
