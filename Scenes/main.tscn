@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://cb57d5h41nkfm"]
+[gd_scene load_steps=19 format=3 uid="uid://cb57d5h41nkfm"]
 
 [ext_resource type="Texture2D" uid="uid://drpdpip3qludd" path="res://Assets/Walls/wall_atlas_test.png" id="1_fh24l"]
 [ext_resource type="Texture2D" uid="uid://cvlap2s66h85y" path="res://map_sketch.jpg" id="2_vfua3"]
 [ext_resource type="PackedScene" uid="uid://4vvoc508yu65" path="res://Scenes/pacman.tscn" id="3_elt41"]
 [ext_resource type="PackedScene" uid="uid://23uepjxoqfxk" path="res://Scenes/ghost.tscn" id="4_tyfov"]
+[ext_resource type="PackedScene" uid="uid://cvql6usga5o7h" path="res://Scenes/pellet.tscn" id="5_rp5b8"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_yeael"]
 vertices = PackedVector2Array(1.5, -0.75, 12, -0.75, 12, 0.75, 1.5, 0.75, 1.5, 12, 0, 12, 0, 0.75, 0, -0.75, -12, 0.75, -12, -0.75, 1.5, -12, 0, -12)
@@ -337,3 +338,8 @@ position = Vector2(20, -84)
 scale = Vector2(2, 2)
 tile_map = NodePath("../../TileMap")
 color = Color(0.834549, 0.113776, 0, 1)
+
+[node name="Pellets" type="Node" parent="."]
+
+[node name="Pellet" parent="Pellets" instance=ExtResource("5_rp5b8")]
+position = Vector2(-56, -84)
