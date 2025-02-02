@@ -332,7 +332,8 @@ position = Vector2(-155.4, -227.9)
 
 [node name="Ghosts" type="Node" parent="."]
 
-[node name="Ghost" parent="Ghosts" node_paths=PackedStringArray("tile_map") instance=ExtResource("4_tyfov")]
+[node name="RedGhost" parent="Ghosts" node_paths=PackedStringArray("tile_map") instance=ExtResource("4_tyfov")]
 position = Vector2(20, -84)
 scale = Vector2(2, 2)
 tile_map = NodePath("../../TileMap")
+color = Color(0.834549, 0.113776, 0, 1)

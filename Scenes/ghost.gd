@@ -1,19 +1,13 @@
 extends Area2D
 
-# The speed (in pixels per second) at which the ghost moves.
-@export var speed: float = 120.0
 
+@export var speed: float = 120.0
 # An array of NodePaths to your scatter target nodes.
 @export var scatter_targets: Array[NodePath] = []
-
-# (Optional) A TileMap that provides a navigation map.
 @export var tile_map: TileMap
-
-# Index of the current scatter target.
 var current_target_index: int = 0
-
-# Reference to the NavigationAgent2D child node.
 @onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
+@export var color: Color
 
 func _ready() -> void:
 	# Configure the navigation agent.
@@ -65,8 +59,8 @@ func _process(delta: float) -> void:
 func _on_target_reached() -> void:
 	print("Reached scatter target index:", current_target_index)
 	
-	# --- INSERT STOP CONDITION HERE IF NEEDED ---
-	# For example:
+	# --- INSERT STOP CONDITION HERE ---
+
 	# if some_condition:
 	#     return
 	
