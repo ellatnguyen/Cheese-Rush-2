@@ -329,16 +329,16 @@ collision_mask = 14
 [node name="scatter" type="Node" parent="MovementTargets/RedGhost"]
 
 [node name="Red1" type="Marker2D" parent="MovementTargets/RedGhost/scatter"]
-position = Vector2(-155.3, -156)
+position = Vector2(-110, -124)
 
 [node name="Red2" type="Marker2D" parent="MovementTargets/RedGhost/scatter"]
-position = Vector2(-251.2, -156)
+position = Vector2(-230, -220)
 
 [node name="Red3" type="Marker2D" parent="MovementTargets/RedGhost/scatter"]
-position = Vector2(-251.3, -227.7)
+position = Vector2(-230, -292)
 
 [node name="Red4" type="Marker2D" parent="MovementTargets/RedGhost/scatter"]
-position = Vector2(-155.4, -227.9)
+position = Vector2(-109, -292)
 
 [node name="Ghosts" type="Node" parent="."]
 
@@ -351,15 +351,19 @@ color = Color(0.834549, 0.113776, 0, 1)
 [node name="Pellets" type="Node" parent="."]
 
 [node name="Pellet" parent="Pellets" instance=ExtResource("5_rp5b8")]
+visible = false
 position = Vector2(-230, -220)
 
 [node name="Pellet3" parent="Pellets" instance=ExtResource("5_rp5b8")]
+visible = false
 position = Vector2(-134, -220)
 
 [node name="Pellet7" parent="Pellets" instance=ExtResource("5_rp5b8")]
+visible = false
 position = Vector2(-134, -292)
 
 [node name="Pellet4" parent="Pellets" instance=ExtResource("5_rp5b8")]
+visible = false
 position = Vector2(-110, -220)
 
 [node name="Pellet14" parent="Pellets" instance=ExtResource("5_rp5b8")]

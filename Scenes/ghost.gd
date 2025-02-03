@@ -1,6 +1,8 @@
 extends Area2D
 
 
+
+
 @export var speed: float = 120.0
 # An array of NodePaths to your scatter target nodes.
 @export var scatter_targets: Array[NodePath] = []
