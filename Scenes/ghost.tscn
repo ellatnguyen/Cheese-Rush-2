@@ -1,10 +1,21 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=10 format=3 uid="uid://23uepjxoqfxk"]
+=======
+[gd_scene load_steps=9 format=3 uid="uid://23uepjxoqfxk"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Texture2D" uid="uid://dp5k2l5vvacbl" path="res://Assets/Ghost/Ghost_Body_01.png" id="1_4ecvp"]
 [ext_resource type="Script" path="res://Scenes/ghost.gd" id="1_5qkk8"]
 [ext_resource type="Texture2D" uid="uid://cr1syy53y0w5q" path="res://Assets/Ghost/Ghost_Eyes_Down.png" id="2_gqkw8"]
+<<<<<<< Updated upstream
 [ext_resource type="Script" path="res://Scenes/ghost_body_sprite.gd" id="3_d5n4y"]
 [ext_resource type="Texture2D" uid="uid://d2arikaqe6xrh" path="res://Assets/Ghost/Ghost_Body_02.png" id="5_rafv6"]
+=======
+[ext_resource type="Script" path="res://Scenes/ghost_eye_sprite.gd" id="4_pexur"]
+[ext_resource type="Texture2D" uid="uid://lcb6t868o6bw" path="res://Assets/Ghost/Ghost_Eyes_Up.png" id="5_vdbt1"]
+[ext_resource type="Texture2D" uid="uid://2r3jieu0bx8h" path="res://Assets/Ghost/Ghost_Eyes_Left.png" id="6_g5iku"]
+[ext_resource type="Texture2D" uid="uid://dlqwavk2s32mp" path="res://Assets/Ghost/Ghost_Eyes_Right.png" id="7_n11yy"]
+>>>>>>> Stashed changes
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_q6527"]
 radius = 8.0
@@ -57,6 +68,11 @@ script = ExtResource("3_d5n4y")
 [node name="EyeSprite" type="Sprite2D" parent="."]
 texture_filter = 1
 texture = ExtResource("2_gqkw8")
+script = ExtResource("4_pexur")
+up = ExtResource("5_vdbt1")
+down = ExtResource("2_gqkw8")
+left = ExtResource("6_g5iku")
+right = ExtResource("7_n11yy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_q6527")
