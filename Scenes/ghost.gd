@@ -1,5 +1,5 @@
 extends Area2D
-
+class_name Ghost
 
 @export var speed: float = 120.0
 # An array of NodePaths to your scatter target nodes.
@@ -8,20 +8,22 @@ extends Area2D
 var current_target_index: int = 0
 @onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
 @export var color: Color
+@onready var body_sprite=$BodySprite
+
 
 func _ready() -> void:
 	# Configure the navigation agent.
 	nav_agent.path_desired_distance = 4.0
-	nav_agent.target_desired_distance = 1.0  # Lower if your targets are very close.
+	nav_agent.target_desired_distance = 1.0 
 	nav_agent.target_reached.connect(_on_target_reached)
 	
-	# (Optional) If using a TileMap, assign its navigation map to the agent.
+	# If using a TileMap, assign its navigation map to the agent.
 	if tile_map:
 		var nav_map = tile_map.get_navigation_map(0)
 		nav_agent.set_navigation_map(nav_map)
 		NavigationServer2D.agent_set_map(nav_agent.get_rid(), nav_map)
 	
-	# (For testing) If no scatter targets were assigned in the Inspector, assign some default paths.
+	# If no scatter targets were assigned in the Inspector, assign some default paths.
 	if scatter_targets.size() == 0:
 		scatter_targets = [
 			"/root/main/MovementTargets/RedGhost/scatter/Red1",
