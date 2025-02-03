@@ -1,8 +1,9 @@
-[gd_scene load_steps=21 format=3 uid="uid://cb57d5h41nkfm"]
+[gd_scene load_steps=22 format=3 uid="uid://cb57d5h41nkfm"]
 
 [ext_resource type="Texture2D" uid="uid://drpdpip3qludd" path="res://Assets/Walls/wall_atlas_test.png" id="1_fh24l"]
 [ext_resource type="Texture2D" uid="uid://cvlap2s66h85y" path="res://map_sketch.jpg" id="2_vfua3"]
 [ext_resource type="PackedScene" uid="uid://4vvoc508yu65" path="res://Scenes/pacman.tscn" id="3_elt41"]
+[ext_resource type="Texture2D" uid="uid://c48jm0yjkvhoi" path="res://Final Assets/Background/background_with_tunnels.png" id="4_ts7xh"]
 [ext_resource type="PackedScene" uid="uid://23uepjxoqfxk" path="res://Scenes/ghost.tscn" id="4_tyfov"]
 [ext_resource type="PackedScene" uid="uid://cvql6usga5o7h" path="res://Scenes/pellet.tscn" id="5_rp5b8"]
 [ext_resource type="PackedScene" uid="uid://rnv2xlnlcmuq" path="res://Scenes/large_pellet.tscn" id="6_jxehp"]
@@ -320,7 +321,13 @@ position = Vector2(82, 68)
 scale = Vector2(2, 2)
 collision_mask = 14
 
-[node name="BackgroundWithoutOverlay" type="Sprite2D" parent="."]
+[node name="BackgroundWithTunnels" type="Sprite2D" parent="."]
+position = Vector2(309, -2)
+scale = Vector2(0.923437, 0.930556)
+texture = ExtResource("4_ts7xh")
+
+[node name="BackgroundWithoutOverlay2" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(309, -2)
 scale = Vector2(0.923437, 0.930556)
 texture = ExtResource("7_21s03")
@@ -337,16 +344,16 @@ collision_mask = 14
 [node name="scatter" type="Node" parent="MovementTargets/RedGhost"]
 
 [node name="Red1" type="Marker2D" parent="MovementTargets/RedGhost/scatter"]
-position = Vector2(-155.3, -156)
+position = Vector2(-108, -148)
 
 [node name="Red2" type="Marker2D" parent="MovementTargets/RedGhost/scatter"]
-position = Vector2(-251.2, -156)
+position = Vector2(-230, -148)
 
 [node name="Red3" type="Marker2D" parent="MovementTargets/RedGhost/scatter"]
-position = Vector2(-251.3, -227.7)
+position = Vector2(-231, -293)
 
 [node name="Red4" type="Marker2D" parent="MovementTargets/RedGhost/scatter"]
-position = Vector2(-155.4, -227.9)
+position = Vector2(-110, -292)
 
 [node name="Ghosts" type="Node" parent="."]
 
