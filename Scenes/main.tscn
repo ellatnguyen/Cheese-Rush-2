@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cb57d5h41nkfm"]
+[gd_scene load_steps=28 format=3 uid="uid://cb57d5h41nkfm"]
 
 [ext_resource type="Texture2D" uid="uid://drpdpip3qludd" path="res://Assets/Walls/wall_atlas_test.png" id="1_fh24l"]
 [ext_resource type="Texture2D" uid="uid://cvlap2s66h85y" path="res://map_sketch.jpg" id="2_vfua3"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://cvql6usga5o7h" path="res://Scenes/pellet.tscn" id="5_rp5b8"]
 [ext_resource type="PackedScene" uid="uid://rnv2xlnlcmuq" path="res://Scenes/large_pellet.tscn" id="6_jxehp"]
 [ext_resource type="Texture2D" uid="uid://chgwhinauxx5n" path="res://Final Assets/Background/background_without_overlay.PNG" id="7_21s03"]
+[ext_resource type="Script" path="res://UI/battle_scene.gd" id="9_h3luk"]
+[ext_resource type="Texture2D" uid="uid://b8w806qccf3tf" path="res://Assets/fight.png" id="10_ftet8"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_yeael"]
 vertices = PackedVector2Array(1.5, -0.75, 12, -0.75, 12, 0.75, 1.5, 0.75, 1.5, 12, 0, 12, 0, 0.75, 0, -0.75, -12, 0.75, -12, -0.75, 1.5, -12, 0, -12)
@@ -294,6 +296,60 @@ physics_layer_0/collision_layer = 2
 navigation_layer_0/layers = 1
 sources/0 = SubResource("TileSetAtlasSource_ymes1")
 
+[sub_resource type="Animation" id="Animation_vqasb"]
+resource_name = "fade_in"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_byx2q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fam8a"]
+resource_name = "fade_out"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_aeo8i"]
+_data = {
+"RESET": SubResource("Animation_byx2q"),
+"fade_in": SubResource("Animation_vqasb"),
+"fade_out": SubResource("Animation_fam8a")
+}
+
 [node name="main" type="Node"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -332,7 +388,7 @@ position = Vector2(309, -2)
 scale = Vector2(0.923437, 0.930556)
 texture = ExtResource("7_21s03")
 
-[node name="Player" parent="." instance=ExtResource("3_elt41")]
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("3_elt41")]
 position = Vector2(82, 68)
 scale = Vector2(3.5, 3.51185)
 collision_mask = 14
@@ -1145,3 +1201,61 @@ position = Vector2(370, 284)
 
 [node name="Large Pellet4" parent="Pellets" instance=ExtResource("6_jxehp")]
 position = Vector2(370, -292)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="battle_scene" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -166.0
+offset_top = -156.0
+offset_right = 317.0
+offset_bottom = 157.0
+script = ExtResource("9_h3luk")
+
+[node name="background" type="TextureRect" parent="CanvasLayer/battle_scene"]
+layout_mode = 0
+offset_left = -82.0
+offset_top = -28.0
+offset_right = 542.0
+offset_bottom = 356.0
+texture = ExtResource("10_ftet8")
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="CanvasLayer/battle_scene/background"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 253.0
+offset_right = 608.0
+offset_bottom = 361.0
+tooltip_text = "
+"
+
+[node name="Button" type="Button" parent="CanvasLayer/battle_scene/background/Panel"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 50.5
+offset_right = 510.0
+offset_bottom = 101.5
+text = "MASH!"
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/battle_scene"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -82.0
+offset_top = -28.0
+offset_right = 59.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/battle_scene"]
+libraries = {
+"": SubResource("AnimationLibrary_aeo8i")
+}
+
+[connection signal="body_entered" from="Ghosts/RedGhost" to="Ghosts/RedGhost" method="_on_cat_body_entered"]
+[connection signal="animation_finished" from="CanvasLayer/battle_scene/AnimationPlayer" to="CanvasLayer/battle_scene" method="_on_animation_player_animation_finished"]

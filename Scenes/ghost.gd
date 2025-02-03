@@ -1,5 +1,7 @@
 extends Area2D
 
+var character_name : String = "testingcat"
+var lvl : int = 49
 
 @export var speed: float = 120.0
 # An array of NodePaths to your scatter target nodes.
@@ -75,3 +77,10 @@ func _set_target(target_path: NodePath) -> void:
 		print("New target set:", target_node.name, "at", target_node.global_position)
 	else:
 		print("Error: Could not find scatter target node at:", target_path)
+
+
+func _on_cat_body_entered(body):
+	if body.is_in_group("Player"):
+		event_handler.emit_signal("battle_started", character_name, lvl)
+		print("Ghost hit") # Debug- delete later
+	pass # Replace with function body.
