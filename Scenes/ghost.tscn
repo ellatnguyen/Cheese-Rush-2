@@ -1,24 +1,33 @@
-[gd_scene load_steps=5 format=3 uid="uid://23uepjxoqfxk"]
+[gd_scene load_steps=7 format=3 uid="uid://23uepjxoqfxk"]
 
-[ext_resource type="Texture2D" uid="uid://dp5k2l5vvacbl" path="res://Assets/Ghost/Ghost_Body_01.png" id="1_4ecvp"]
 [ext_resource type="Script" path="res://Scenes/ghost.gd" id="1_5qkk8"]
-[ext_resource type="Texture2D" uid="uid://cr1syy53y0w5q" path="res://Assets/Ghost/Ghost_Eyes_Down.png" id="2_gqkw8"]
+[ext_resource type="Texture2D" uid="uid://d24ee8s5dwva0" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_moveup.png" id="2_np8g2"]
+[ext_resource type="Texture2D" uid="uid://q7cs2sjryst" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_nonAnim_Movedown.png" id="3_xhj2u"]
+[ext_resource type="Texture2D" uid="uid://bprpyks8orbpo" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_MoveLeft.png" id="4_pwtq7"]
+[ext_resource type="Texture2D" uid="uid://bsfht1pq1qqot" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_MoveRight.png" id="5_xwxdi"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_q6527"]
-radius = 8.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h2l7u"]
+radius = 7.99901
+height = 31.9961
 
 [node name="Ghost" type="Area2D"]
 script = ExtResource("1_5qkk8")
+texture_up = ExtResource("2_np8g2")
+texture_down = ExtResource("3_xhj2u")
+texture_left = ExtResource("4_pwtq7")
+texture_right = ExtResource("5_xwxdi")
 
 [node name="BodySprite" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("1_4ecvp")
+scale = Vector2(0.022, 0.022)
+texture = ExtResource("5_xwxdi")
 
 [node name="EyeSprite" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("2_gqkw8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_q6527")
+rotation = 1.5865
+scale = Vector2(0.6, 0.6)
+shape = SubResource("CapsuleShape2D_h2l7u")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
