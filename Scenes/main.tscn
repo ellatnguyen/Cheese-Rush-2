@@ -1124,4 +1124,4 @@ position = Vector2(-230, 284)
 position = Vector2(370, 284)
 
 [node name="Large Pellet4" parent="Pellets" instance=ExtResource("6_jxehp")]
-position = Vector2(371, -292)
+position = Vector2(370, -292)
