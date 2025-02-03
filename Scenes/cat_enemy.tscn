@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://bw2eguc31vfoi"]
+
+[sub_resource type="GDScript" id="GDScript_lobpx"]
+script/source = "extends CharacterBody2D
+
+@export var speed: float = 60.0
+
+@export var cat_up_texture: Texture2D
+@export var cat_down_texture: Texture2D
+@export var cat_left_texture: Texture2D
+@export var cat_right_texture: Texture2D
+
+# Corner for scatter (uncomment if you want to use it):
+#@export var scatter_target_position: Vector2 = GhostState.Vector2(69.0, 1.0)
+
+onready var body_sprite = $BodySprite
+var velocity: Vector2 = Vector2.ZERO
+
+# Define the enum without problematic comments:
+enum GhostState {
+	SCATTER,
+}
+
+var state: GhostState = GhostState.SCATTER
+
+func _physics_process(delta: float) -> void:
+	match state:
+		GhostState.SCATTER:
+			do_scatter_movement(delta)
+	
+	update_sprite_direction(velocity)
+
+func do_scatter_movement(delta: float) -> void:
+	# Only valid if scatter_target_position is not commented out above
+	var direction_to_corner = (scatter_target_position - global_position).normalized()
+	velocity = direction_to_corner * speed
+	velocity = move_and_slide(velocity)
+
+func update_sprite_direction(vel: Vector2) -> void:
+	if vel.length() == 0:
+		return
+	if abs(vel.x) > abs(vel.y):
+		if vel.x > 0:
+			body_sprite.texture = cat_right_texture
+		else:
+			body_sprite.texture = cat_left_texture
+	else:
+		if vel.y > 0:
+			body_sprite.texture = cat_down_texture
+		else:
+			body_sprite.texture = cat_up_texture
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_22e6n"]
+
+[node name="CatGhost" type="CharacterBody2D"]
+slide_on_ceiling = false
+script = SubResource("GDScript_lobpx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_22e6n")
+
+[node name="body_sprite" type="Sprite2D" parent="."]
