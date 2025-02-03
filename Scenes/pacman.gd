@@ -15,14 +15,19 @@ func get_input():
 	
 	if Input.is_action_pressed("left"):
 		movement_direction = Vector2.LEFT
-		rotation_degrees = 0
+		$MouseAnimation.play("running_lr")
+		$MouseAnimation.flip_h = false
+		
 	elif Input.is_action_pressed("right"):
 		movement_direction = Vector2.RIGHT
-		rotation_degrees = 180
+		$MouseAnimation.play("running_lr")
+		$MouseAnimation.flip_h = true
+		
 	elif Input.is_action_pressed("down"):
 		movement_direction = Vector2.DOWN
-		rotation_degrees = 270
+		$MouseAnimation.play("running_down")
+		
 	elif Input.is_action_pressed("up"):
 		movement_direction = Vector2.UP
-		rotation_degrees = 90
+		$MouseAnimation.play("running_up")
 	

@@ -311,8 +311,15 @@ position = Vector2(8, 160)
 scale = Vector2(0.239997, 0.239997)
 texture = ExtResource("2_vfua3")
 
+[node name="Player(Demo)" parent="." instance=ExtResource("3_elt41")]
+visible = false
+position = Vector2(82, 68)
+scale = Vector2(2, 2)
+collision_mask = 14
+
 [node name="Player" parent="." instance=ExtResource("3_elt41")]
 position = Vector2(82, 68)
+scale = Vector2(2, 2)
 collision_mask = 14
 
 [node name="MovementTargets" type="Node" parent="."]
