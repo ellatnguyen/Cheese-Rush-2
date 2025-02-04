@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://rnv2xlnlcmuq"]
 
-[ext_resource type="Texture2D" uid="uid://cp0sg566n844e" path="res://Assets/Pellet/Pellet_Large.png" id="1_8bny4"]
 [ext_resource type="Script" path="res://Scenes/pellet.gd" id="1_ap2t7"]
+[ext_resource type="Texture2D" uid="uid://eap8ncvpkwew" path="res://Final Assets/Collectables/collectables sprite sheet.png" id="2_r4dq0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_62x8c"]
 size = Vector2(24, 24)
@@ -11,7 +11,10 @@ script = ExtResource("1_ap2t7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("1_8bny4")
+scale = Vector2(0.301282, 0.301282)
+texture = ExtResource("2_r4dq0")
+region_enabled = true
+region_rect = Rect2(446.314, 39.051, 84.743, 78.0663)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_62x8c")

@@ -158,6 +158,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
+texture_filter = 1
 script = ExtResource("1_87356")
 speed = 200
 
@@ -173,7 +174,7 @@ scale = Vector2(-0.0288039, -0.0288039)
 texture = ExtResource("2_uf0yn")
 
 [node name="MouseAnimation" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1.19209e-07, 5.96046e-08)
+position = Vector2(1, 5.96046e-08)
 scale = Vector2(0.019, 0.019)
 sprite_frames = SubResource("SpriteFrames_ka663")
-animation = &"running_up"
+animation = &"running_down"
