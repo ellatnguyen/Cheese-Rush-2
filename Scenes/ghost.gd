@@ -14,7 +14,7 @@ extends Area2D
 var current_target_index: int = 0
 
 @onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
-@onready var sprite: Sprite2D = $Sprite2D  # Make sure you have a Sprite2D node as a child.
+@onready var sprite: Sprite2D = $BodySprite  # Make sure you have a Sprite2D node as a child.
 	
 func _ready() -> void:
 	# Configure the navigation agent.
