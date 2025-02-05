@@ -1,13 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://23uepjxoqfxk"]
 
-[ext_resource type="Script" path="res://Scenes/ghost.gd" id="1_5qkk8"]
+[ext_resource type="Script" path="res://Scenes/enemies/scatter.gd" id="1_5qkk8"]
 [ext_resource type="Texture2D" uid="uid://q7cs2sjryst" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_nonAnim_Movedown.png" id="4_tafgn"]
 [ext_resource type="Texture2D" uid="uid://bprpyks8orbpo" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_MoveLeft.png" id="5_2olsd"]
 [ext_resource type="Texture2D" uid="uid://bsfht1pq1qqot" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_MoveRight.png" id="6_cm43t"]
 [ext_resource type="Texture2D" uid="uid://d24ee8s5dwva0" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_moveup.png" id="6_l345i"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pnx5x"]
-radius = 8.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dbuu6"]
 animations = [{
@@ -44,6 +41,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jsqxl"]
+radius = 6.0
+
 [node name="Ghost" type="Area2D"]
 script = ExtResource("1_5qkk8")
 texture_up = ExtResource("6_l345i")
@@ -56,10 +56,6 @@ texture_filter = 1
 scale = Vector2(0.045, 0.045)
 texture = ExtResource("6_l345i")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_pnx5x")
-one_way_collision_margin = 3.1
-
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 
 [node name="CatAnimation" type="AnimatedSprite2D" parent="."]
@@ -67,3 +63,6 @@ visible = false
 scale = Vector2(0.019, 0.019)
 sprite_frames = SubResource("SpriteFrames_dbuu6")
 animation = &"running_down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_jsqxl")

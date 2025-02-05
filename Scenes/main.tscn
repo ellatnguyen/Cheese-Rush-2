@@ -1,13 +1,14 @@
-[gd_scene load_steps=25 format=3 uid="uid://cb57d5h41nkfm"]
+[gd_scene load_steps=26 format=3 uid="uid://cb57d5h41nkfm"]
 
 [ext_resource type="Texture2D" uid="uid://drpdpip3qludd" path="res://Assets/Walls/wall_atlas_test.png" id="1_fh24l"]
 [ext_resource type="Texture2D" uid="uid://cvlap2s66h85y" path="res://map_sketch.jpg" id="2_vfua3"]
 [ext_resource type="PackedScene" uid="uid://4vvoc508yu65" path="res://Scenes/pacman.tscn" id="3_elt41"]
 [ext_resource type="Texture2D" uid="uid://c48jm0yjkvhoi" path="res://Final Assets/Background/background_with_tunnels.png" id="4_ts7xh"]
-[ext_resource type="PackedScene" uid="uid://23uepjxoqfxk" path="res://Scenes/ghost.tscn" id="4_tyfov"]
+[ext_resource type="PackedScene" uid="uid://23uepjxoqfxk" path="res://Scenes/enemies/scatter.tscn" id="4_tyfov"]
 [ext_resource type="PackedScene" uid="uid://cvql6usga5o7h" path="res://Scenes/pellet.tscn" id="5_rp5b8"]
 [ext_resource type="PackedScene" uid="uid://rnv2xlnlcmuq" path="res://Scenes/large_pellet.tscn" id="6_jxehp"]
 [ext_resource type="Texture2D" uid="uid://chgwhinauxx5n" path="res://Final Assets/Background/background_without_overlay.PNG" id="7_21s03"]
+[ext_resource type="PackedScene" uid="uid://cn156qqal6sgm" path="res://Scenes/enemies/chase.tscn" id="7_rippt"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_yeael"]
 vertices = PackedVector2Array(1.5, -0.75, 12, -0.75, 12, 0.75, 1.5, 0.75, 1.5, 12, 0, 12, 0, 0.75, 0, -0.75, -12, 0.75, -12, -0.75, 1.5, -12, 0, -12)
@@ -382,7 +383,11 @@ position = Vector2(-110, -292)
 [node name="Ghosts" type="Node" parent="."]
 
 [node name="RedGhost" parent="Ghosts" instance=ExtResource("4_tyfov")]
-position = Vector2(69, 1)
+position = Vector2(57, 0)
+scale = Vector2(2, 2)
+
+[node name="Chase" parent="Ghosts" instance=ExtResource("7_rippt")]
+position = Vector2(101, 1)
 scale = Vector2(2, 2)
 
 [node name="Pellets" type="Node" parent="."]
