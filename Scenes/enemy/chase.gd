@@ -70,8 +70,8 @@ func _on_CageTimer_timeout() -> void:
 # Example: in your cat script or player script
 func _on_body_entered(body: Node) -> void:
 	if body is Player:
-		# 1) Hide or stop gameplay logic if needed
-		# 2) Show the full-screen image
+		# 1) Hide or stop gameplay logic
+	
 		var main_scene = get_tree().current_scene
 		# Or if you have a direct path to the UI node, you can do:
 		#   var ui = main_scene.get_node("GameOverUI/FullScreenImage")
