@@ -1,7 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1738731469
+::res://::1738798660
 cheese.gd::GDScript::-1::1738727370::0::1::::<>Area2D<>::
-default_env.tres::Environment::265446521816995477::1738727370::0::1::::<><>::
+default_env.tres::Environment::265446521816995477::1738733374::0::1::::<><>::
 game.gd::GDScript::-1::1738727370::0::1::::<>Node<>::
 icon.png::CompressedTexture2D::4739273742389358977::1738206515::1738731472::1::::<><>::
 icon.svg::CompressedTexture2D::1560022321525067346::1738727403::1738731472::1::::<><>::
@@ -11,10 +11,10 @@ placeholdertiles.tres::TileSet::5518016808055717549::1738727370::0::1::::<><>::u
 README.md::TextFile::-1::1738206515::0::1::::<><>::
 spawner.gd::GDScript::-1::1738727370::0::1::::<>Node2D<>::
 ::res://Assets/::1738727370
-::res://Assets/Fonts/::1738727402
+::res://Assets/Fonts/::1738731473
 background_with_tunnels.png::CompressedTexture2D::3204240453443670369::1738727402::1738731473::1::::<><>::
 upheavtt.ttf::FontFile::4940748717333841145::1738727370::1738731471::1::::<><>::
-::res://Assets/Fruits/::1738727370
+::res://Assets/Fruits/::1738731472
 Fruit_Apple.png::CompressedTexture2D::8046766052358523591::1738727370::1738731472::1::::<><>::
 Fruit_Bell.png::CompressedTexture2D::3877112185405466518::1738727370::1738731472::1::::<><>::
 Fruit_Cherry.png::CompressedTexture2D::7727553405036550862::1738727370::1738731472::1::::<><>::
@@ -23,7 +23,7 @@ Fruit_Key.png::CompressedTexture2D::8916529770811764504::1738727370::1738731472:
 Fruit_Melon.png::CompressedTexture2D::844565813354706921::1738727370::1738731472::1::::<><>::
 Fruit_Orange.png::CompressedTexture2D::3409079504265450551::1738727370::1738731472::1::::<><>::
 Fruit_Strawberry.png::CompressedTexture2D::4807263429679619945::1738727370::1738731472::1::::<><>::
-::res://Assets/Ghost/::1738727370
+::res://Assets/Ghost/::1738731472
 Ghost_Body_01.png::CompressedTexture2D::8274682049717872421::1738727370::1738731472::1::::<><>::
 Ghost_Body_02.png::CompressedTexture2D::9055407830501505757::1738727370::1738731472::1::::<><>::
 Ghost_Eyes_Down.png::CompressedTexture2D::6020862603971629612::1738727370::1738731472::1::::<><>::
@@ -34,9 +34,9 @@ Ghost_Vulnerable_Blue_01.png::CompressedTexture2D::1344355115526539164::17387273
 Ghost_Vulnerable_Blue_02.png::CompressedTexture2D::7384788489010832537::1738727370::1738731472::1::::<><>::
 Ghost_Vulnerable_White_01.png::CompressedTexture2D::4106582703573880892::1738727370::1738731472::1::::<><>::
 Ghost_Vulnerable_White_02.png::CompressedTexture2D::9029622029366187724::1738727370::1738731472::1::::<><>::
-::res://Assets/Map/::1738727370
+::res://Assets/Map/::1738731473
 origmaps_2x.png::CompressedTexture2D::2175801451264481245::1738727370::1738731473::1::::<><>::
-::res://Assets/Pacman/::1738727370
+::res://Assets/Pacman/::1738731472
 direction_pointer.png::CompressedTexture2D::1145063599141741791::1738727370::1738731472::1::::<><>::
 Pacman_01.png::CompressedTexture2D::1112712340989041182::1738727370::1738731472::1::::<><>::
 Pacman_02.png::CompressedTexture2D::917504872050284237::1738727370::1738731472::1::::<><>::
@@ -52,17 +52,17 @@ Pacman_Death_08.png::CompressedTexture2D::2565499895426312557::1738727370::17387
 Pacman_Death_09.png::CompressedTexture2D::8568210408513905439::1738727370::1738731471::1::::<><>::
 Pacman_Death_10.png::CompressedTexture2D::7164876418441981382::1738727370::1738731471::1::::<><>::
 Pacman_Death_11.png::CompressedTexture2D::3295270843444730258::1738727370::1738731471::1::::<><>::
-::res://Assets/Pellet/::1738727370
+::res://Assets/Pellet/::1738731479
 pellets.png::CompressedTexture2D::8761103356864932379::1738731479::1738731479::1::::<><>::
 Pellet_Large.png::Texture2D::5878388711458051274::1738727370::1738731479::1::res://Assets/Pellet/pellets.png::<><>::uid://dw27dew0sauw6::::res://Assets/Pellet/pellets.png
 Pellet_Medium.png::Texture2D::68228180995104463::1738727370::1738731479::1::res://Assets/Pellet/pellets.png::<><>::uid://dw27dew0sauw6::::res://Assets/Pellet/pellets.png
 Pellet_Small.png::Texture2D::2762906375941105429::1738727370::1738731479::1::res://Assets/Pellet/pellets.png::<><>::uid://dw27dew0sauw6::::res://Assets/Pellet/pellets.png
-::res://Assets/Sounds/::1738727370
+::res://Assets/Sounds/::1738731479
 pacman_chomp.wav::AudioStreamWAV::6454762173403191858::1738727370::1738731479::1::::<><>::
 pacman_death.wav::AudioStreamWAV::1363408538072922770::1738727370::1738731479::1::::<><>::
 pacman_eatghost.wav::AudioStreamWAV::7027686761978367866::1738727370::1738731479::1::::<><>::
 pacman_power_pellet.wav::AudioStreamWAV::1397499369666775141::1738727370::1738731479::1::::<><>::
-::res://Assets/Walls/::1738727370
+::res://Assets/Walls/::1738731479
 Wall_00.png::Texture2D::6041795656637365603::1738727370::1738731479::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
 Wall_01.png::Texture2D::5940747117145670226::1738727370::1738731479::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
 Wall_02.png::Texture2D::2397668745219171676::1738727370::1738731479::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
@@ -104,20 +104,20 @@ Wall_37.png::Texture2D::8738895695163185359::1738727370::1738731479::1::res://As
 wall_atlas.png::CompressedTexture2D::16532947320530093::1738727370::1738731471::1::::<><>::
 wall_atlas_test2.png::CompressedTexture2D::5497960232308025044::1738731479::1738731479::1::::<><>::
 wall_atlas_test.png::CompressedTexture2D::8383647441776519377::1738727370::1738731471::1::::<><>::
-::res://Final Assets/::1738727402
+::res://Final Assets/::1738731478
 Mouse Sprite Sheet.png::CompressedTexture2D::619703506915294356::1738727402::1738731478::1::::<><>::
-::res://Final Assets/Background/::1738727402
+::res://Final Assets/Background/::1738731471
 background.PNG::CompressedTexture2D::4554468015398452004::1738727402::1738731471::1::::<><>::
 background_layout.PNG::CompressedTexture2D::4198658562640589614::1738727402::1738731471::1::::<><>::
 background_tiles.PNG::CompressedTexture2D::7150661754619363600::1738727402::1738731471::1::::<><>::
 background_walls.PNG::CompressedTexture2D::5150642518673293595::1738727402::1738731471::1::::<><>::
 background_without_overlay.PNG::CompressedTexture2D::5277898254071900829::1738727402::1738731471::1::::<><>::
 background_with_tunnels.png::CompressedTexture2D::6877011531817046504::1738727402::1738731471::1::::<><>::
-::res://Final Assets/Collectables/::1738727402
+::res://Final Assets/Collectables/::1738731471
 collectables sprite sheet.png::CompressedTexture2D::281725747510256342::1738727402::1738731471::1::::<><>::
-::res://Final Assets/Sprites/::1738727403
+::res://Final Assets/Sprites/::1738731473
 background_with_tunnels.png::CompressedTexture2D::8696882203943797011::1738727403::1738731473::1::::<><>::
-::res://Final Assets/Sprites/Small Sprite, Mouse Non-Animated/::1738727402
+::res://Final Assets/Sprites/Small Sprite, Mouse Non-Animated/::1738731472
 Small_Sprite_nonAnim_moveup.png::CompressedTexture2D::7810091378175756603::1738727402::1738731472::1::::<><>::
 Small_Sprite_normal_nonanim_moving Left.png::CompressedTexture2D::514488719596885862::1738727402::1738731472::1::::<><>::
 Small_Sprite_normal_nonanim_movingdown.png::CompressedTexture2D::7127782893807050639::1738727402::1738731472::1::::<><>::
@@ -126,7 +126,7 @@ Small_Sprite_PizzacutterMode_NonAnim_movingdown.png::CompressedTexture2D::504064
 Small_Sprite_PizzaCutterMode_Nonanim_movingup.png::CompressedTexture2D::8968352322758590727::1738727402::1738731472::1::::<><>::
 Small_sprite_PizzaCutterMode_NonAnim_To Left.png::CompressedTexture2D::5521989902276703399::1738727402::1738731472::1::::<><>::
 Small_Sprite_unanim_to right.png::CompressedTexture2D::1891867305214839272::1738727402::1738731472::1::::<><>::
-::res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/::1738727402
+::res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/::1738731472
 SmallSpriteCat_nonAnim_Movedown.png::CompressedTexture2D::34977547381876079::1738727402::1738731472::1::::<><>::
 SmallSpriteCat_NonAnim_MoveLeft.png::CompressedTexture2D::3475301928586545944::1738727402::1738731472::1::::<><>::
 SmallSpriteCat_NonAnim_MoveRight.png::CompressedTexture2D::3660602096523070479::1738727402::1738731472::1::::<><>::
@@ -134,13 +134,13 @@ SmallSpriteCat_NonAnim_moveup.png::CompressedTexture2D::9114479557765591437::173
 ::res://Resources/::1738727403
 movement_targets.gd::GDScript::-1::1738727403::0::1::::MyResource<>Resource<>::
 red_movement_targets.tres::Resource/MyResource::5729244483593350158::1738727403::0::1::::<><>::res://Resources/movement_targets.gd
-::res://Scenes/::1738727403
+::res://Scenes/::1738733374
 ghost.gd::GDScript::-1::1738727403::0::1::::<>Area2D<>::
 ghost.tscn::PackedScene::1954123641189347756::1738727403::0::1::::<><>::uid://dp5k2l5vvacbl::::res://Assets/Ghost/Ghost_Body_01.png<>res://Scenes/ghost.gd<>uid://cr1syy53y0w5q::::res://Assets/Ghost/Ghost_Eyes_Down.png<>uid://q7cs2sjryst::::res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_nonAnim_Movedown.png<>uid://bprpyks8orbpo::::res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_MoveLeft.png<>uid://bsfht1pq1qqot::::res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_MoveRight.png<>uid://d24ee8s5dwva0::::res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_moveup.png
-large_pellet.tscn::PackedScene::1221371751568210824::1738727403::0::1::::<><>::res://Scenes/pellet.gd<>uid://eap8ncvpkwew::::res://Final Assets/Collectables/collectables sprite sheet.png
+large_pellet.tscn::PackedScene::1221371751568210824::1738733374::0::1::::<><>::res://Scenes/pellet.gd<>uid://eap8ncvpkwew::::res://Final Assets/Collectables/collectables sprite sheet.png
 main.tscn::PackedScene::4906911432663299270::1738727403::0::1::::<><>::uid://drpdpip3qludd::::res://Assets/Walls/wall_atlas_test.png<>uid://cvlap2s66h85y::::res://map_sketch.jpg<>uid://4vvoc508yu65::::res://Scenes/pacman.tscn<>uid://c48jm0yjkvhoi::::res://Final Assets/Background/background_with_tunnels.png<>uid://23uepjxoqfxk::::res://Scenes/ghost.tscn<>uid://cvql6usga5o7h::::res://Scenes/pellet.tscn<>uid://rnv2xlnlcmuq::::res://Scenes/large_pellet.tscn<>uid://chgwhinauxx5n::::res://Final Assets/Background/background_without_overlay.PNG
 main_s.tscn::PackedScene::5665444587561139788::1738727403::0::1::::<><>::uid://drpdpip3qludd::::res://Assets/Walls/wall_atlas_test.png<>uid://cvlap2s66h85y::::res://map_sketch.jpg<>uid://4vvoc508yu65::::res://Scenes/pacman.tscn<>uid://chgwhinauxx5n::::res://Final Assets/Background/background_without_overlay.PNG<>uid://23uepjxoqfxk::::res://Scenes/ghost.tscn<>uid://cvql6usga5o7h::::res://Scenes/pellet.tscn<>uid://rnv2xlnlcmuq::::res://Scenes/large_pellet.tscn
 pacman.gd::GDScript::-1::1738727403::0::1::::Player<>CharacterBody2D<>::
 pacman.tscn::PackedScene::2080128608872743676::1738727403::0::1::::<><>::res://Scenes/pacman.gd<>uid://djjjcf5x4gywp::::res://Final Assets/Sprites/Small Sprite, Mouse Non-Animated/Small_Sprite_nonAnim_moveup.png<>uid://i3goqyd5udbg::::res://Final Assets/Mouse Sprite Sheet.png<>uid://c8s0sptkuqhfj::::res://Final Assets/Sprites/Small Sprite, Mouse Non-Animated/Small_Sprite_normal_nonanim_movingdown.png
-pellet.gd::GDScript::-1::1738727403::0::1::::Pellet<>Area2D<>::
+pellet.gd::GDScript::-1::1738733354::0::1::::Pellet<>Area2D<>::
 pellet.tscn::PackedScene::6280561452928612783::1738727403::0::1::::<><>::res://Scenes/pellet.gd<>uid://eap8ncvpkwew::::res://Final Assets/Collectables/collectables sprite sheet.png
