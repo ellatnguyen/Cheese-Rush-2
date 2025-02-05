@@ -1,14 +1,21 @@
 extends Area2D
 
-
 @export var speed: float = 120.0
 # An array of NodePaths to your scatter target nodes.
 @export var scatter_targets: Array[NodePath] = []
 @export var tile_map: TileMap
-var current_target_index: int = 0
-@onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
-@export var color: Color
 
+# Export textures for the different ghost eye directions.
+@export var texture_up: Texture2D
+@export var texture_down: Texture2D
+@export var texture_left: Texture2D
+@export var texture_right: Texture2D
+
+var current_target_index: int = 0
+
+@onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
+@onready var sprite: Sprite2D = $BodySprite  # Make sure you have a Sprite2D node as a child.
+	
 func _ready() -> void:
 	# Configure the navigation agent.
 	nav_agent.path_desired_distance = 4.0
@@ -53,14 +60,32 @@ func _process(delta: float) -> void:
 	var diff: Vector2 = next_point - global_position
 	
 	if diff.length() > 0.1:
+		# Determine the direction of movement.
 		var direction: Vector2 = diff.normalized()
+		_update_sprite_direction(direction)
 		position += direction * speed * delta
+
+# This function updates the sprite's texture based on the movement direction.
+func _update_sprite_direction(direction: Vector2) -> void:
+	# We choose the dominant direction (horizontal vs. vertical).
+	if abs(direction.x) > abs(direction.y):
+		# Horizontal movement is dominant.
+		if direction.x > 0:
+			sprite.texture = texture_right
+		else:
+			sprite.texture = texture_left
+	else:
+		# Vertical movement is dominant.
+		if direction.y > 0:
+			sprite.texture = texture_down
+		else:
+			sprite.texture = texture_up
 
 func _on_target_reached() -> void:
 	print("Reached scatter target index:", current_target_index)
 	
 	# --- INSERT STOP CONDITION HERE ---
-
+	
 	# if some_condition:
 	#     return
 	
