@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cb57d5h41nkfm"]
+[gd_scene load_steps=23 format=3 uid="uid://cb57d5h41nkfm"]
 
 [ext_resource type="Texture2D" uid="uid://drpdpip3qludd" path="res://Assets/Walls/wall_atlas_test.png" id="1_fh24l"]
 [ext_resource type="Texture2D" uid="uid://cvlap2s66h85y" path="res://map_sketch.jpg" id="2_vfua3"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cvql6usga5o7h" path="res://Scenes/pellet.tscn" id="5_rp5b8"]
 [ext_resource type="PackedScene" uid="uid://rnv2xlnlcmuq" path="res://Scenes/large_pellet.tscn" id="6_jxehp"]
 [ext_resource type="Texture2D" uid="uid://chgwhinauxx5n" path="res://Final Assets/Background/background_without_overlay.PNG" id="7_21s03"]
+[ext_resource type="PackedScene" uid="uid://dsur6criaqsgo" path="res://Scenes/connector.tscn" id="9_co04s"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_yeael"]
 vertices = PackedVector2Array(1.5, -0.75, 12, -0.75, 12, 0.75, 1.5, 0.75, 1.5, 12, 0, 12, 0, 0.75, 0, -0.75, -12, 0.75, -12, -0.75, 1.5, -12, 0, -12)
@@ -840,9 +841,6 @@ position = Vector2(34, -148)
 [node name="Pellet161" parent="Pellets" instance=ExtResource("5_rp5b8")]
 position = Vector2(58, -292)
 
-[node name="Pellet162" parent="Pellets" instance=ExtResource("5_rp5b8")]
-position = Vector2(58, -316)
-
 [node name="Pellet163" parent="Pellets" instance=ExtResource("5_rp5b8")]
 position = Vector2(178, -292)
 
@@ -1113,9 +1111,6 @@ position = Vector2(-62, -4)
 [node name="Pellet254" parent="Pellets" instance=ExtResource("5_rp5b8")]
 position = Vector2(82, 284)
 
-[node name="Pellet255" parent="Pellets" instance=ExtResource("5_rp5b8")]
-position = Vector2(82, 308)
-
 [node name="Pellet256" parent="Pellets" instance=ExtResource("5_rp5b8")]
 position = Vector2(-254, -4)
 
@@ -1145,3 +1140,5 @@ position = Vector2(370, 284)
 
 [node name="Large Pellet4" parent="Pellets" instance=ExtResource("6_jxehp")]
 position = Vector2(370, -292)
+
+[node name="Connector" parent="." instance=ExtResource("9_co04s")]
