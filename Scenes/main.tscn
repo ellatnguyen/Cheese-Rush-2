@@ -1239,6 +1239,13 @@ offset_right = 510.0
 offset_bottom = 101.5
 text = "MASH!"
 
+[node name="MyProgressBar" type="ProgressBar" parent="CanvasLayer/battle_scene/background/Panel"]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 19.0
+offset_right = 448.0
+offset_bottom = 46.0
+
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/battle_scene"]
 layout_mode = 1
 anchors_preset = 15
@@ -1250,6 +1257,7 @@ offset_right = 59.0
 offset_bottom = 43.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_force_pass_scroll_events = false
 color = Color(0, 0, 0, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/battle_scene"]
@@ -1257,5 +1265,9 @@ libraries = {
 "": SubResource("AnimationLibrary_aeo8i")
 }
 
+[node name="MashTimer" type="Timer" parent="CanvasLayer/battle_scene"]
+one_shot = true
+
 [connection signal="body_entered" from="Ghosts/RedGhost" to="Ghosts/RedGhost" method="_on_cat_body_entered"]
 [connection signal="animation_finished" from="CanvasLayer/battle_scene/AnimationPlayer" to="CanvasLayer/battle_scene" method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="CanvasLayer/battle_scene/MashTimer" to="CanvasLayer/battle_scene" method="_on_mash_timer_timeout"]

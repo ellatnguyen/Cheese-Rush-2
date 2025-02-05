@@ -1,8 +1,5 @@
 extends Area2D
 
-var character_name : String = "testingcat"
-var lvl : int = 49
-
 @export var speed: float = 120.0
 # An array of NodePaths to your scatter target nodes.
 @export var scatter_targets: Array[NodePath] = []
@@ -80,7 +77,8 @@ func _set_target(target_path: NodePath) -> void:
 
 
 func _on_cat_body_entered(body):
+	# NEED TO ADD LOGIC OF IF HAS PIZZA CUTTER OR LARGE PELLET - ADDED VARS TO PACMAN
 	if body.is_in_group("Player"):
-		event_handler.emit_signal("battle_started", character_name, lvl)
+		event_handler.emit_signal("battle_started")
 		print("Ghost hit") # Debug- delete later
 	pass # Replace with function body.

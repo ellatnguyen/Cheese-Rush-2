@@ -4,6 +4,8 @@ class_name Player
 
 @export var speed = 100
 var movement_direction = Vector2.ZERO
+var has_power_up = false
+var has_pizza_cutter = false
 
 func _physics_process(delta):
 	get_input()
