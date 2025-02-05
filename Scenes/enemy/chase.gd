@@ -66,3 +66,19 @@ func teleport_back_to_cage_for_7_seconds() -> void:
 
 func _on_CageTimer_timeout() -> void:
 	chase_enabled = true
+
+# Example: in your cat script or player script
+func _on_body_entered(body: Node) -> void:
+	if body is Player:
+		# 1) Hide or stop gameplay logic if needed
+		# 2) Show the full-screen image
+		var main_scene = get_tree().current_scene
+		# Or if you have a direct path to the UI node, you can do:
+		#   var ui = main_scene.get_node("GameOverUI/FullScreenImage")
+		# Or if you put your CanvasLayer at the root:
+		#   var ui = get_node("/root/main/GameOverUI/FullScreenImage")
+
+		var ui_image = main_scene.get_node("GameOverUI/FullScreenImage")
+		if ui_image:
+			ui_image.visible = true  # Make the image appear on-screen
+			get_tree().paused = true

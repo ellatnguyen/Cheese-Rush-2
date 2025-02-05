@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cb57d5h41nkfm"]
+[gd_scene load_steps=31 format=3 uid="uid://cb57d5h41nkfm"]
 
 [ext_resource type="Texture2D" uid="uid://drpdpip3qludd" path="res://Assets/Walls/wall_atlas_test.png" id="1_fh24l"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_nap10"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://rnv2xlnlcmuq" path="res://Scenes/large_pellet.tscn" id="6_jxehp"]
 [ext_resource type="Texture2D" uid="uid://chgwhinauxx5n" path="res://Final Assets/Background/background_without_overlay.PNG" id="7_21s03"]
 [ext_resource type="Texture2D" uid="uid://d24ee8s5dwva0" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_moveup.png" id="7_j7kpy"]
+[ext_resource type="Texture2D" uid="uid://dbxyfnvsji65l" path="res://Final Assets/WinLose_Screen/LoseDraft.jpg" id="7_lbgvl"]
 [ext_resource type="Texture2D" uid="uid://q7cs2sjryst" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_nonAnim_Movedown.png" id="8_oci6u"]
 [ext_resource type="PackedScene" uid="uid://dsur6criaqsgo" path="res://Scenes/connector.tscn" id="9_co04s"]
 [ext_resource type="Texture2D" uid="uid://bprpyks8orbpo" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_MoveLeft.png" id="9_esmku"]
@@ -356,6 +357,24 @@ collision_mask = 14
 [node name="CagePosition" type="Node2D" parent="."]
 position = Vector2(71, 5)
 
+[node name="GameOverUI" type="CanvasLayer" parent="."]
+
+[node name="FullScreenImage" type="TextureRect" parent="GameOverUI"]
+visible = false
+layout_direction = 2
+anchors_preset = -1
+anchor_left = -0.219
+anchor_top = -0.316
+anchor_right = 0.322
+anchor_bottom = 0.278
+offset_left = 0.28801
+offset_top = -0.231995
+offset_right = 0.0559692
+offset_bottom = -0.144012
+texture = ExtResource("7_lbgvl")
+expand_mode = 5
+stretch_mode = 5
+
 [node name="MovementTargets" type="Node" parent="."]
 
 [node name="RedGhost" type="Node" parent="MovementTargets"]
@@ -388,7 +407,7 @@ texture_right = ExtResource("10_w6lar")
 cage_position_node = NodePath("../../CagePosition")
 
 [node name="Scatter_cat" parent="Enemys" node_paths=PackedStringArray("cage_position_node") instance=ExtResource("4_tyfov")]
-position = Vector2(12, -4)
+position = Vector2(37, -6)
 scale = Vector2(2, 2)
 texture_up = ExtResource("7_j7kpy")
 texture_down = ExtResource("8_oci6u")
