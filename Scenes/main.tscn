@@ -1,14 +1,18 @@
-[gd_scene load_steps=24 format=3 uid="uid://cb57d5h41nkfm"]
+[gd_scene load_steps=28 format=3 uid="uid://cb57d5h41nkfm"]
 
 [ext_resource type="Texture2D" uid="uid://drpdpip3qludd" path="res://Assets/Walls/wall_atlas_test.png" id="1_fh24l"]
 [ext_resource type="Texture2D" uid="uid://cvlap2s66h85y" path="res://map_sketch.jpg" id="2_vfua3"]
 [ext_resource type="PackedScene" uid="uid://4vvoc508yu65" path="res://Scenes/pacman.tscn" id="3_elt41"]
 [ext_resource type="Texture2D" uid="uid://c48jm0yjkvhoi" path="res://Final Assets/Background/background_with_tunnels.png" id="4_ts7xh"]
-[ext_resource type="PackedScene" uid="uid://23uepjxoqfxk" path="res://Scenes/ghost.tscn" id="4_tyfov"]
+[ext_resource type="PackedScene" uid="uid://23uepjxoqfxk" path="res://Scenes/enemy/scatter.tscn" id="4_tyfov"]
 [ext_resource type="PackedScene" uid="uid://cvql6usga5o7h" path="res://Scenes/pellet.tscn" id="5_rp5b8"]
 [ext_resource type="PackedScene" uid="uid://rnv2xlnlcmuq" path="res://Scenes/large_pellet.tscn" id="6_jxehp"]
 [ext_resource type="Texture2D" uid="uid://chgwhinauxx5n" path="res://Final Assets/Background/background_without_overlay.PNG" id="7_21s03"]
+[ext_resource type="Texture2D" uid="uid://d24ee8s5dwva0" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_moveup.png" id="7_j7kpy"]
+[ext_resource type="Texture2D" uid="uid://q7cs2sjryst" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_nonAnim_Movedown.png" id="8_oci6u"]
 [ext_resource type="PackedScene" uid="uid://dsur6criaqsgo" path="res://Scenes/connector.tscn" id="9_co04s"]
+[ext_resource type="Texture2D" uid="uid://bprpyks8orbpo" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_MoveLeft.png" id="9_esmku"]
+[ext_resource type="Texture2D" uid="uid://bsfht1pq1qqot" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_MoveRight.png" id="10_w6lar"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_yeael"]
 vertices = PackedVector2Array(1.5, -0.75, 12, -0.75, 12, 0.75, 1.5, 0.75, 1.5, 12, 0, 12, 0, 0.75, 0, -0.75, -12, 0.75, -12, -0.75, 1.5, -12, 0, -12)
@@ -364,11 +368,15 @@ position = Vector2(-231, -293)
 [node name="Red4" type="Marker2D" parent="MovementTargets/RedGhost/scatter"]
 position = Vector2(-110, -292)
 
-[node name="Ghosts" type="Node" parent="."]
+[node name="Enemys" type="Node" parent="."]
 
-[node name="RedGhost" parent="Ghosts" instance=ExtResource("4_tyfov")]
+[node name="Scatter_cat" parent="Enemys" instance=ExtResource("4_tyfov")]
 position = Vector2(69, 1)
 scale = Vector2(2, 2)
+texture_up = ExtResource("7_j7kpy")
+texture_down = ExtResource("8_oci6u")
+texture_left = ExtResource("9_esmku")
+texture_right = ExtResource("10_w6lar")
 
 [node name="Pellets" type="Node" parent="."]
 

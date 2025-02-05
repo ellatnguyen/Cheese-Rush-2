@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://23uepjxoqfxk"]
 
-[ext_resource type="Script" path="res://Scenes/ghost.gd" id="1_5qkk8"]
+[ext_resource type="Script" path="res://Scenes/enemy/scatter.gd" id="1_5qkk8"]
 [ext_resource type="Texture2D" uid="uid://q7cs2sjryst" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_nonAnim_Movedown.png" id="4_tafgn"]
 [ext_resource type="Texture2D" uid="uid://bprpyks8orbpo" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_MoveLeft.png" id="5_2olsd"]
 [ext_resource type="Texture2D" uid="uid://bsfht1pq1qqot" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_MoveRight.png" id="6_cm43t"]
