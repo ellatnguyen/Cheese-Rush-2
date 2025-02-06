@@ -348,7 +348,7 @@ position = Vector2(309, -2)
 scale = Vector2(0.923437, 0.930556)
 texture = ExtResource("7_21s03")
 
-[node name="Player" parent="." instance=ExtResource("3_elt41")]
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("3_elt41")]
 position = Vector2(82, 73)
 scale = Vector2(3.5, 3.512)
 collision_mask = 14
@@ -1180,4 +1180,5 @@ position = Vector2(370, -292)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[connection signal="body_entered" from="Enemys/Scatter_cat" to="Enemys/Scatter_cat" method="_on_body_entered"]
 [connection signal="pellet_eaten" from="Pellets/Large Pellet" to="." method="_on_LargePellet_pellet_eaten"]
