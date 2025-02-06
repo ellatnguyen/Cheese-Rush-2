@@ -12,11 +12,10 @@ extends CharacterBody2D
 const SPEED = 120
 @export var chase_enabled: bool = false
 
-# A reference to your "cage" position in the scene.
 @export var cage_position_node: Node2D
 
 func _ready() -> void:
-	# Start-of-game 10-second delay
+	# 10-second delay
 	var chase_timer = Timer.new()
 	chase_timer.wait_time = 10.0
 	chase_timer.one_shot = true
@@ -46,9 +45,8 @@ func _update_sprite_direction(direction: Vector2) -> void:
 func _on_ChaseTimer_timeout() -> void:
 	chase_enabled = true
 
-# -------------------------------------------
 # Teleport the ghost to the "cage" for 7 sec
-# -------------------------------------------
+
 func teleport_back_to_cage_for_7_seconds() -> void:
 	chase_enabled = false
 	# Move ghost to cage
@@ -66,3 +64,18 @@ func teleport_back_to_cage_for_7_seconds() -> void:
 
 func _on_CageTimer_timeout() -> void:
 	chase_enabled = true
+
+func _on_body_entered(body):
+	if body.is_in_group("Player"):
+		if false:
+			#event_handler.emit_signal("battle_started")
+			#print("Ghost hit") # Debug- delete later
+			pass
+		else:
+			var anim_player = get_node("/root/main/GameOverUI/AnimationPlayer2")
+			var full_screen_image = get_node("/root/main/GameOverUI/FullScreenImage")
+			var color = get_node("/root/main/GameOverUI/ColorRect")
+			color.visible=true
+			full_screen_image.visible= true
+			get_tree().paused=true
+			anim_player.play("lose_screen_fade")

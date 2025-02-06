@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://cb57d5h41nkfm"]
+[gd_scene load_steps=39 format=3 uid="uid://cb57d5h41nkfm"]
 
 [ext_resource type="Texture2D" uid="uid://drpdpip3qludd" path="res://Assets/Walls/wall_atlas_test.png" id="1_fh24l"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_nap10"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://23uepjxoqfxk" path="res://Scenes/enemy/scatter.tscn" id="4_tyfov"]
 [ext_resource type="PackedScene" uid="uid://cvql6usga5o7h" path="res://Scenes/pellet.tscn" id="5_rp5b8"]
 [ext_resource type="PackedScene" uid="uid://rnv2xlnlcmuq" path="res://Scenes/large_pellet.tscn" id="6_jxehp"]
+[ext_resource type="Texture2D" uid="uid://bi4m6lukd4i1b" path="res://Final Assets/Rat Battle/Death Screen Without text.png" id="7_2ax24"]
 [ext_resource type="Texture2D" uid="uid://chgwhinauxx5n" path="res://Final Assets/Background/background_without_overlay.PNG" id="7_21s03"]
 [ext_resource type="Texture2D" uid="uid://d24ee8s5dwva0" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_moveup.png" id="7_j7kpy"]
 [ext_resource type="Texture2D" uid="uid://q7cs2sjryst" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_nonAnim_Movedown.png" id="8_oci6u"]
@@ -312,6 +313,43 @@ physics_layer_0/collision_layer = 2
 navigation_layer_0/layers = 1
 sources/0 = SubResource("TileSetAtlasSource_ymes1")
 
+[sub_resource type="Animation" id="Animation_58i86"]
+resource_name = "lose_screen_fade"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.166667, 2.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_e5fom"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0crgi"]
+_data = {
+"RESET": SubResource("Animation_e5fom"),
+"lose_screen_fade": SubResource("Animation_58i86")
+}
+
 [sub_resource type="Animation" id="Animation_h3at8"]
 resource_name = "rat_slide_in"
 length = 0.4
@@ -367,6 +405,37 @@ collision_mask = 14
 
 [node name="CagePosition" type="Node2D" parent="."]
 position = Vector2(71, 5)
+
+[node name="GameOverUI" type="CanvasLayer" parent="."]
+
+[node name="FullScreenImage" type="TextureRect" parent="GameOverUI"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.038
+anchor_top = 0.188
+anchor_right = 0.586
+anchor_bottom = 0.753
+offset_left = -106.776
+offset_top = -333.824
+offset_right = 546.928
+offset_bottom = 199.056
+texture = ExtResource("7_2ax24")
+expand_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="GameOverUI"]
+visible = false
+visibility_layer = 2
+offset_left = -218.0
+offset_top = -277.0
+offset_right = 1158.0
+offset_bottom = 676.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="GameOverUI"]
+process_mode = 2
+libraries = {
+"": SubResource("AnimationLibrary_0crgi")
+}
 
 [node name="MovementTargets" type="Node" parent="."]
 
