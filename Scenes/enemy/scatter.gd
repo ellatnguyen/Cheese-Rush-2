@@ -112,8 +112,7 @@ func _on_CageTimer_timeout() -> void:
 		_set_target(scatter_targets[current_target_index])
 
 
-
-func _on_body_entered(body):
+func _on_hit_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		if false:
 			#event_handler.emit_signal("battle_started")
