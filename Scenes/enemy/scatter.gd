@@ -116,3 +116,11 @@ func _on_CageTimer_timeout() -> void:
 	# (Optional) Re-set the target
 	if scatter_targets.size() > 0:
 		_set_target(scatter_targets[current_target_index])
+
+
+
+func _on_body_entered(body):
+	if body.is_in_group("Player"):
+		event_handler.emit_signal("battle_started")
+		print("Ghost hit") # Debug- delete later
+	pass # Replace with function body.
