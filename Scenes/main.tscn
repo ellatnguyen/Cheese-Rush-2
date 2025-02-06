@@ -1178,4 +1178,6 @@ position = Vector2(370, -292)
 
 [node name="Connector" parent="." instance=ExtResource("9_co04s")]
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
 [connection signal="pellet_eaten" from="Pellets/Large Pellet" to="." method="_on_LargePellet_pellet_eaten"]
