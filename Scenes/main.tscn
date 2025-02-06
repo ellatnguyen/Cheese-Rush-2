@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cb57d5h41nkfm"]
+[gd_scene load_steps=35 format=3 uid="uid://cb57d5h41nkfm"]
 
 [ext_resource type="Texture2D" uid="uid://drpdpip3qludd" path="res://Assets/Walls/wall_atlas_test.png" id="1_fh24l"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_nap10"]
@@ -15,6 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://bprpyks8orbpo" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_MoveLeft.png" id="9_esmku"]
 [ext_resource type="Texture2D" uid="uid://bsfht1pq1qqot" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_MoveRight.png" id="10_w6lar"]
 [ext_resource type="PackedScene" uid="uid://c4hb06tmg4hva" path="res://Scenes/enemy/chase.tscn" id="11_q2hgy"]
+[ext_resource type="Script" path="res://Scenes/battle_scene.gd" id="16_ekqvu"]
+[ext_resource type="Texture2D" uid="uid://igk6q2ajp7jt" path="res://Final Assets/Rat Battle/cat battle/Battle Asset,CatRightOnlyAnimaiton-0.png" id="17_cfc05"]
+[ext_resource type="Texture2D" uid="uid://bq4ui4psbcvds" path="res://Final Assets/Rat Battle/rat battle/BattleSequinceanimaiton, RatonlyLEft-0.png" id="18_sw4vy"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_yeael"]
 vertices = PackedVector2Array(1.5, -0.75, 12, -0.75, 12, 0.75, 1.5, 0.75, 1.5, 12, 0, 12, 0, 0.75, 0, -0.75, -12, 0.75, -12, -0.75, 1.5, -12, 0, -12)
@@ -309,6 +312,15 @@ physics_layer_0/collision_layer = 2
 navigation_layer_0/layers = 1
 sources/0 = SubResource("TileSetAtlasSource_ymes1")
 
+[sub_resource type="Animation" id="Animation_h3at8"]
+resource_name = "rat_slide_in"
+length = 0.4
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xxwtf"]
+_data = {
+"rat_slide_in": SubResource("Animation_h3at8")
+}
+
 [node name="main" type="Node"]
 script = ExtResource("1_nap10")
 
@@ -376,7 +388,7 @@ position = Vector2(-110, -292)
 
 [node name="Enemys" type="Node" parent="."]
 
-[node name="chase_cat" parent="Enemys" node_paths=PackedStringArray("target_to_chase", "cage_position_node") instance=ExtResource("11_q2hgy")]
+[node name="chase_cat" parent="Enemys" node_paths=PackedStringArray("target_to_chase", "cage_position_node") groups=["Enemy"] instance=ExtResource("11_q2hgy")]
 position = Vector2(121, 0)
 scale = Vector2(2, 2)
 floor_constant_speed = true
@@ -387,7 +399,7 @@ texture_left = ExtResource("9_esmku")
 texture_right = ExtResource("10_w6lar")
 cage_position_node = NodePath("../../CagePosition")
 
-[node name="Scatter_cat" parent="Enemys" node_paths=PackedStringArray("cage_position_node") instance=ExtResource("4_tyfov")]
+[node name="Scatter_cat" parent="Enemys" node_paths=PackedStringArray("cage_position_node") groups=["Enemy"] instance=ExtResource("4_tyfov")]
 position = Vector2(12, -4)
 scale = Vector2(2, 2)
 texture_up = ExtResource("7_j7kpy")
@@ -1180,5 +1192,51 @@ position = Vector2(370, -292)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="battle_scene" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("16_ekqvu")
+
+[node name="background" type="TextureRect" parent="CanvasLayer/battle_scene"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 3.0
+offset_right = 87.0
+offset_bottom = 43.0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/battle_scene"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 8.963
+anchor_right = 8.963
+offset_left = -2390.52
+offset_top = -845.0
+offset_right = -805.52
+offset_bottom = 902.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+mouse_force_pass_scroll_events = false
+color = Color(0, 0, 0, 0.415686)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/battle_scene"]
+libraries = {
+"": SubResource("AnimationLibrary_xxwtf")
+}
+
+[node name="CatFightSprite" type="Sprite2D" parent="CanvasLayer/battle_scene"]
+position = Vector2(1041, 347)
+texture = ExtResource("17_cfc05")
+
+[node name="RatFightSprite" type="Sprite2D" parent="CanvasLayer/battle_scene"]
+position = Vector2(1752, 318)
+texture = ExtResource("18_sw4vy")
+
+[node name="MashTimer" type="Timer" parent="CanvasLayer/battle_scene"]
+one_shot = true
+
 [connection signal="body_entered" from="Enemys/Scatter_cat" to="Enemys/Scatter_cat" method="_on_body_entered"]
 [connection signal="pellet_eaten" from="Pellets/Large Pellet" to="." method="_on_LargePellet_pellet_eaten"]
+[connection signal="timeout" from="CanvasLayer/battle_scene/MashTimer" to="CanvasLayer/battle_scene" method="_on_mash_timer_timeout"]
