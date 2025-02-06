@@ -309,6 +309,60 @@ physics_layer_0/collision_layer = 2
 navigation_layer_0/layers = 1
 sources/0 = SubResource("TileSetAtlasSource_ymes1")
 
+[sub_resource type="Animation" id="Animation_vqasb"]
+resource_name = "fade_in"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_byx2q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fam8a"]
+resource_name = "fade_out"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_aeo8i"]
+_data = {
+"RESET": SubResource("Animation_byx2q"),
+"fade_in": SubResource("Animation_vqasb"),
+"fade_out": SubResource("Animation_fam8a")
+}
+
 [node name="main" type="Node"]
 script = ExtResource("1_nap10")
 
@@ -1176,6 +1230,75 @@ position = Vector2(370, 284)
 [node name="Large Pellet4" parent="Pellets" instance=ExtResource("6_jxehp")]
 position = Vector2(370, -292)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="battle_scene" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -166.0
+offset_top = -156.0
+offset_right = 317.0
+offset_bottom = 157.0
+script = ExtResource("9_h3luk")
+
+[node name="background" type="TextureRect" parent="CanvasLayer/battle_scene"]
+layout_mode = 0
+offset_left = -82.0
+offset_top = -28.0
+offset_right = 542.0
+offset_bottom = 356.0
+texture = ExtResource("10_ftet8")
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="CanvasLayer/battle_scene/background"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 253.0
+offset_right = 608.0
+offset_bottom = 361.0
+tooltip_text = "
+"
+
+[node name="Button" type="Button" parent="CanvasLayer/battle_scene/background/Panel"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 50.5
+offset_right = 510.0
+offset_bottom = 101.5
+text = "MASH!"
+
+[node name="MyProgressBar" type="ProgressBar" parent="CanvasLayer/battle_scene/background/Panel"]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 19.0
+offset_right = 448.0
+offset_bottom = 46.0
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/battle_scene"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -82.0
+offset_top = -28.0
+offset_right = 59.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_force_pass_scroll_events = false
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/battle_scene"]
+libraries = {
+"": SubResource("AnimationLibrary_aeo8i")
+}
+
+[node name="MashTimer" type="Timer" parent="CanvasLayer/battle_scene"]
+one_shot = true
+
+[connection signal="body_entered" from="Ghosts/RedGhost" to="Ghosts/RedGhost" method="_on_cat_body_entered"]
+[connection signal="animation_finished" from="CanvasLayer/battle_scene/AnimationPlayer" to="CanvasLayer/battle_scene" method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="CanvasLayer/battle_scene/MashTimer" to="CanvasLayer/battle_scene" method="_on_mash_timer_timeout"]
 [node name="Connector" parent="." instance=ExtResource("9_co04s")]
 
 [connection signal="pellet_eaten" from="Pellets/Large Pellet" to="." method="_on_LargePellet_pellet_eaten"]
