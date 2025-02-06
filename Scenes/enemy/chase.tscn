@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4hb06tmg4hva"]
+
+[ext_resource type="Script" path="res://Scenes/enemy/chase.gd" id="1_e8yv8"]
+[ext_resource type="Texture2D" uid="uid://d24ee8s5dwva0" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_moveup.png" id="2_g7b6s"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dr767"]
+radius = 6.0
+
+[node name="chase" type="CharacterBody2D"]
+script = ExtResource("1_e8yv8")
+
+[node name="BodySprite" type="Sprite2D" parent="."]
+scale = Vector2(0.043, 0.043)
+texture = ExtResource("2_g7b6s")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_dr767")

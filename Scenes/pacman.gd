@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 class_name Player
 
-@export var speed = 100
+@export var speed = 103
 var movement_direction = Vector2.ZERO
 var has_power_up = false
 var has_pizza_cutter = false
