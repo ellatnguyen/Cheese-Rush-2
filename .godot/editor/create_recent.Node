@@ -1,0 +1,12 @@
+AudioStreamPlayer2D
+CollisionShape2D
+Sprite2D
+Area2D
+Node
+Node2D
+NavigationRegion2D
+NavigationAgent2D
+Marker2D
+CharacterBody2D
+Camera2D
+TileMap

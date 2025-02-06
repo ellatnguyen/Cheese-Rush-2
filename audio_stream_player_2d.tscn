@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://nexh33v484vj"]
+
+[ext_resource type="Script" path="res://audio_stream_player.gd" id="1_1n6hf"]
+[ext_resource type="AudioStream" uid="uid://bbo3rlggrdgh8" path="res://VGM Project 1 - Gameplay - Flow 1.wav" id="1_te6u5"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_te6u5")
+autoplay = true
+script = ExtResource("1_1n6hf")
