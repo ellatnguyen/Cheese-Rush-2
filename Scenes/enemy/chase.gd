@@ -3,16 +3,14 @@ extends CharacterBody2D
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
 @export var target_to_chase: CharacterBody2D
 @onready var sprite: Sprite2D = $BodySprite
-
 @export var texture_up: Texture2D
 @export var texture_down: Texture2D
 @export var texture_left: Texture2D
 @export var texture_right: Texture2D
-
-const SPEED = 0
+const SPEED = 120
 @export var chase_enabled: bool = false
-
 @export var cage_position_node: Node2D
+var was_just_hit: bool = false
 
 func _ready() -> void:
 	# Event Handler
@@ -51,18 +49,15 @@ func _update_sprite_direction(direction: Vector2) -> void:
 func _on_ChaseTimer_timeout() -> void:
 	chase_enabled = true
 
-# Teleport the ghost to the "cage" for 7 sec
-
 func teleport_back_to_cage_for_7_seconds() -> void:
 	chase_enabled = false
-	# Move ghost to cage
 	if cage_position_node:
 		global_position = cage_position_node.global_position
 	velocity = Vector2.ZERO
 
 	# Start a 7-second cage timer
 	var cage_timer = Timer.new()
-	cage_timer.wait_time = 7.0
+	cage_timer.wait_time = 10
 	cage_timer.one_shot = true
 	cage_timer.connect("timeout", Callable(self, "_on_CageTimer_timeout"))
 	add_child(cage_timer)
@@ -73,26 +68,28 @@ func _on_CageTimer_timeout() -> void:
 
 func _on_hit_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-			#event_handler.emit_signal("battle_started")
-			#print("Ghost hit") # Debug- delete later
-		if false:
-			#event_handler.emit_signal("battle_started")
-			#print("Ghost hit") # Debug- delete later
-			pass
-		else:
-			var anim_player = get_node("/root/main/GameOverUI/AnimationPlayer2")
-			var full_screen_image = get_node("/root/main/GameOverUI/FullScreenImage")
-			var color = get_node("/root/main/GameOverUI/ColorRect")
-			color.visible=true
-			full_screen_image.visible= true
-			get_tree().paused=true
-			anim_player.play("lose_screen_fade")
+			was_just_hit = true
+			event_handler.emit_signal("battle_started")
+		#if false:
+			##event_handler.emit_signal("battle_started")
+			##print("Ghost hit") # Debug- delete later
+			#pass
+		#else:
+			#var anim_player = get_node("/root/main/GameOverUI/AnimationPlayer2")
+			#var full_screen_image = get_node("/root/main/GameOverUI/FullScreenImage")
+			#var color = get_node("/root/main/GameOverUI/ColorRect")
+			#color.visible=true
+			#full_screen_image.visible= true
+			#get_tree().paused=true
+			#anim_player.play("lose_screen_fade")
 
 func _on_best_battle():
-	print("Chase Best battle!")  
+	teleport_back_to_cage_for_7_seconds()
 
 func _on_better_battle():
-	print("Chase Better battle!")  
+	if was_just_hit:
+		teleport_back_to_cage_for_7_seconds()
+		was_just_hit  = false
 
 func _on_good_battle():
-	print("Chase Good battle!")  
+	pass

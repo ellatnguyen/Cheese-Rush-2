@@ -9,16 +9,13 @@ extends Area2D
 @export var texture_down: Texture2D
 @export var texture_left: Texture2D
 @export var texture_right: Texture2D
-
 @export var chase_enabled: bool = false
-
-var current_target_index: int = 0
-
 @onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
 @onready var sprite: Sprite2D = $BodySprite
-
-
+var current_target_index: int = 0
 @export var cage_position_node: Node2D
+
+var was_just_hit: bool = false
 
 func _ready() -> void:
 	# Event Handler
@@ -104,9 +101,8 @@ func teleport_back_to_cage_for_7_seconds() -> void:
 	
 	# Setting the target position to the same position ensures no path
 	nav_agent.set_target_position(global_position)
-
 	var cage_timer = Timer.new()
-	cage_timer.wait_time = 7.0
+	cage_timer.wait_time = 10
 	cage_timer.one_shot = true
 	cage_timer.connect("timeout", Callable(self, "_on_CageTimer_timeout"))
 	add_child(cage_timer)
@@ -120,26 +116,29 @@ func _on_CageTimer_timeout() -> void:
 
 func _on_hit_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-		#event_handler.emit_signal("battle_started")
-		#print("Ghost hit") # Debug- delete later
-		if false:
-			#event_handler.emit_signal("battle_started")
-			#print("Ghost hit") # Debug- delete later
-			pass
-		else:
-			var anim_player = get_node("/root/main/GameOverUI/AnimationPlayer2")
-			var full_screen_image = get_node("/root/main/GameOverUI/FullScreenImage")
-			var color = get_node("/root/main/GameOverUI/ColorRect")
-			color.visible=true
-			full_screen_image.visible= true
-			get_tree().paused=true
-			anim_player.play("lose_screen_fade")
+		was_just_hit = true
+		event_handler.emit_signal("battle_started")
+		print("Ghost hit") # Debug- delete later
+		#if false:
+			##event_handler.emit_signal("battle_started")
+			##print("Ghost hit") # Debug- delete later
+			#pass
+		#else:
+			#var anim_player = get_node("/root/main/GameOverUI/AnimationPlayer2")
+			#var full_screen_image = get_node("/root/main/GameOverUI/FullScreenImage")
+			#var color = get_node("/root/main/GameOverUI/ColorRect")
+			#color.visible=true
+			#full_screen_image.visible= true
+			#get_tree().paused=true
+			#anim_player.play("lose_screen_fade")
 
 func _on_best_battle():
-	print("Scatter Best battle!")  
+	teleport_back_to_cage_for_7_seconds()  
 
 func _on_better_battle():
-	print("Scatter Better battle!")  
+	if was_just_hit:
+		teleport_back_to_cage_for_7_seconds()
+		was_just_hit  = false
 
 func _on_good_battle():
 	print("Scatter Good battle!")  
