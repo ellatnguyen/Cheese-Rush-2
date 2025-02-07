@@ -1,3 +1,4 @@
+
 [gd_scene load_steps=69 format=3 uid="uid://cb57d5h41nkfm"]
 
 [ext_resource type="Texture2D" uid="uid://drpdpip3qludd" path="res://Assets/Walls/wall_atlas_test.png" id="1_fh24l"]
@@ -47,7 +48,30 @@
 [ext_resource type="Texture2D" uid="uid://blto5sgm327s4" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-23.png" id="43_yrnex"]
 [ext_resource type="Texture2D" uid="uid://c6ibeke2dovgn" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-24.png" id="44_s6y1q"]
 [ext_resource type="Texture2D" uid="uid://courl4mbn5mgl" path="res://win screen.PNG" id="46_n13uo"]
+[ext_resource type="Script" path="res://Scenes/homescreen.gd" id="47_a4jdt"]
+[ext_resource type="Texture2D" uid="uid://dn70n7t7n4rsb" path="res://Final Assets/HomeScreen Assets/homescreen.png" id="48_e5imq"]
+[ext_resource type="Texture2D" uid="uid://dmtbkt85p1n77" path="res://Final Assets/HomeScreen Assets/frame_05_delay-0.17s.png" id="54_yvpr8"]
+[ext_resource type="Texture2D" uid="uid://bwingulnqome" path="res://Final Assets/HomeScreen Assets/frame_08_delay-0.17s.png" id="57_gt1lj"]
+[ext_resource type="Texture2D" uid="uid://dibr1o11edxso" path="res://Final Assets/HomeScreen Assets/frame_09_delay-0.17s.png" id="58_o7kdv"]
+[ext_resource type="Texture2D" uid="uid://c24t41mk8k2oy" path="res://Final Assets/HomeScreen Assets/frame_10_delay-0.17s.png" id="59_nxw1t"]
+[ext_resource type="Texture2D" uid="uid://cb6y2bsicsprn" path="res://Final Assets/HomeScreen Assets/frame_11_delay-0.17s.png" id="60_yxjs1"]
+[ext_resource type="Texture2D" uid="uid://ci8dfpq136j4x" path="res://Final Assets/HomeScreen Assets/frame_12_delay-0.17s.png" id="61_fgwg3"]
+[ext_resource type="Texture2D" uid="uid://h8k21ej1kh8w" path="res://Final Assets/HomeScreen Assets/frame_13_delay-0.17s.png" id="62_pkl4m"]
+[ext_resource type="Texture2D" uid="uid://dfklo0p24040x" path="res://Final Assets/HomeScreen Assets/frame_14_delay-0.17s.png" id="63_g8jai"]
+[ext_resource type="Texture2D" uid="uid://cp18384ih16en" path="res://Final Assets/HomeScreen Assets/frame_15_delay-0.17s.png" id="64_uvso4"]
+[ext_resource type="Texture2D" uid="uid://dgre61oarj2sj" path="res://Final Assets/HomeScreen Assets/frame_16_delay-0.17s.png" id="65_tctd8"]
+[ext_resource type="Texture2D" uid="uid://b4orr8oh23wv3" path="res://Final Assets/HomeScreen Assets/frame_17_delay-0.17s.png" id="66_2nvuq"]
+[ext_resource type="Texture2D" uid="uid://b0fsaxhn0jqd3" path="res://Final Assets/HomeScreen Assets/frame_18_delay-0.17s.png" id="67_4bxqy"]
+[ext_resource type="Texture2D" uid="uid://c0nw10nacq0wv" path="res://Final Assets/HomeScreen Assets/frame_19_delay-0.17s.png" id="68_6xne7"]
+[ext_resource type="Texture2D" uid="uid://bqf831spvxhtv" path="res://Final Assets/HomeScreen Assets/frame_20_delay-0.17s.png" id="69_las2h"]
+[ext_resource type="Texture2D" uid="uid://d1vq53wy6cjsl" path="res://Final Assets/HomeScreen Assets/frame_21_delay-0.17s.png" id="70_meygk"]
+[ext_resource type="Texture2D" uid="uid://i6dsybk04t21" path="res://Final Assets/HomeScreen Assets/frame_22_delay-0.17s.png" id="71_q3l20"]
+[ext_resource type="Texture2D" uid="uid://du1e6yt5hae0i" path="res://Final Assets/HomeScreen Assets/frame_23_delay-0.17s.png" id="72_0abir"]
+[ext_resource type="Texture2D" uid="uid://dpcry5o1388qj" path="res://Final Assets/HomeScreen Assets/frame_24_delay-0.17s.png" id="73_fce45"]
+[ext_resource type="Texture2D" uid="uid://7vqpuwa1a867" path="res://Final Assets/HomeScreen Assets/frame_25_delay-0.17s.png" id="74_ttv8e"]
+[ext_resource type="Texture2D" uid="uid://do1owniyujplw" path="res://Final Assets/HomeScreen Assets/frame_26_delay-0.17s.png" id="75_4e7lw"]
 [ext_resource type="Texture2D" uid="uid://dn2nke01mkodj" path="res://Final Assets/Rat Battle/good, better, best.PNG" id="47_o2l8e"]
+
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_yeael"]
 vertices = PackedVector2Array(1.5, -0.75, 12, -0.75, 12, 0.75, 1.5, 0.75, 1.5, 12, 0, 12, 0, 0.75, 0, -0.75, -12, 0.75, -12, -0.75, 1.5, -12, 0, -12)
@@ -476,10 +500,80 @@ animations = [{
 "speed": 20.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_5xpc0"]
+resource_name = "Button"
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("54_yvpr8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_gt1lj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_o7kdv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_nxw1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_yxjs1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_fgwg3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_pkl4m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_g8jai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_uvso4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_tctd8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_2nvuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_4bxqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_6xne7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_las2h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_meygk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_q3l20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_0abir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_fce45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_ttv8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_4e7lw")
+}],
+"loop": false,
+"name": &"default",
+"speed": 13.0
+}]
+
 [node name="main" type="Node"]
 script = ExtResource("1_nap10")
 
 [node name="TileMap" type="TileMap" parent="."]
+visible = false
 position = Vector2(21, -64)
 tile_set = SubResource("TileSet_kmh2q")
 navigation_visibility_mode = 1
@@ -574,16 +668,10 @@ position = Vector2(-110, -292)
 
 [node name="Enemys" type="Node" parent="."]
 
-[node name="chase_cat" parent="Enemys" node_paths=PackedStringArray("target_to_chase", "cage_position_node") groups=["Enemy"] instance=ExtResource("11_q2hgy")]
+[node name="chase_cat" parent="Enemys" groups=["Enemy"] instance=ExtResource("11_q2hgy")]
 position = Vector2(121, 0)
 scale = Vector2(2, 2)
 floor_constant_speed = true
-target_to_chase = NodePath("../../Player")
-texture_up = ExtResource("7_j7kpy")
-texture_down = ExtResource("8_oci6u")
-texture_left = ExtResource("9_esmku")
-texture_right = ExtResource("10_w6lar")
-cage_position_node = NodePath("../../CagePosition")
 
 [node name="Scatter_cat" parent="Enemys" node_paths=PackedStringArray("cage_position_node") groups=["Enemy"] instance=ExtResource("4_tyfov")]
 position = Vector2(12, -4)
@@ -1490,6 +1578,29 @@ process_mode = 2
 libraries = {
 "": SubResource("AnimationLibrary_0crgi")
 }
+
+[node name="HomeScreen" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("47_a4jdt")
+
+[node name="Homescreen" type="Sprite2D" parent="HomeScreen"]
+position = Vector2(311, -4)
+texture = ExtResource("48_e5imq")
+
+[node name="Button" type="Button" parent="HomeScreen/Homescreen"]
+offset_left = -130.0
+offset_top = 4.0
+offset_right = 133.0
+offset_bottom = 111.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HomeScreen/Homescreen"]
+position = Vector2(3, 50)
+scale = Vector2(0.896071, 0.784292)
+sprite_frames = SubResource("SpriteFrames_5xpc0")
+speed_scale = 2.0
 
 [connection signal="body_entered" from="Enemys/Scatter_cat" to="Enemys/Scatter_cat" method="_on_body_entered"]
 [connection signal="pellet_eaten" from="Pellets/Large Pellet" to="." method="_on_LargePellet_pellet_eaten"]
