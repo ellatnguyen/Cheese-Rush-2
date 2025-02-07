@@ -9,10 +9,15 @@
 [ext_resource type="PackedScene" uid="uid://cvql6usga5o7h" path="res://Scenes/pellet.tscn" id="5_rp5b8"]
 [ext_resource type="PackedScene" uid="uid://rnv2xlnlcmuq" path="res://Scenes/large_pellet.tscn" id="6_jxehp"]
 [ext_resource type="Texture2D" uid="uid://chgwhinauxx5n" path="res://Final Assets/Background/background_without_overlay.PNG" id="7_21s03"]
+[ext_resource type="Script" path="res://Scenes/pellets_manager.gd" id="7_w2ftd"]
+[ext_resource type="PackedScene" uid="uid://dsur6criaqsgo" path="res://Scenes/connector.tscn" id="9_co04s"]
+[ext_resource type="AudioStream" uid="uid://b5h15q0ipqsgy" path="res://Assets/Sounds/movement.wav" id="10_5k48d"]
+[ext_resource type="AudioStream" uid="uid://ds0fu884eoi02" path="res://Assets/Sounds/squeak1.wav" id="11_ejcy8"]
+[ext_resource type="AudioStream" uid="uid://db1ysgbqygw35" path="res://Assets/Sounds/chomp.wav" id="12_n8m2l"]
+[ext_resource type="AudioStream" uid="uid://rywgvii006be" path="res://Assets/Sounds/powerup1.wav" id="13_4goms"]
 [ext_resource type="Texture2D" uid="uid://2df3jevr5rey" path="res://lose screen.PNG" id="7_33q76"]
 [ext_resource type="Texture2D" uid="uid://d24ee8s5dwva0" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_moveup.png" id="7_j7kpy"]
 [ext_resource type="Texture2D" uid="uid://q7cs2sjryst" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_nonAnim_Movedown.png" id="8_oci6u"]
-[ext_resource type="PackedScene" uid="uid://dsur6criaqsgo" path="res://Scenes/connector.tscn" id="9_co04s"]
 [ext_resource type="Texture2D" uid="uid://bprpyks8orbpo" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_MoveLeft.png" id="9_esmku"]
 [ext_resource type="Texture2D" uid="uid://bsfht1pq1qqot" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_MoveRight.png" id="10_w6lar"]
 [ext_resource type="PackedScene" uid="uid://c4hb06tmg4hva" path="res://Scenes/enemy/chase.tscn" id="11_q2hgy"]
@@ -388,7 +393,7 @@ scale = Vector2(2, 2)
 collision_mask = 14
 
 [node name="BackgroundWithTunnels" type="Sprite2D" parent="."]
-position = Vector2(309, -2)
+position = Vector2(324, -14)
 scale = Vector2(0.923437, 0.930556)
 texture = ExtResource("4_ts7xh")
 
@@ -479,6 +484,7 @@ chase_enabled = true
 cage_position_node = NodePath("../../CagePosition")
 
 [node name="Pellets" type="Node" parent="."]
+script = ExtResource("7_w2ftd")
 
 [node name="Pellet" parent="Pellets" instance=ExtResource("5_rp5b8")]
 position = Vector2(-230, -220)
@@ -1258,6 +1264,21 @@ position = Vector2(370, 284)
 position = Vector2(370, -292)
 
 [node name="Connector" parent="." instance=ExtResource("9_co04s")]
+
+
+[node name="SoundPlayers" type="Node" parent="."]
+
+[node name="PlayerWalkingSound" type="AudioStreamPlayer2D" parent="SoundPlayers"]
+stream = ExtResource("10_5k48d")
+
+[node name="PlayerDeathSound" type="AudioStreamPlayer2D" parent="SoundPlayers"]
+stream = ExtResource("11_ejcy8")
+
+[node name="PlayerChompSound" type="AudioStreamPlayer2D" parent="SoundPlayers"]
+stream = ExtResource("12_n8m2l")
+
+[node name="PlayerPowerUpSound" type="AudioStreamPlayer2D" parent="SoundPlayers"]
+stream = ExtResource("13_4goms")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
