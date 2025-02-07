@@ -7,6 +7,9 @@ extends Node
 @onready var pellet_manager = $Pellets
 
 func _ready() -> void:
+	if $GameplayMusic.playing == false:
+		$GameplayMusic.play()
+		pass
 	pellet_manager.ui = ui
 	# We will connect the signals from large pellets to _on_large_pellet_eaten()
 	# in code OR via the Editor (next steps).

@@ -80,6 +80,8 @@ func _on_hit_area_body_entered(body: Node2D) -> void:
 			var color = get_node("/root/main/GameOverUI/ColorRect")
 			var labels = get_node("/root/main/UI/MarginContainer/HBoxContainer/ScoreLabel")
 			var final = get_node("/root/main/UI/FinalScore")
+			var gameplaymusic = get_node("/root/main/GameplayMusic")
+			gameplaymusic.stop()
 			final.visible = true
 			labels.visible = false
 			color.visible = true

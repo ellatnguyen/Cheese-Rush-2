@@ -1,4 +1,4 @@
-[gd_scene load_steps=100 format=3 uid="uid://cb57d5h41nkfm"]
+[gd_scene load_steps=103 format=3 uid="uid://cb57d5h41nkfm"]
 
 [ext_resource type="Texture2D" uid="uid://drpdpip3qludd" path="res://Assets/Walls/wall_atlas_test.png" id="1_fh24l"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_nap10"]
@@ -78,6 +78,9 @@
 [ext_resource type="Texture2D" uid="uid://dpcry5o1388qj" path="res://Final Assets/HomeScreen Assets/frame_24_delay-0.17s.png" id="73_5e3ej"]
 [ext_resource type="Texture2D" uid="uid://7vqpuwa1a867" path="res://Final Assets/HomeScreen Assets/frame_25_delay-0.17s.png" id="74_goj52"]
 [ext_resource type="Texture2D" uid="uid://do1owniyujplw" path="res://Final Assets/HomeScreen Assets/frame_26_delay-0.17s.png" id="75_7pcei"]
+[ext_resource type="AudioStream" uid="uid://cnjmheo6s16d2" path="res://Final Assets/Music/VGM Project 1 - Gameplay - Flow 1.wav" id="79_rvoi1"]
+[ext_resource type="AudioStream" uid="uid://bh5dhswguak2i" path="res://Final Assets/Music/VGM Project 1 - Power Up Gameplay - Flow 1.wav" id="80_ktn4h"]
+[ext_resource type="AudioStream" uid="uid://nor1air300ac" path="res://Final Assets/Music/pacmanpizzeria-1.wav" id="81_nufa4"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_yeael"]
 vertices = PackedVector2Array(1.5, -0.75, 12, -0.75, 12, 0.75, 1.5, 0.75, 1.5, 12, 0, 12, 0, 0.75, 0, -0.75, -12, 0.75, -12, -0.75, 1.5, -12, 0, -12)
@@ -1527,7 +1530,6 @@ text = "0"
 horizontal_alignment = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="battle_scene" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -1668,6 +1670,15 @@ position = Vector2(2.67784, 46.6946)
 scale = Vector2(0.867618, 0.867618)
 sprite_frames = SubResource("SpriteFrames_2xubh")
 speed_scale = 2.0
+
+[node name="GameplayMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("79_rvoi1")
+
+[node name="PowerUpMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("80_ktn4h")
+
+[node name="WinMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("81_nufa4")
 
 [connection signal="body_entered" from="Enemys/Scatter_cat" to="Enemys/Scatter_cat" method="_on_body_entered"]
 [connection signal="body_entered" from="Knife/Area2D" to="Knife/Area2D" method="_on_body_entered"]

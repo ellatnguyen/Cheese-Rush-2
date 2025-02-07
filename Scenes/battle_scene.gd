@@ -12,6 +12,8 @@ extends Control
 @onready var better = $BETTER
 @onready var best = $BEST
 @onready var labels = get_node("/root/main/UI/MarginContainer/HBoxContainer/ScoreLabel")
+@onready var gameplaymusic = get_node("/root/main/GameplayMusic")
+@onready var powerupmusic = get_node("/root/main/PowerUpMusic")
 
 #@onready var cutter_popup = get_node("/root/main/Knife/Area2D/PizzaCutterPopUp")
 #@onready var map = $BackgroundWithTunnels
@@ -27,6 +29,8 @@ func _ready():
 
 func init(): 
 	labels.visible = false
+	gameplaymusic.stop()
+	powerupmusic.play()
 	
 	# Stop player movement
 	var player = get_tree().get_first_node_in_group("Player")
@@ -160,3 +164,5 @@ func _on_mash_timer_timeout():
 	print("Battle scene ended, resuming game.")
 
 	labels.visible = true
+	powerupmusic.stop()
+	gameplaymusic.play()
