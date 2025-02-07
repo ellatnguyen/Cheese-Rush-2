@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://cb57d5h41nkfm"]
+[gd_scene load_steps=97 format=3 uid="uid://cb57d5h41nkfm"]
 
 [ext_resource type="Texture2D" uid="uid://drpdpip3qludd" path="res://Assets/Walls/wall_atlas_test.png" id="1_fh24l"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_nap10"]
@@ -45,7 +45,36 @@
 [ext_resource type="Texture2D" uid="uid://c6ibeke2dovgn" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-24.png" id="44_s6y1q"]
 [ext_resource type="Texture2D" uid="uid://courl4mbn5mgl" path="res://win screen.PNG" id="46_n13uo"]
 [ext_resource type="Texture2D" uid="uid://dn2nke01mkodj" path="res://Final Assets/Rat Battle/good, better, best.PNG" id="47_o2l8e"]
+[ext_resource type="Script" path="res://Scenes/home_screen.gd" id="47_whc4i"]
+[ext_resource type="Texture2D" uid="uid://dn70n7t7n4rsb" path="res://Final Assets/HomeScreen Assets/homescreen.png" id="48_lrfql"]
+[ext_resource type="Texture2D" uid="uid://c78dk6k3c41h3" path="res://Final Assets/HomeScreen Assets/frame_00_delay-0.17s.png" id="49_j7gpk"]
 [ext_resource type="Texture2D" uid="uid://dje8jfsl4bmwc" path="res://Final Assets/labels/ratman_labels.png" id="49_nj1yg"]
+[ext_resource type="Texture2D" uid="uid://cbqpya8h8tqev" path="res://Final Assets/HomeScreen Assets/frame_01_delay-0.17s.png" id="50_grwhf"]
+[ext_resource type="Texture2D" uid="uid://dr8vjlljgx44w" path="res://Final Assets/HomeScreen Assets/frame_02_delay-0.17s.png" id="51_sihmj"]
+[ext_resource type="Texture2D" uid="uid://lhmtv2l603g4" path="res://Final Assets/HomeScreen Assets/frame_03_delay-0.17s.png" id="52_mv5mu"]
+[ext_resource type="Texture2D" uid="uid://0mgutyhl44ae" path="res://Final Assets/HomeScreen Assets/frame_04_delay-0.17s.png" id="53_yta4c"]
+[ext_resource type="Texture2D" uid="uid://dmtbkt85p1n77" path="res://Final Assets/HomeScreen Assets/frame_05_delay-0.17s.png" id="54_b3vgf"]
+[ext_resource type="Texture2D" uid="uid://bc40xinv7edan" path="res://Final Assets/HomeScreen Assets/frame_06_delay-0.17s.png" id="55_myohw"]
+[ext_resource type="Texture2D" uid="uid://d01gcgf8yx0h1" path="res://Final Assets/HomeScreen Assets/frame_07_delay-0.17s.png" id="56_ognq3"]
+[ext_resource type="Texture2D" uid="uid://bwingulnqome" path="res://Final Assets/HomeScreen Assets/frame_08_delay-0.17s.png" id="57_idcml"]
+[ext_resource type="Texture2D" uid="uid://dibr1o11edxso" path="res://Final Assets/HomeScreen Assets/frame_09_delay-0.17s.png" id="58_3q1ab"]
+[ext_resource type="Texture2D" uid="uid://c24t41mk8k2oy" path="res://Final Assets/HomeScreen Assets/frame_10_delay-0.17s.png" id="59_1luqq"]
+[ext_resource type="Texture2D" uid="uid://cb6y2bsicsprn" path="res://Final Assets/HomeScreen Assets/frame_11_delay-0.17s.png" id="60_hfs5k"]
+[ext_resource type="Texture2D" uid="uid://ci8dfpq136j4x" path="res://Final Assets/HomeScreen Assets/frame_12_delay-0.17s.png" id="61_8engi"]
+[ext_resource type="Texture2D" uid="uid://h8k21ej1kh8w" path="res://Final Assets/HomeScreen Assets/frame_13_delay-0.17s.png" id="62_5yseb"]
+[ext_resource type="Texture2D" uid="uid://dfklo0p24040x" path="res://Final Assets/HomeScreen Assets/frame_14_delay-0.17s.png" id="63_ta2ue"]
+[ext_resource type="Texture2D" uid="uid://cp18384ih16en" path="res://Final Assets/HomeScreen Assets/frame_15_delay-0.17s.png" id="64_n6ayo"]
+[ext_resource type="Texture2D" uid="uid://dgre61oarj2sj" path="res://Final Assets/HomeScreen Assets/frame_16_delay-0.17s.png" id="65_vw34e"]
+[ext_resource type="Texture2D" uid="uid://b4orr8oh23wv3" path="res://Final Assets/HomeScreen Assets/frame_17_delay-0.17s.png" id="66_enar4"]
+[ext_resource type="Texture2D" uid="uid://b0fsaxhn0jqd3" path="res://Final Assets/HomeScreen Assets/frame_18_delay-0.17s.png" id="67_tapfx"]
+[ext_resource type="Texture2D" uid="uid://c0nw10nacq0wv" path="res://Final Assets/HomeScreen Assets/frame_19_delay-0.17s.png" id="68_cr8h2"]
+[ext_resource type="Texture2D" uid="uid://bqf831spvxhtv" path="res://Final Assets/HomeScreen Assets/frame_20_delay-0.17s.png" id="69_a85jv"]
+[ext_resource type="Texture2D" uid="uid://d1vq53wy6cjsl" path="res://Final Assets/HomeScreen Assets/frame_21_delay-0.17s.png" id="70_8mtye"]
+[ext_resource type="Texture2D" uid="uid://i6dsybk04t21" path="res://Final Assets/HomeScreen Assets/frame_22_delay-0.17s.png" id="71_k01w0"]
+[ext_resource type="Texture2D" uid="uid://du1e6yt5hae0i" path="res://Final Assets/HomeScreen Assets/frame_23_delay-0.17s.png" id="72_vrqpl"]
+[ext_resource type="Texture2D" uid="uid://dpcry5o1388qj" path="res://Final Assets/HomeScreen Assets/frame_24_delay-0.17s.png" id="73_5e3ej"]
+[ext_resource type="Texture2D" uid="uid://7vqpuwa1a867" path="res://Final Assets/HomeScreen Assets/frame_25_delay-0.17s.png" id="74_goj52"]
+[ext_resource type="Texture2D" uid="uid://do1owniyujplw" path="res://Final Assets/HomeScreen Assets/frame_26_delay-0.17s.png" id="75_7pcei"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_yeael"]
 vertices = PackedVector2Array(1.5, -0.75, 12, -0.75, 12, 0.75, 1.5, 0.75, 1.5, 12, 0, 12, 0, 0.75, 0, -0.75, -12, 0.75, -12, -0.75, 1.5, -12, 0, -12)
@@ -472,6 +501,95 @@ animations = [{
 "loop": true,
 "name": &"fight",
 "speed": 20.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2xubh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("49_j7gpk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_grwhf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_sihmj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_mv5mu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_yta4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_b3vgf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_myohw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_ognq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_idcml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_3q1ab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_1luqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_hfs5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_8engi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_5yseb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_ta2ue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_n6ayo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_vw34e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_enar4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_tapfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_cr8h2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_a85jv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_8mtye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_k01w0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_vrqpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_5e3ej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_goj52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_7pcei")
+}],
+"loop": false,
+"name": &"default",
+"speed": 13.0
 }]
 
 [node name="main" type="Node"]
@@ -1484,6 +1602,31 @@ position = Vector2(651, -187)
 scale = Vector2(0.385156, 0.420833)
 texture = ExtResource("49_nj1yg")
 
+[node name="HomeScreen" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("47_whc4i")
+
+[node name="Homescreen" type="Sprite2D" parent="HomeScreen"]
+position = Vector2(311.333, -12.5)
+scale = Vector2(0.995833, 0.995833)
+texture = ExtResource("48_lrfql")
+
+[node name="Button" type="Button" parent="HomeScreen/Homescreen"]
+offset_left = -129.0
+offset_top = -14.0
+offset_right = 136.0
+offset_bottom = 131.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HomeScreen/Homescreen"]
+position = Vector2(2.67784, 46.6946)
+scale = Vector2(0.867618, 0.867618)
+sprite_frames = SubResource("SpriteFrames_2xubh")
+speed_scale = 2.0
+
 [connection signal="body_entered" from="Enemys/Scatter_cat" to="Enemys/Scatter_cat" method="_on_body_entered"]
 [connection signal="body_entered" from="Knife/Area2D" to="Knife/Area2D" method="_on_body_entered"]
 [connection signal="timeout" from="CanvasLayer/battle_scene/MashTimer" to="CanvasLayer/battle_scene" method="_on_mash_timer_timeout"]
+[connection signal="pressed" from="HomeScreen/Homescreen/Button" to="HomeScreen" method="_on_button_pressed"]
