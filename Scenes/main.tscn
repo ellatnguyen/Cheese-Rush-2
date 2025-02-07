@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://cb57d5h41nkfm"]
+[gd_scene load_steps=69 format=3 uid="uid://cb57d5h41nkfm"]
 
 [ext_resource type="Texture2D" uid="uid://drpdpip3qludd" path="res://Assets/Walls/wall_atlas_test.png" id="1_fh24l"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_nap10"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://igk6q2ajp7jt" path="res://Final Assets/Rat Battle/cat battle/Battle Asset,CatRightOnlyAnimaiton-0.png" id="17_cfc05"]
 [ext_resource type="Texture2D" uid="uid://bq4ui4psbcvds" path="res://Final Assets/Rat Battle/rat battle/BattleSequinceanimaiton, RatonlyLEft-0.png" id="18_sw4vy"]
 [ext_resource type="Texture2D" uid="uid://ddng2pjuro7bm" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-0.png" id="20_ddmpr"]
+[ext_resource type="Texture2D" uid="uid://c3663ul00ouho" path="res://Final Assets/buttons and health bars.PNG" id="21_n5e3x"]
 [ext_resource type="Texture2D" uid="uid://b7dygvxoodw3f" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-1.png" id="21_uruoa"]
 [ext_resource type="Texture2D" uid="uid://dsx3m3qlgj2qv" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-2.png" id="22_0d1lo"]
 [ext_resource type="Texture2D" uid="uid://dv4cvdfvx68ab" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-3.png" id="23_3mn1m"]
@@ -46,6 +47,7 @@
 [ext_resource type="Texture2D" uid="uid://blto5sgm327s4" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-23.png" id="43_yrnex"]
 [ext_resource type="Texture2D" uid="uid://c6ibeke2dovgn" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-24.png" id="44_s6y1q"]
 [ext_resource type="Texture2D" uid="uid://courl4mbn5mgl" path="res://win screen.PNG" id="46_n13uo"]
+[ext_resource type="Texture2D" uid="uid://dn2nke01mkodj" path="res://Final Assets/Rat Battle/good, better, best.PNG" id="47_o2l8e"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_yeael"]
 vertices = PackedVector2Array(1.5, -0.75, 12, -0.75, 12, 0.75, 1.5, 0.75, 1.5, 12, 0, 12, 0, 0.75, 0, -0.75, -12, 0.75, -12, -0.75, 1.5, -12, 0, -12)
@@ -1423,12 +1425,40 @@ texture = ExtResource("18_sw4vy")
 [node name="MashTimer" type="Timer" parent="CanvasLayer/battle_scene"]
 one_shot = true
 
+[node name="MashSpacebar" type="Sprite2D" parent="CanvasLayer/battle_scene"]
+position = Vector2(587, 349)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("21_n5e3x")
+region_enabled = true
+region_rect = Rect2(945.754, 91.2161, 727.246, 516.021)
+
 [node name="BattleAnimation" type="AnimatedSprite2D" parent="CanvasLayer/battle_scene"]
 position = Vector2(560.99, 330)
 scale = Vector2(0.977691, 0.977691)
 sprite_frames = SubResource("SpriteFrames_7n032")
 animation = &"fight"
 frame_progress = 0.55289
+
+[node name="GOOD" type="Sprite2D" parent="CanvasLayer/battle_scene"]
+position = Vector2(-636, 111)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("47_o2l8e")
+region_enabled = true
+region_rect = Rect2(40.1075, 9.2438, 400.876, 133.97)
+
+[node name="BETTER" type="Sprite2D" parent="CanvasLayer/battle_scene"]
+position = Vector2(-757, 310)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("47_o2l8e")
+region_enabled = true
+region_rect = Rect2(47.4627, 137.161, 471.174, 122.383)
+
+[node name="BEST" type="Sprite2D" parent="CanvasLayer/battle_scene"]
+position = Vector2(-720, 547)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("47_o2l8e")
+region_enabled = true
+region_rect = Rect2(38.284, 254.445, 391.625, 137.681)
 
 [node name="GameOverUI2" type="CanvasLayer" parent="."]
 

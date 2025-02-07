@@ -5,9 +5,12 @@ extends Control
 
 @onready var rat = $RatFightSprite  
 @onready var cat = $CatFightSprite  
-@onready var dark_rect = $ColorRect
 @onready var scatter_cat = $Scatter_cat
 @onready var battle_animation = $BattleAnimation
+@onready var mash_space = $MashSpacebar
+@onready var good = $GOOD
+@onready var better = $BETTER
+@onready var best = $BEST
 #@onready var map = $BackgroundWithTunnels
 #@onready var progress_bar = $background/Panel/MyProgressBar  
 
@@ -20,9 +23,6 @@ func _ready():
 	event_handler.battle_started.connect(init)
 
 func init(): 
-	dark_rect.position.x = 1200  
-	dark_rect.position.y = 328  
-	dark_rect.visible = true
 	
 	# Stop player movement
 	var player = get_tree().get_first_node_in_group("Player")
@@ -37,7 +37,10 @@ func init():
 		enemy.set_physics_process(false)
 		enemy.set_process(false)
 		player.set_deferred("motion_mode", 0)
-
+	
+	mash_space.position.x = 602  
+	mash_space.position.y = 346  
+	
 	# Set initial positions for rat and cat (off-screen)
 	rat.position.x = -300  
 	cat.position.x = 1200  
@@ -59,6 +62,8 @@ func init():
 	#var midpoint = map.position
 
 	# Example: Positioning something at the midpoint
+	battle_animation.position.x = 561  
+	battle_animation.position.y = 330  
 	battle_animation.play("fight")
 
 	# Show battle background
@@ -91,12 +96,21 @@ func _on_mash_timer_timeout():
 	# Determine the outcome based on mash count
 	if mash_count >= 30:
 		print("Best Outcome!")
+		best.visible = true
+		best.position.x = 584
+		best.position.y = 327
 		event_handler.emit_signal("best_battle")
 	elif mash_count >= 20:
 		print("Better Outcome!")
+		better.visible = true
+		better.position.x = 584
+		better.position.y = 327
 		event_handler.emit_signal("better_battle")
 	elif mash_count >= 10:
 		print("Good Outcome!")
+		good.visible = true
+		good.position.x = 584
+		good.position.y = 327
 		event_handler.emit_signal("good_battle")
 	else:
 		print("Failed Outcome!")
@@ -104,7 +118,9 @@ func _on_mash_timer_timeout():
 	battle_animation.visible = false
 	cat.visible = true
 	rat.visible = true
-		
+	
+	mash_space.visible = false
+	
 	# Create tweens for sliding out
 	var tween = create_tween()
 	tween.tween_property(rat, "position:x", -300, 0.8).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
@@ -113,9 +129,11 @@ func _on_mash_timer_timeout():
 	await tween.finished  # Wait for slide-out animation
 	
 	# Hide battle UI
-	dark_rect.visible = false
 	visible = false
 	$background.visible = false
+	good.visible = false
+	better.visible = false
+	best.visible = false
 
 	# Unpause the game
 	get_tree().paused = false
