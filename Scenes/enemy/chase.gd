@@ -9,7 +9,7 @@ extends CharacterBody2D
 @export var texture_left: Texture2D
 @export var texture_right: Texture2D
 
-const SPEED = 120
+const SPEED = 0
 @export var chase_enabled: bool = false
 
 @export var cage_position_node: Node2D
@@ -73,20 +73,20 @@ func _on_CageTimer_timeout() -> void:
 
 func _on_hit_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-			event_handler.emit_signal("battle_started")
-			print("Ghost hit") # Debug- delete later
-		#if false:
-			##event_handler.emit_signal("battle_started")
-			##print("Ghost hit") # Debug- delete later
-			#pass
-		#else:
-			#var anim_player = get_node("/root/main/GameOverUI/AnimationPlayer2")
-			#var full_screen_image = get_node("/root/main/GameOverUI/FullScreenImage")
-			#var color = get_node("/root/main/GameOverUI/ColorRect")
-			#color.visible=true
-			#full_screen_image.visible= true
-			#get_tree().paused=true
-			#anim_player.play("lose_screen_fade")
+			#event_handler.emit_signal("battle_started")
+			#print("Ghost hit") # Debug- delete later
+		if false:
+			#event_handler.emit_signal("battle_started")
+			#print("Ghost hit") # Debug- delete later
+			pass
+		else:
+			var anim_player = get_node("/root/main/GameOverUI/AnimationPlayer2")
+			var full_screen_image = get_node("/root/main/GameOverUI/FullScreenImage")
+			var color = get_node("/root/main/GameOverUI/ColorRect")
+			color.visible=true
+			full_screen_image.visible= true
+			get_tree().paused=true
+			anim_player.play("lose_screen_fade")
 
 func _on_best_battle():
 	print("Chase Best battle!")  
