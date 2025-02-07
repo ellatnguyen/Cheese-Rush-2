@@ -1,9 +1,10 @@
+AudioStreamPlayer2D
+Node
 CollisionShape2D
 Area2D
 ColorRect
 Node2D
 Sprite2D
-Node
 NavigationRegion2D
 NavigationAgent2D
 Marker2D
