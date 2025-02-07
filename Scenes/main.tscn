@@ -1,4 +1,4 @@
-[gd_scene load_steps=97 format=3 uid="uid://cb57d5h41nkfm"]
+[gd_scene load_steps=100 format=3 uid="uid://cb57d5h41nkfm"]
 
 [ext_resource type="Texture2D" uid="uid://drpdpip3qludd" path="res://Assets/Walls/wall_atlas_test.png" id="1_fh24l"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_nap10"]
@@ -14,8 +14,11 @@
 [ext_resource type="PackedScene" uid="uid://c4hb06tmg4hva" path="res://Scenes/enemy/chase.tscn" id="11_q2hgy"]
 [ext_resource type="PackedScene" uid="uid://ckflrfkih80qb" path="res://Scenes/knife.tscn" id="13_fyaic"]
 [ext_resource type="Script" path="res://Scenes/pellets_manager.gd" id="14_rv7aq"]
+[ext_resource type="Texture2D" uid="uid://bk7v57vt4uwc" path="res://Final Assets/pizza cutter pop up.PNG" id="15_rxn8y"]
 [ext_resource type="Script" path="res://Scenes/battle_scene.gd" id="16_ekqvu"]
+[ext_resource type="Script" path="res://Scenes/ui.gd" id="16_u3tth"]
 [ext_resource type="Texture2D" uid="uid://igk6q2ajp7jt" path="res://Final Assets/Rat Battle/cat battle/Battle Asset,CatRightOnlyAnimaiton-0.png" id="17_cfc05"]
+[ext_resource type="FontFile" uid="uid://dgbcmjxmdaivu" path="res://Final Assets/Fonts/Scorefont-Regular.ttf" id="17_uwud5"]
 [ext_resource type="Texture2D" uid="uid://bq4ui4psbcvds" path="res://Final Assets/Rat Battle/rat battle/BattleSequinceanimaiton, RatonlyLEft-0.png" id="18_sw4vy"]
 [ext_resource type="Texture2D" uid="uid://ddng2pjuro7bm" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-0.png" id="20_ddmpr"]
 [ext_resource type="Texture2D" uid="uid://c3663ul00ouho" path="res://Final Assets/buttons and health bars.PNG" id="21_n5e3x"]
@@ -596,6 +599,7 @@ animations = [{
 script = ExtResource("1_nap10")
 
 [node name="TileMap" type="TileMap" parent="."]
+visible = false
 position = Vector2(21, -64)
 tile_set = SubResource("TileSet_kmh2q")
 navigation_visibility_mode = 1
@@ -1484,7 +1488,46 @@ rotation = -0.232129
 scale = Vector2(8, 8)
 collision_mask = 2
 
+[node name="PizzaCutterPopUp" type="Sprite2D" parent="Knife/Area2D"]
+visible = false
+position = Vector2(99.5816, 69.395)
+rotation = 0.232129
+scale = Vector2(0.0870918, 0.0870918)
+texture = ExtResource("15_rxn8y")
+
+[node name="UI" type="CanvasLayer" parent="."]
+script = ExtResource("16_u3tth")
+
+[node name="MarginContainer" type="MarginContainer" parent="UI"]
+offset_left = 775.0
+offset_top = 156.0
+offset_right = 1131.0
+offset_bottom = 273.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/MarginContainer"]
+layout_mode = 2
+
+[node name="ScoreLabel" type="Label" parent="UI/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0.607843, 1)
+theme_override_fonts/font = ExtResource("17_uwud5")
+theme_override_font_sizes/font_size = 30
+text = "Score: 0"
+
+[node name="FinalScore" type="Label" parent="UI"]
+visible = false
+offset_left = 847.0
+offset_top = 478.0
+offset_right = 1007.0
+offset_bottom = 544.0
+theme_override_colors/font_color = Color(0, 0, 0.607843, 1)
+theme_override_fonts/font = ExtResource("17_uwud5")
+theme_override_font_sizes/font_size = 30
+text = "0"
+horizontal_alignment = 1
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="battle_scene" type="Control" parent="CanvasLayer"]
 layout_mode = 3

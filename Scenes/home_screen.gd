@@ -3,11 +3,13 @@ extends Control
 @onready var button = $Homescreen/Button
 @onready var animated_sprite = $Homescreen/AnimatedSprite2D
 @onready var homescreen = $"."
+@onready var labels = get_node("/root/main/UI/MarginContainer/HBoxContainer/ScoreLabel")
 
 
 func _ready():
 	# Initially, MainScreen is visible
 	homescreen.visible = true
+	labels.visible = false
 	
 	# Make the button invisible but still clickable (transparent)
 	button.modulate.a = 0  # Set alpha to 0 (fully transparent)
@@ -27,3 +29,4 @@ func _on_button_pressed():
 	
 	# Hide the homescreen and reveal the main game
 	homescreen.visible = false  # Hides the MainScreen (home screen)
+	labels.visible = true

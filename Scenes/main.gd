@@ -3,7 +3,11 @@ extends Node
 @onready var chase_cat = $Enemys/chase_cat
 @onready var scatter_cat = $Enemys/Scatter_cat
 
+@onready var ui = $UI
+@onready var pellet_manager = $Pellets
+
 func _ready() -> void:
+	pellet_manager.ui = ui
 	# We will connect the signals from large pellets to _on_large_pellet_eaten()
 	# in code OR via the Editor (next steps).
 	pass
