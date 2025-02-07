@@ -35,6 +35,10 @@ func on_pellet_eaten():
 			var full_screen_image = get_node(full_screen_image_path)
 			var color = get_node(color_path)
 			var final = get_node("/root/main/UI/FinalScore")
+			var gameplaymusic = get_node("/root/main/GameplayMusic")
+			var winmusic = get_node("/root/main/WinMusic")
+			gameplaymusic.stop()
+			winmusic.play()
 			
 			final.visible = true
 
