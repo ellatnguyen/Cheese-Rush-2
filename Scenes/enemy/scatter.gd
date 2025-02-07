@@ -16,6 +16,7 @@ var current_target_index: int = 0
 @export var cage_position_node: Node2D
 
 var was_just_hit: bool = false
+const PoofEffect = preload("res://Scenes/enemy/poof.tscn")
 
 func _ready() -> void:
 	# Event Handler
@@ -98,8 +99,7 @@ func teleport_back_to_cage_for_7_seconds() -> void:
 
 	if cage_position_node:
 		global_position = cage_position_node.global_position
-	
-	# Setting the target position to the same position ensures no path
+
 	nav_agent.set_target_position(global_position)
 	var cage_timer = Timer.new()
 	cage_timer.wait_time = 10
@@ -133,12 +133,20 @@ func _on_hit_area_body_entered(body: Node2D) -> void:
 			#anim_player.play("lose_screen_fade")
 
 func _on_best_battle():
+	show_poof_at_position(global_position)
 	teleport_back_to_cage_for_7_seconds()  
 
 func _on_better_battle():
 	if was_just_hit:
+		show_poof_at_position(global_position)
 		teleport_back_to_cage_for_7_seconds()
 		was_just_hit  = false
 
 func _on_good_battle():
 	print("Scatter Good battle!")  
+	
+func show_poof_at_position(pos: Vector2) -> void:
+	var poof = PoofEffect.instantiate()
+	get_tree().current_scene.add_child(poof)
+	poof.global_position = pos
+	poof.get_node("AnimatedSprite2D").play("poof")
