@@ -1,7 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1738902325
+::res://::1738907360
 cheese.gd::GDScript::-1::1738900777::0::1::::<>Area2D<>::
-default_env.tres::Environment::265446521816995477::1738901763::0::1::::<><>::
+default_env.tres::Environment::265446521816995477::1738907359::0::1::::<><>::
 game.gd::GDScript::-1::1738900777::0::1::::<>Node<>::
 icon.png::CompressedTexture2D::4739273742389358977::1738812498::1738902143::1::::<><>::
 icon.svg::CompressedTexture2D::1560022321525067346::1738900777::1738902143::1::::<><>::
@@ -75,12 +75,13 @@ Wall_37.png::Texture2D::8738895695163185359::1738900777::1738902152::1::res://As
 wall_atlas.png::CompressedTexture2D::16532947320530093::1738900777::1738902147::1::::<><>::
 wall_atlas_test2.png::CompressedTexture2D::5497960232308025044::1738902152::1738902152::1::::<><>::
 wall_atlas_test.png::CompressedTexture2D::8383647441776519377::1738900777::1738902147::1::::<><>::
-::res://Final Assets/::1738902152
+::res://Final Assets/::1738907361
 buttons and health bars.PNG::CompressedTexture2D::6804057997261778476::1738901522::1738902143::1::::<><>::
 lose screen.PNG::CompressedTexture2D::1519190324293306952::1738901522::1738902143::1::::<><>::
 Mouse Sprite Sheet.png::CompressedTexture2D::619703506915294356::1738900777::1738902152::1::::<><>::
-::res://Final Assets/Audio_Files/::1738902242
-VGM Project 1 - Gameplay - Flow 1.wav::AudioStreamWAV::6057880257825865103::1738902242::1738902327::1::::<><>::
+VGM Project 1 - Gameplay - Flow 1.wav::AudioStreamWAV::6057880257825865103::1738902242::1738907361::1::::<><>::
+::res://Final Assets/Audio_Files/::1738907381
+VGM Project 1 - Gameplay - Flow 1.wav::AudioStreamWAV::3515759135075725343::1738907381::1738907382::1::::<><>::
 ::res://Final Assets/Background/::1738902148
 background.PNG::CompressedTexture2D::4554468015398452004::1738900777::1738902148::1::::<><>::
 background_layout.PNG::CompressedTexture2D::4198658562640589614::1738900777::1738902148::1::::<><>::
@@ -192,18 +193,21 @@ SmallSpriteCat_NonAnim_moveup.png::CompressedTexture2D::9114479557765591437::173
 ::res://Resources/::1738900777
 movement_targets.gd::GDScript::-1::1738900777::0::1::::MyResource<>Resource<>::
 red_movement_targets.tres::Resource/MyResource::5729244483593350158::1738900777::0::1::::<><>::res://Resources/movement_targets.gd
-::res://Scenes/::1738901763
+::res://Scenes/::1738907359
+audio.tscn::PackedScene::456659998457984316::1738904358::0::1::::<><>::
+audio_stream_player_2d.gd::GDScript::-1::1738907359::0::1::::<>RefCounted<>::
+audio_test.tscn::PackedScene::5375652088763542849::1738907359::0::1::::<><>::uid://cskqnxu3dc4r0::::res://Final Assets/VGM Project 1 - Gameplay - Flow 1.wav<>res://Scenes/audio_stream_player_2d.gd
 battle_scene.gd::GDScript::-1::1738901522::0::1::::<>Control<>::
 connector.gd::GDScript::-1::1738900777::0::1::::<>Node2D<>::
-connector.tscn::PackedScene::8465036471805671906::1738901763::0::1::::<><>::res://Scenes/connector.gd
-large_pellet.tscn::PackedScene::1221371751568210824::1738901762::0::1::::<><>::res://Scenes/pellet.gd<>uid://eap8ncvpkwew::::res://Final Assets/Collectables/collectables sprite sheet.png
+connector.tscn::PackedScene::8465036471805671906::1738906845::0::1::::<><>::res://Scenes/connector.gd
+large_pellet.tscn::PackedScene::1221371751568210824::1738907216::0::1::::<><>::res://Scenes/pellet.gd<>uid://eap8ncvpkwew::::res://Final Assets/Collectables/collectables sprite sheet.png
 main.gd::GDScript::-1::1738900777::0::1::::<>Node<>::
-main.tscn::PackedScene::4906911432663299270::1738901762::0::1::::<><>::uid://drpdpip3qludd::::res://Assets/Walls/wall_atlas_test.png<>res://Scenes/main.gd<>uid://cvlap2s66h85y::::res://map_sketch.jpg<>uid://4vvoc508yu65::::res://Scenes/pacman.tscn<>uid://c48jm0yjkvhoi::::res://Final Assets/Background/background_with_tunnels.png<>uid://23uepjxoqfxk::::res://Scenes/enemy/scatter.tscn<>uid://cvql6usga5o7h::::res://Scenes/pellet.tscn<>uid://rnv2xlnlcmuq::::res://Scenes/large_pellet.tscn<>uid://chgwhinauxx5n::::res://Final Assets/Background/background_without_overlay.PNG<>uid://2df3jevr5rey::::res://lose screen.PNG<>uid://d24ee8s5dwva0::::res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_moveup.png<>uid://q7cs2sjryst::::res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_nonAnim_Movedown.png<>uid://dsur6criaqsgo::::res://Scenes/connector.tscn<>uid://bprpyks8orbpo::::res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_MoveLeft.png<>uid://bsfht1pq1qqot::::res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_MoveRight.png<>uid://c4hb06tmg4hva::::res://Scenes/enemy/chase.tscn<>res://Scenes/battle_scene.gd<>uid://igk6q2ajp7jt::::res://Final Assets/Rat Battle/cat battle/Battle Asset,CatRightOnlyAnimaiton-0.png<>uid://bq4ui4psbcvds::::res://Final Assets/Rat Battle/rat battle/BattleSequinceanimaiton, RatonlyLEft-0.png
+main.tscn::PackedScene::4906911432663299270::1738906845::0::1::::<><>::uid://drpdpip3qludd::::res://Assets/Walls/wall_atlas_test.png<>res://Scenes/main.gd<>uid://cvlap2s66h85y::::res://map_sketch.jpg<>uid://4vvoc508yu65::::res://Scenes/pacman.tscn<>uid://c48jm0yjkvhoi::::res://Final Assets/Background/background_with_tunnels.png<>uid://23uepjxoqfxk::::res://Scenes/enemy/scatter.tscn<>uid://cvql6usga5o7h::::res://Scenes/pellet.tscn<>uid://rnv2xlnlcmuq::::res://Scenes/large_pellet.tscn<>uid://chgwhinauxx5n::::res://Final Assets/Background/background_without_overlay.PNG<>uid://2df3jevr5rey::::res://lose screen.PNG<>uid://d24ee8s5dwva0::::res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_moveup.png<>uid://q7cs2sjryst::::res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_nonAnim_Movedown.png<>uid://dsur6criaqsgo::::res://Scenes/connector.tscn<>uid://bprpyks8orbpo::::res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_MoveLeft.png<>uid://bsfht1pq1qqot::::res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_MoveRight.png<>uid://c4hb06tmg4hva::::res://Scenes/enemy/chase.tscn<>res://Scenes/battle_scene.gd<>uid://igk6q2ajp7jt::::res://Final Assets/Rat Battle/cat battle/Battle Asset,CatRightOnlyAnimaiton-0.png<>uid://bq4ui4psbcvds::::res://Final Assets/Rat Battle/rat battle/BattleSequinceanimaiton, RatonlyLEft-0.png
 main_s.tscn::PackedScene::5665444587561139788::1738900777::0::1::::<><>::uid://drpdpip3qludd::::res://Assets/Walls/wall_atlas_test.png<>uid://cvlap2s66h85y::::res://map_sketch.jpg<>uid://4vvoc508yu65::::res://Scenes/pacman.tscn<>uid://chgwhinauxx5n::::res://Final Assets/Background/background_without_overlay.PNG<>uid://23uepjxoqfxk::::res://Scenes/enemy/scatter.tscn<>uid://cvql6usga5o7h::::res://Scenes/pellet.tscn<>uid://rnv2xlnlcmuq::::res://Scenes/large_pellet.tscn
 pacman.gd::GDScript::-1::1738901314::0::1::::Player<>CharacterBody2D<>::
-pacman.tscn::PackedScene::2080128608872743676::1738901762::0::1::::<><>::res://Scenes/pacman.gd<>uid://djjjcf5x4gywp::::res://Final Assets/Sprites/Small Sprite, Mouse Non-Animated/Small_Sprite_nonAnim_moveup.png<>uid://i3goqyd5udbg::::res://Final Assets/Mouse Sprite Sheet.png<>uid://c8s0sptkuqhfj::::res://Final Assets/Sprites/Small Sprite, Mouse Non-Animated/Small_Sprite_normal_nonanim_movingdown.png
+pacman.tscn::PackedScene::2080128608872743676::1738906845::0::1::::<><>::res://Scenes/pacman.gd<>uid://djjjcf5x4gywp::::res://Final Assets/Sprites/Small Sprite, Mouse Non-Animated/Small_Sprite_nonAnim_moveup.png<>uid://i3goqyd5udbg::::res://Final Assets/Mouse Sprite Sheet.png<>uid://c8s0sptkuqhfj::::res://Final Assets/Sprites/Small Sprite, Mouse Non-Animated/Small_Sprite_normal_nonanim_movingdown.png
 pellet.gd::GDScript::-1::1738901314::0::1::::Pellet<>Area2D<>::
-pellet.tscn::PackedScene::6280561452928612783::1738901762::0::1::::<><>::res://Scenes/pellet.gd<>uid://eap8ncvpkwew::::res://Final Assets/Collectables/collectables sprite sheet.png
+pellet.tscn::PackedScene::6280561452928612783::1738906845::0::1::::<><>::res://Scenes/pellet.gd<>uid://eap8ncvpkwew::::res://Final Assets/Collectables/collectables sprite sheet.png
 ::res://Scenes/enemy/::1738901522
 chase.gd::GDScript::-1::1738901522::0::1::::<>CharacterBody2D<>::
 chase.tscn::PackedScene::6822875497137478638::1738901522::0::1::::<><>::res://Scenes/enemy/chase.gd<>uid://d24ee8s5dwva0::::res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_moveup.png

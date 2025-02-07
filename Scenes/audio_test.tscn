@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ciuag7obgnwpd"]
 
-[ext_resource type="AudioStream" uid="uid://cskqnxu3dc4r0" path="res://Final Assets/Audio_Files/VGM Project 1 - Gameplay - Flow 1.wav" id="1_qd3i3"]
+[ext_resource type="AudioStream" uid="uid://cskqnxu3dc4r0" path="res://Final Assets/VGM Project 1 - Gameplay - Flow 1.wav" id="1_qd3i3"]
 [ext_resource type="Script" path="res://Scenes/audio_stream_player_2d.gd" id="2_ryox2"]
 
 [node name="AudioTest" type="Node"]
