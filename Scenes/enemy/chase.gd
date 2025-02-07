@@ -7,12 +7,14 @@ extends CharacterBody2D
 @export var texture_down: Texture2D
 @export var texture_left: Texture2D
 @export var texture_right: Texture2D
-const SPEED = 120
+const spd = 120
+const run_away_spd = 240
 @export var chase_enabled: bool = false
 @export var cage_position_node: Node2D
 var was_just_hit: bool = false
 
 const PoofEffect = preload("res://Scenes/enemy/poof.tscn")
+var runaway_enabled: bool = false
 
 func _ready() -> void:
 	# Event Handler
@@ -30,9 +32,15 @@ func _ready() -> void:
 	chase_timer.start()
 
 func _physics_process(delta: float) -> void:
-	if chase_enabled:
+	if runaway_enabled:
+		# Compute the direction away from the player:
+		var direction = (global_position - target_to_chase.global_position).normalized()
+		velocity = direction * run_away_spd
+		move_and_slide()
+		_update_sprite_direction(velocity)
+	elif chase_enabled:
 		navigation_agent.target_position = target_to_chase.global_position
-		velocity = global_position.direction_to(navigation_agent.get_next_path_position()) * SPEED
+		velocity = global_position.direction_to(navigation_agent.get_next_path_position()) * spd
 		move_and_slide()
 		_update_sprite_direction(velocity)
 
@@ -57,7 +65,7 @@ func teleport_back_to_cage_for_7_seconds() -> void:
 		global_position = cage_position_node.global_position
 	velocity = Vector2.ZERO
 
-	# Start a 7-second cage timer
+	# Start a cage timer
 	var cage_timer = Timer.new()
 	cage_timer.wait_time = 10
 	cage_timer.one_shot = true
@@ -96,8 +104,23 @@ func _on_better_battle():
 		was_just_hit  = false
 
 func _on_good_battle():
-	print("Scatter Good battle!")  
-	
+	# When a "good battle" occurs, trigger scatter (runaway) mode.
+	print("Scatter Good battle!")
+	runaway_enabled = true
+	chase_enabled = false
+	# Start a 10-second timer to end runaway mode:
+	var scatter_timer = Timer.new()
+	scatter_timer.wait_time = 10.0
+	scatter_timer.one_shot = true
+	scatter_timer.connect("timeout", Callable(self, "_on_ScatterTimer_timeout"))
+	add_child(scatter_timer)
+	scatter_timer.start()
+
+func _on_ScatterTimer_timeout() -> void:
+	# End scatter mode and resume chase.
+	runaway_enabled = false
+	chase_enabled = true
+
 func show_poof_at_position(pos: Vector2) -> void:
 	var poof = PoofEffect.instantiate()
 	get_tree().current_scene.add_child(poof)
