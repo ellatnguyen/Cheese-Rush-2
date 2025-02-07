@@ -1,146 +1,193 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1738728759
-cheese.gd::GDScript::-1::1738728717::0::1::::<>Area2D<>::
-default_env.tres::Environment::265446521816995477::1738728717::0::1::::<><>::
-game.gd::GDScript::-1::1738728717::0::1::::<>Node<>::
-icon.png::CompressedTexture2D::4739273742389358977::1738728717::1738728762::1::::<><>::
-icon.svg::CompressedTexture2D::1560022321525067346::1738728717::1738728762::1::::<><>::
-map_sketch.jpg::CompressedTexture2D::6269543473375285408::1738728717::1738728766::1::::<><>::
-mouse.gd::GDScript::-1::1738728717::0::1::::<>CharacterBody2D<>::
-placeholdertiles.tres::TileSet::5518016808055717549::1738728717::0::1::::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-README.md::TextFile::-1::1738728717::0::1::::<><>::
-spawner.gd::GDScript::-1::1738728717::0::1::::<>Node2D<>::
-::res://Assets/::1738728717
-::res://Assets/Fonts/::1738728717
-background_with_tunnels.png::CompressedTexture2D::3204240453443670369::1738728717::1738728763::1::::<><>::
-upheavtt.ttf::FontFile::4940748717333841145::1738728717::1738728761::1::::<><>::
-::res://Assets/Fruits/::1738728717
-Fruit_Apple.png::CompressedTexture2D::8046766052358523591::1738728717::1738728763::1::::<><>::
-Fruit_Bell.png::CompressedTexture2D::3877112185405466518::1738728717::1738728763::1::::<><>::
-Fruit_Cherry.png::CompressedTexture2D::7727553405036550862::1738728717::1738728763::1::::<><>::
-Fruit_GalaxianStarship.png::CompressedTexture2D::6815964960119971557::1738728717::1738728763::1::::<><>::
-Fruit_Key.png::CompressedTexture2D::8916529770811764504::1738728717::1738728763::1::::<><>::
-Fruit_Melon.png::CompressedTexture2D::844565813354706921::1738728717::1738728763::1::::<><>::
-Fruit_Orange.png::CompressedTexture2D::3409079504265450551::1738728717::1738728763::1::::<><>::
-Fruit_Strawberry.png::CompressedTexture2D::4807263429679619945::1738728717::1738728763::1::::<><>::
-::res://Assets/Ghost/::1738728717
-Ghost_Body_01.png::CompressedTexture2D::8274682049717872421::1738728717::1738728763::1::::<><>::
-Ghost_Body_02.png::CompressedTexture2D::9055407830501505757::1738728717::1738728763::1::::<><>::
-Ghost_Eyes_Down.png::CompressedTexture2D::6020862603971629612::1738728717::1738728763::1::::<><>::
-Ghost_Eyes_Left.png::CompressedTexture2D::1931909775296698333::1738728717::1738728763::1::::<><>::
-Ghost_Eyes_Right.png::CompressedTexture2D::7965706268693817843::1738728717::1738728763::1::::<><>::
-Ghost_Eyes_Up.png::CompressedTexture2D::776323162505675860::1738728717::1738728763::1::::<><>::
-Ghost_Vulnerable_Blue_01.png::CompressedTexture2D::1344355115526539164::1738728717::1738728763::1::::<><>::
-Ghost_Vulnerable_Blue_02.png::CompressedTexture2D::7384788489010832537::1738728717::1738728762::1::::<><>::
-Ghost_Vulnerable_White_01.png::CompressedTexture2D::4106582703573880892::1738728717::1738728763::1::::<><>::
-Ghost_Vulnerable_White_02.png::CompressedTexture2D::9029622029366187724::1738728717::1738728763::1::::<><>::
-::res://Assets/Map/::1738728717
-origmaps_2x.png::CompressedTexture2D::2175801451264481245::1738728717::1738728763::1::::<><>::
-::res://Assets/Pacman/::1738728717
-direction_pointer.png::CompressedTexture2D::1145063599141741791::1738728717::1738728763::1::::<><>::
-Pacman_01.png::CompressedTexture2D::1112712340989041182::1738728717::1738728763::1::::<><>::
-Pacman_02.png::CompressedTexture2D::917504872050284237::1738728717::1738728763::1::::<><>::
-Pacman_03.png::CompressedTexture2D::1456868467444960845::1738728717::1738728763::1::::<><>::
-Pacman_Death_01.png::CompressedTexture2D::6105894317527933998::1738728717::1738728763::1::::<><>::
-Pacman_Death_02.png::CompressedTexture2D::3736246918774762694::1738728717::1738728763::1::::<><>::
-Pacman_Death_03.png::CompressedTexture2D::1637750315998850277::1738728717::1738728763::1::::<><>::
-Pacman_Death_04.png::CompressedTexture2D::8358847996932356278::1738728717::1738728763::1::::<><>::
-Pacman_Death_05.png::CompressedTexture2D::6155147792753066110::1738728717::1738728763::1::::<><>::
-Pacman_Death_06.png::CompressedTexture2D::6292633740705553859::1738728717::1738728763::1::::<><>::
-Pacman_Death_07.png::CompressedTexture2D::4461930919310261500::1738728717::1738728763::1::::<><>::
-Pacman_Death_08.png::CompressedTexture2D::2565499895426312557::1738728717::1738728761::1::::<><>::
-Pacman_Death_09.png::CompressedTexture2D::8568210408513905439::1738728717::1738728761::1::::<><>::
-Pacman_Death_10.png::CompressedTexture2D::7164876418441981382::1738728717::1738728761::1::::<><>::
-Pacman_Death_11.png::CompressedTexture2D::3295270843444730258::1738728717::1738728761::1::::<><>::
-::res://Assets/Pellet/::1738728717
-pellets.png::CompressedTexture2D::8761103356864932379::1738728767::1738728767::1::::<><>::
-Pellet_Large.png::Texture2D::5878388711458051274::1738728717::1738728767::1::res://Assets/Pellet/pellets.png::<><>::uid://dw27dew0sauw6::::res://Assets/Pellet/pellets.png
-Pellet_Medium.png::Texture2D::68228180995104463::1738728717::1738728767::1::res://Assets/Pellet/pellets.png::<><>::uid://dw27dew0sauw6::::res://Assets/Pellet/pellets.png
-Pellet_Small.png::Texture2D::2762906375941105429::1738728717::1738728767::1::res://Assets/Pellet/pellets.png::<><>::uid://dw27dew0sauw6::::res://Assets/Pellet/pellets.png
-::res://Assets/Sounds/::1738728717
-pacman_chomp.wav::AudioStreamWAV::6454762173403191858::1738728717::1738728767::1::::<><>::
-pacman_death.wav::AudioStreamWAV::1363408538072922770::1738728717::1738728767::1::::<><>::
-pacman_eatghost.wav::AudioStreamWAV::7027686761978367866::1738728717::1738728767::1::::<><>::
-pacman_power_pellet.wav::AudioStreamWAV::1397499369666775141::1738728717::1738728767::1::::<><>::
-::res://Assets/Walls/::1738728717
-Wall_00.png::Texture2D::6041795656637365603::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_01.png::Texture2D::5940747117145670226::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_02.png::Texture2D::2397668745219171676::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_03.png::Texture2D::4399031884251205612::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_04.png::Texture2D::4315710631936942862::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_05.png::Texture2D::4539166114427121979::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_06.png::Texture2D::3549352038417958591::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_07.png::Texture2D::7211852738620354722::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_08.png::Texture2D::8474464896665277660::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_09.png::Texture2D::2688206519611868442::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_10.png::Texture2D::7578262798306363012::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_11.png::Texture2D::2404423509749975934::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_12.png::Texture2D::4569792670467908669::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_13.png::Texture2D::7109326111559251589::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_14.png::Texture2D::5445584358570093119::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_15.png::Texture2D::2711980569374167025::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_16.png::Texture2D::278747248976428215::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_17.png::Texture2D::5952535580972238550::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_18.png::Texture2D::1783727576460520716::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_19.png::Texture2D::904850213673722900::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_20.png::Texture2D::1705714064843525684::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_21.png::Texture2D::8843617166231713478::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_22.png::Texture2D::4519273237335166517::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_23.png::Texture2D::1006938125677371673::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_24.png::Texture2D::8211941872554721316::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_25.png::Texture2D::1675047153961238248::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_26.png::Texture2D::1945055548185923211::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_27.png::Texture2D::7255926332694612535::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_28.png::Texture2D::8515171519227466908::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_29.png::Texture2D::7194626714554262200::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_30.png::Texture2D::5373464193911773118::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_31.png::Texture2D::3194223368321347635::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_32.png::Texture2D::4540620650029545412::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_33.png::Texture2D::8787716971394874893::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_34.png::Texture2D::7909784464256395379::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_35.png::Texture2D::5029019987301360784::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_36.png::Texture2D::4462194622359897456::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-Wall_37.png::Texture2D::8738895695163185359::1738728717::1738728768::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
-wall_atlas.png::CompressedTexture2D::16532947320530093::1738728717::1738728761::1::::<><>::
-wall_atlas_test2.png::CompressedTexture2D::5497960232308025044::1738728767::1738728768::1::::<><>::
-wall_atlas_test.png::CompressedTexture2D::8383647441776519377::1738728717::1738728761::1::::<><>::
-::res://Final Assets/::1738728717
-Mouse Sprite Sheet.png::CompressedTexture2D::619703506915294356::1738728717::1738728767::1::::<><>::
-::res://Final Assets/Background/::1738728717
-background.PNG::CompressedTexture2D::4554468015398452004::1738728717::1738728761::1::::<><>::
-background_layout.PNG::CompressedTexture2D::4198658562640589614::1738728717::1738728761::1::::<><>::
-background_tiles.PNG::CompressedTexture2D::7150661754619363600::1738728717::1738728761::1::::<><>::
-background_walls.PNG::CompressedTexture2D::5150642518673293595::1738728717::1738728761::1::::<><>::
-background_without_overlay.PNG::CompressedTexture2D::5277898254071900829::1738728717::1738728761::1::::<><>::
-background_with_tunnels.png::CompressedTexture2D::6877011531817046504::1738728717::1738728762::1::::<><>::
-::res://Final Assets/Collectables/::1738728717
-collectables sprite sheet.png::CompressedTexture2D::281725747510256342::1738728717::1738728761::1::::<><>::
-::res://Final Assets/Sprites/::1738728717
-background_with_tunnels.png::CompressedTexture2D::8696882203943797011::1738728717::1738728762::1::::<><>::
-::res://Final Assets/Sprites/Small Sprite, Mouse Non-Animated/::1738728717
-Small_Sprite_nonAnim_moveup.png::CompressedTexture2D::7810091378175756603::1738728717::1738728762::1::::<><>::
-Small_Sprite_normal_nonanim_moving Left.png::CompressedTexture2D::514488719596885862::1738728717::1738728762::1::::<><>::
-Small_Sprite_normal_nonanim_movingdown.png::CompressedTexture2D::7127782893807050639::1738728717::1738728762::1::::<><>::
-Small_Sprite_Pizzacuttermode_nonAnim_Moveright.png::CompressedTexture2D::6705872176691470701::1738728717::1738728762::1::::<><>::
-Small_Sprite_PizzacutterMode_NonAnim_movingdown.png::CompressedTexture2D::5040646267825098756::1738728717::1738728762::1::::<><>::
-Small_Sprite_PizzaCutterMode_Nonanim_movingup.png::CompressedTexture2D::8968352322758590727::1738728717::1738728762::1::::<><>::
-Small_sprite_PizzaCutterMode_NonAnim_To Left.png::CompressedTexture2D::5521989902276703399::1738728717::1738728762::1::::<><>::
-Small_Sprite_unanim_to right.png::CompressedTexture2D::1891867305214839272::1738728717::1738728762::1::::<><>::
-::res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/::1738728717
-SmallSpriteCat_nonAnim_Movedown.png::CompressedTexture2D::34977547381876079::1738728717::1738728762::1::::<><>::
-SmallSpriteCat_NonAnim_MoveLeft.png::CompressedTexture2D::3475301928586545944::1738728717::1738728762::1::::<><>::
-SmallSpriteCat_NonAnim_MoveRight.png::CompressedTexture2D::3660602096523070479::1738728717::1738728762::1::::<><>::
-SmallSpriteCat_NonAnim_moveup.png::CompressedTexture2D::9114479557765591437::1738728717::1738728762::1::::<><>::
-::res://Resources/::1738728717
-movement_targets.gd::GDScript::-1::1738728717::0::1::::MyResource<>Resource<>::
-red_movement_targets.tres::Resource/MyResource::5729244483593350158::1738728717::0::1::::<><>::res://Resources/movement_targets.gd
-::res://Scenes/::1738728717
-ghost.gd::GDScript::-1::1738728717::0::1::::<>Area2D<>::
-ghost.tscn::PackedScene::1954123641189347756::1738728717::0::1::::<><>::uid://dp5k2l5vvacbl::::res://Assets/Ghost/Ghost_Body_01.png<>res://Scenes/ghost.gd<>uid://cr1syy53y0w5q::::res://Assets/Ghost/Ghost_Eyes_Down.png<>uid://q7cs2sjryst::::res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_nonAnim_Movedown.png<>uid://bprpyks8orbpo::::res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_MoveLeft.png<>uid://bsfht1pq1qqot::::res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_MoveRight.png<>uid://d24ee8s5dwva0::::res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_moveup.png
-large_pellet.tscn::PackedScene::1221371751568210824::1738728717::0::1::::<><>::res://Scenes/pellet.gd<>uid://eap8ncvpkwew::::res://Final Assets/Collectables/collectables sprite sheet.png
-main.tscn::PackedScene::4906911432663299270::1738728717::0::1::::<><>::uid://drpdpip3qludd::::res://Assets/Walls/wall_atlas_test.png<>uid://cvlap2s66h85y::::res://map_sketch.jpg<>uid://4vvoc508yu65::::res://Scenes/pacman.tscn<>uid://c48jm0yjkvhoi::::res://Final Assets/Background/background_with_tunnels.png<>uid://23uepjxoqfxk::::res://Scenes/ghost.tscn<>uid://cvql6usga5o7h::::res://Scenes/pellet.tscn<>uid://rnv2xlnlcmuq::::res://Scenes/large_pellet.tscn<>uid://chgwhinauxx5n::::res://Final Assets/Background/background_without_overlay.PNG
-main_s.tscn::PackedScene::5665444587561139788::1738728717::0::1::::<><>::uid://drpdpip3qludd::::res://Assets/Walls/wall_atlas_test.png<>uid://cvlap2s66h85y::::res://map_sketch.jpg<>uid://4vvoc508yu65::::res://Scenes/pacman.tscn<>uid://chgwhinauxx5n::::res://Final Assets/Background/background_without_overlay.PNG<>uid://23uepjxoqfxk::::res://Scenes/ghost.tscn<>uid://cvql6usga5o7h::::res://Scenes/pellet.tscn<>uid://rnv2xlnlcmuq::::res://Scenes/large_pellet.tscn
-pacman.gd::GDScript::-1::1738728717::0::1::::Player<>CharacterBody2D<>::
-pacman.tscn::PackedScene::2080128608872743676::1738728717::0::1::::<><>::res://Scenes/pacman.gd<>uid://djjjcf5x4gywp::::res://Final Assets/Sprites/Small Sprite, Mouse Non-Animated/Small_Sprite_nonAnim_moveup.png<>uid://i3goqyd5udbg::::res://Final Assets/Mouse Sprite Sheet.png<>uid://c8s0sptkuqhfj::::res://Final Assets/Sprites/Small Sprite, Mouse Non-Animated/Small_Sprite_normal_nonanim_movingdown.png
-pellet.gd::GDScript::-1::1738728717::0::1::::Pellet<>Area2D<>::
-pellet.tscn::PackedScene::6280561452928612783::1738728717::0::1::::<><>::res://Scenes/pellet.gd<>uid://eap8ncvpkwew::::res://Final Assets/Collectables/collectables sprite sheet.png
+::res://::1738886822
+cheese.gd::GDScript::-1::1738882581::0::1::::<>Area2D<>::
+default_env.tres::Environment::265446521816995477::1738886817::0::1::::<><>::
+game.gd::GDScript::-1::1738882581::0::1::::<>Node<>::
+icon.png::CompressedTexture2D::4739273742389358977::1738882581::1738886854::1::::<><>::
+icon.svg::CompressedTexture2D::1560022321525067346::1738882581::1738886854::1::::<><>::
+lose screen.PNG::CompressedTexture2D::1901645978549652612::1738886822::1738886854::1::::<><>::
+map_sketch.jpg::CompressedTexture2D::6269543473375285408::1738882581::1738886857::1::::<><>::
+mouse.gd::GDScript::-1::1738886822::0::1::::<>CharacterBody2D<>::
+placeholdertiles.tres::TileSet::5518016808055717549::1738882582::0::1::::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+README.md::TextFile::-1::1738882581::0::1::::<><>::
+spawner.gd::GDScript::-1::1738882582::0::1::::<>Node2D<>::
+::res://Assets/::1738886822
+::res://Assets/Fonts/::1738886817
+background_with_tunnels.png::CompressedTexture2D::3204240453443670369::1738882581::1738886854::1::::<><>::
+upheavtt.ttf::FontFile::4940748717333841145::1738882581::1738886850::1::::<><>::
+::res://Assets/Fruits/::1738886817
+Fruit_Apple.png::CompressedTexture2D::8046766052358523591::1738882581::1738886854::1::::<><>::
+Fruit_Bell.png::CompressedTexture2D::3877112185405466518::1738882581::1738886854::1::::<><>::
+Fruit_Cherry.png::CompressedTexture2D::7727553405036550862::1738882581::1738886854::1::::<><>::
+Fruit_GalaxianStarship.png::CompressedTexture2D::6815964960119971557::1738882581::1738886854::1::::<><>::
+Fruit_Key.png::CompressedTexture2D::8916529770811764504::1738882581::1738886854::1::::<><>::
+Fruit_Melon.png::CompressedTexture2D::844565813354706921::1738882581::1738886854::1::::<><>::
+Fruit_Orange.png::CompressedTexture2D::3409079504265450551::1738882581::1738886854::1::::<><>::
+Fruit_Strawberry.png::CompressedTexture2D::4807263429679619945::1738882581::1738886854::1::::<><>::
+::res://Assets/Map/::1738886817
+origmaps_2x.png::CompressedTexture2D::2175801451264481245::1738882581::1738886854::1::::<><>::
+::res://Assets/Sounds/::1738886835
+blip1.wav::AudioStreamWAV::5253354506757654378::1738886835::1738886857::1::::<><>::
+catscreech1.wav::AudioStreamWAV::4429070149407105745::1738886835::1738886857::1::::<><>::
+catscreech2.wav::AudioStreamWAV::4065759334582075664::1738886835::1738886857::1::::<><>::
+chomp.wav::AudioStreamWAV::7284614385883779358::1738886835::1738886857::1::::<><>::
+deathsound1.wav::AudioStreamWAV::1448312704813299302::1738886835::1738886857::1::::<><>::
+deathsound2.wav::AudioStreamWAV::1256154565672465767::1738886835::1738886857::1::::<><>::
+knife.wav::AudioStreamWAV::5776561380827403200::1738886835::1738886857::1::::<><>::
+movement.wav::AudioStreamWAV::4508169732119456988::1738886835::1738886857::1::::<><>::
+powerup1.wav::AudioStreamWAV::1244103012294975354::1738886835::1738886857::1::::<><>::
+ratdeath3.wav::AudioStreamWAV::6544137721222965307::1738886835::1738886857::1::::<><>::
+squeak1.wav::AudioStreamWAV::8474611766829944221::1738886835::1738886857::1::::<><>::
+squeak2.wav::AudioStreamWAV::8327987123002558385::1738886835::1738886857::1::::<><>::
+yippee.wav::AudioStreamWAV::6517158862976457317::1738886835::1738886857::1::::<><>::
+::res://Assets/Sounds/Rat Battle/::1738886822
+::res://Assets/Sounds/Rat Battle/battle scene pop up/::1738886822
+::res://Assets/Walls/::1738886817
+Wall_00.png::Texture2D::6041795656637365603::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_01.png::Texture2D::5940747117145670226::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_02.png::Texture2D::2397668745219171676::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_03.png::Texture2D::4399031884251205612::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_04.png::Texture2D::4315710631936942862::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_05.png::Texture2D::4539166114427121979::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_06.png::Texture2D::3549352038417958591::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_07.png::Texture2D::7211852738620354722::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_08.png::Texture2D::8474464896665277660::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_09.png::Texture2D::2688206519611868442::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_10.png::Texture2D::7578262798306363012::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_11.png::Texture2D::2404423509749975934::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_12.png::Texture2D::4569792670467908669::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_13.png::Texture2D::7109326111559251589::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_14.png::Texture2D::5445584358570093119::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_15.png::Texture2D::2711980569374167025::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_16.png::Texture2D::278747248976428215::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_17.png::Texture2D::5952535580972238550::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_18.png::Texture2D::1783727576460520716::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_19.png::Texture2D::904850213673722900::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_20.png::Texture2D::1705714064843525684::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_21.png::Texture2D::8843617166231713478::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_22.png::Texture2D::4519273237335166517::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_23.png::Texture2D::1006938125677371673::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_24.png::Texture2D::8211941872554721316::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_25.png::Texture2D::1675047153961238248::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_26.png::Texture2D::1945055548185923211::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_27.png::Texture2D::7255926332694612535::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_28.png::Texture2D::8515171519227466908::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_29.png::Texture2D::7194626714554262200::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_30.png::Texture2D::5373464193911773118::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_31.png::Texture2D::3194223368321347635::1738882581::1738886858::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_32.png::Texture2D::4540620650029545412::1738882581::1738886859::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_33.png::Texture2D::8787716971394874893::1738882581::1738886859::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_34.png::Texture2D::7909784464256395379::1738882581::1738886859::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_35.png::Texture2D::5029019987301360784::1738882581::1738886859::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_36.png::Texture2D::4462194622359897456::1738882581::1738886859::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+Wall_37.png::Texture2D::8738895695163185359::1738882581::1738886859::1::res://Assets/Walls/wall_atlas_test2.png::<><>::uid://ckliupvy8xl6c::::res://Assets/Walls/wall_atlas_test2.png
+wall_atlas.png::CompressedTexture2D::16532947320530093::1738882581::1738886854::1::::<><>::
+wall_atlas_test2.png::CompressedTexture2D::5497960232308025044::1738886857::1738886859::1::::<><>::
+wall_atlas_test.png::CompressedTexture2D::8383647441776519377::1738882581::1738886854::1::::<><>::
+::res://Final Assets/::1738886822
+Mouse Sprite Sheet.png::CompressedTexture2D::619703506915294356::1738882581::1738886857::1::::<><>::
+::res://Final Assets/Background/::1738886817
+background.PNG::CompressedTexture2D::4554468015398452004::1738882581::1738886853::1::::<><>::
+background_layout.PNG::CompressedTexture2D::4198658562640589614::1738882581::1738886853::1::::<><>::
+background_tiles.PNG::CompressedTexture2D::7150661754619363600::1738882581::1738886853::1::::<><>::
+background_walls.PNG::CompressedTexture2D::5150642518673293595::1738882581::1738886853::1::::<><>::
+background_without_overlay.PNG::CompressedTexture2D::5277898254071900829::1738882581::1738886853::1::::<><>::
+background_with_tunnels.png::CompressedTexture2D::6877011531817046504::1738882581::1738886853::1::::<><>::
+::res://Final Assets/Collectables/::1738886817
+collectables sprite sheet.png::CompressedTexture2D::281725747510256342::1738882581::1738886853::1::::<><>::
+::res://Final Assets/Rat Battle/::1738886822
+Death Screen Without text.png::CompressedTexture2D::3008582960301796077::1738886822::1738886853::1::::<><>::
+good, better, best.PNG::CompressedTexture2D::8128262646489628471::1738886822::1738886853::1::::<><>::
+pizza cutter pop up.PNG::CompressedTexture2D::8208225359162272251::1738886822::1738886853::1::::<><>::
+WinScreenWithouttext.png::CompressedTexture2D::1058515975969191527::1738886822::1738886853::1::::<><>::
+::res://Final Assets/Rat Battle/cat battle/::1738886822
+Battle Asset,CatRightOnlyAnimaiton-0.png::CompressedTexture2D::574560427263309581::1738886822::1738886854::1::::<><>::
+Battle Asset,CatRightOnlyAnimaiton-1.png::CompressedTexture2D::1267056099570057759::1738886822::1738886854::1::::<><>::
+Battle Asset,CatRightOnlyAnimaiton-2.png::CompressedTexture2D::800597904263382533::1738886822::1738886854::1::::<><>::
+Battle Asset,CatRightOnlyAnimaiton-3.png::CompressedTexture2D::5357348392327723932::1738886822::1738886856::1::::<><>::
+Battle Asset,CatRightOnlyAnimaiton-4.png::CompressedTexture2D::4580784207112443368::1738886822::1738886856::1::::<><>::
+Battle Asset,CatRightOnlyAnimaiton-5.png::CompressedTexture2D::3882921553669196058::1738886822::1738886856::1::::<><>::
+Battle Asset,CatRightOnlyAnimaiton-6.png::CompressedTexture2D::6144022557821523877::1738886822::1738886856::1::::<><>::
+Battle Asset,CatRightOnlyAnimaiton-7.png::CompressedTexture2D::1880216097553867237::1738886822::1738886856::1::::<><>::
+Battle Asset,CatRightOnlyAnimaiton-8.png::CompressedTexture2D::3125349326546397309::1738886822::1738886857::1::::<><>::
+Battle Asset,CatRightOnlyAnimaiton-9.png::CompressedTexture2D::5614946022662607442::1738886822::1738886856::1::::<><>::
+Battle Asset,CatRightOnlyAnimaiton-10.png::CompressedTexture2D::2756813916002168115::1738886822::1738886856::1::::<><>::
+Battle Asset,CatRightOnlyAnimaiton-11.png::CompressedTexture2D::3766620805749679729::1738886822::1738886856::1::::<><>::
+Battle Asset,CatRightOnlyAnimaiton-12.png::CompressedTexture2D::2336189760901895975::1738886822::1738886855::1::::<><>::
+Battle Asset,CatRightOnlyAnimaiton-13.png::CompressedTexture2D::1214062690218860229::1738886822::1738886855::1::::<><>::
+Battle Asset,CatRightOnlyAnimaiton-14.png::CompressedTexture2D::519022563489893492::1738886822::1738886855::1::::<><>::
+Battle Asset,CatRightOnlyAnimaiton-15.png::CompressedTexture2D::2858252312916370768::1738886822::1738886855::1::::<><>::
+Battle Asset,CatRightOnlyAnimaiton-16.png::CompressedTexture2D::8999526883357571900::1738886822::1738886855::1::::<><>::
+Battle Asset,CatRightOnlyAnimaiton-17.png::CompressedTexture2D::7751829227650389946::1738886822::1738886855::1::::<><>::
+Battle Asset,CatRightOnlyAnimaiton-18.png::CompressedTexture2D::5693840965055510386::1738886822::1738886855::1::::<><>::
+Battle Asset,CatRightOnlyAnimaiton-19.png::CompressedTexture2D::3915263543180121011::1738886822::1738886855::1::::<><>::
+Battle Asset,CatRightOnlyAnimaiton-20.png::CompressedTexture2D::2477107258371120542::1738886822::1738886855::1::::<><>::
+Battle Asset,CatRightOnlyAnimaiton-21.png::CompressedTexture2D::3254908121485202476::1738886822::1738886854::1::::<><>::
+Battle Asset,CatRightOnlyAnimaiton-22.png::CompressedTexture2D::3869523586126580688::1738886822::1738886854::1::::<><>::
+Battle Asset,CatRightOnlyAnimaiton-23.png::CompressedTexture2D::4787266702154856951::1738886822::1738886852::1::::<><>::
+Battle Asset,CatRightOnlyAnimaiton-24.png::CompressedTexture2D::6782409287223717769::1738886822::1738886852::1::::<><>::
+::res://Final Assets/Rat Battle/rat battle/::1738886822
+BattleSequinceanimaiton, RatonlyLEft-0.png::CompressedTexture2D::3570539310144418540::1738886822::1738886852::1::::<><>::
+BattleSequinceanimaiton, RatonlyLEft-1.png::CompressedTexture2D::1302011715139104644::1738886822::1738886852::1::::<><>::
+BattleSequinceanimaiton, RatonlyLEft-2.png::CompressedTexture2D::91610137341074120::1738886822::1738886852::1::::<><>::
+BattleSequinceanimaiton, RatonlyLEft-3.png::CompressedTexture2D::5986900036303557346::1738886822::1738886852::1::::<><>::
+BattleSequinceanimaiton, RatonlyLEft-4.png::CompressedTexture2D::5970903493540339010::1738886822::1738886851::1::::<><>::
+BattleSequinceanimaiton, RatonlyLEft-5.png::CompressedTexture2D::355543558994007106::1738886822::1738886851::1::::<><>::
+BattleSequinceanimaiton, RatonlyLEft-6.png::CompressedTexture2D::7586509289039202693::1738886822::1738886851::1::::<><>::
+BattleSequinceanimaiton, RatonlyLEft-7.png::CompressedTexture2D::203033457874131532::1738886822::1738886851::1::::<><>::
+BattleSequinceanimaiton, RatonlyLEft-8.png::CompressedTexture2D::6488090813870466738::1738886822::1738886851::1::::<><>::
+BattleSequinceanimaiton, RatonlyLEft-9.png::CompressedTexture2D::1926718091609999961::1738886822::1738886851::1::::<><>::
+BattleSequinceanimaiton, RatonlyLEft-10.png::CompressedTexture2D::4337572366195400663::1738886822::1738886851::1::::<><>::
+BattleSequinceanimaiton, RatonlyLEft-11.png::CompressedTexture2D::1802440568066497794::1738886822::1738886851::1::::<><>::
+BattleSequinceanimaiton, RatonlyLEft-12.png::CompressedTexture2D::3999053197090291305::1738886822::1738886851::1::::<><>::
+BattleSequinceanimaiton, RatonlyLEft-13.png::CompressedTexture2D::6083248884666659719::1738886822::1738886851::1::::<><>::
+BattleSequinceanimaiton, RatonlyLEft-14.png::CompressedTexture2D::1517102403352306646::1738886822::1738886851::1::::<><>::
+BattleSequinceanimaiton, RatonlyLEft-15.png::CompressedTexture2D::2616099511183151987::1738886822::1738886851::1::::<><>::
+BattleSequinceanimaiton, RatonlyLEft-16.png::CompressedTexture2D::220265579788407505::1738886822::1738886851::1::::<><>::
+BattleSequinceanimaiton, RatonlyLEft-17.png::CompressedTexture2D::1362921095152592139::1738886822::1738886851::1::::<><>::
+BattleSequinceanimaiton, RatonlyLEft-18.png::CompressedTexture2D::1059659736968000907::1738886822::1738886850::1::::<><>::
+BattleSequinceanimaiton, RatonlyLEft-19.png::CompressedTexture2D::5867789157166750715::1738886822::1738886850::1::::<><>::
+BattleSequinceanimaiton, RatonlyLEft-20.png::CompressedTexture2D::770931132945172181::1738886822::1738886850::1::::<><>::
+BattleSequinceanimaiton, RatonlyLEft-21.png::CompressedTexture2D::7061947907028533196::1738886822::1738886850::1::::<><>::
+BattleSequinceanimaiton, RatonlyLEft-22.png::CompressedTexture2D::7996680142820768793::1738886822::1738886850::1::::<><>::
+BattleSequinceanimaiton, RatonlyLEft-23.png::CompressedTexture2D::1120830634964790069::1738886822::1738886850::1::::<><>::
+BattleSequinceanimaiton, RatonlyLEft-24.png::CompressedTexture2D::2892302961312620352::1738886822::1738886854::1::::<><>::
+::res://Final Assets/Sprites/::1738886817
+background_with_tunnels.png::CompressedTexture2D::8696882203943797011::1738882581::1738886853::1::::<><>::
+::res://Final Assets/Sprites/Small Sprite, Mouse Non-Animated/::1738886817
+Small_Sprite_nonAnim_moveup.png::CompressedTexture2D::7810091378175756603::1738882581::1738886853::1::::<><>::
+Small_Sprite_normal_nonanim_moving Left.png::CompressedTexture2D::514488719596885862::1738882581::1738886853::1::::<><>::
+Small_Sprite_normal_nonanim_movingdown.png::CompressedTexture2D::7127782893807050639::1738882581::1738886852::1::::<><>::
+Small_Sprite_Pizzacuttermode_nonAnim_Moveright.png::CompressedTexture2D::6705872176691470701::1738882581::1738886852::1::::<><>::
+Small_Sprite_PizzacutterMode_NonAnim_movingdown.png::CompressedTexture2D::5040646267825098756::1738882581::1738886852::1::::<><>::
+Small_Sprite_PizzaCutterMode_Nonanim_movingup.png::CompressedTexture2D::8968352322758590727::1738882581::1738886852::1::::<><>::
+Small_sprite_PizzaCutterMode_NonAnim_To Left.png::CompressedTexture2D::5521989902276703399::1738882581::1738886852::1::::<><>::
+Small_Sprite_unanim_to right.png::CompressedTexture2D::1891867305214839272::1738882581::1738886852::1::::<><>::
+::res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/::1738886817
+SmallSpriteCat_nonAnim_Movedown.png::CompressedTexture2D::34977547381876079::1738882581::1738886852::1::::<><>::
+SmallSpriteCat_NonAnim_MoveLeft.png::CompressedTexture2D::3475301928586545944::1738882581::1738886852::1::::<><>::
+SmallSpriteCat_NonAnim_MoveRight.png::CompressedTexture2D::3660602096523070479::1738882581::1738886852::1::::<><>::
+SmallSpriteCat_NonAnim_moveup.png::CompressedTexture2D::9114479557765591437::1738882581::1738886852::1::::<><>::
+::res://Resources/::1738882581
+movement_targets.gd::GDScript::-1::1738882581::0::1::::MyResource<>Resource<>::
+red_movement_targets.tres::Resource/MyResource::5729244483593350158::1738882581::0::1::::<><>::res://Resources/movement_targets.gd
+::res://Scenes/::1738886835
+battle_scene.gd::GDScript::-1::1738886822::0::1::::<>Control<>::
+connector.gd::GDScript::-1::1738886817::0::1::::<>Node2D<>::
+connector.tscn::PackedScene::8465036471805671906::1738886822::0::1::::<><>::res://Scenes/connector.gd
+large_pellet.tscn::PackedScene::1221371751568210824::1738886817::0::1::::<><>::res://Scenes/pellet.gd<>uid://eap8ncvpkwew::::res://Final Assets/Collectables/collectables sprite sheet.png
+main.gd::GDScript::-1::1738886822::0::1::::<>Node<>::
+main.tscn::PackedScene::4906911432663299270::1738886008::0::1::::<><>::uid://drpdpip3qludd::::res://Assets/Walls/wall_atlas_test.png<>uid://cvlap2s66h85y::::res://map_sketch.jpg<>uid://4vvoc508yu65::::res://Scenes/pacman.tscn<>uid://c48jm0yjkvhoi::::res://Final Assets/Background/background_with_tunnels.png<>uid://23uepjxoqfxk::::res://Scenes/ghost.tscn<>uid://cvql6usga5o7h::::res://Scenes/pellet.tscn<>uid://rnv2xlnlcmuq::::res://Scenes/large_pellet.tscn<>uid://chgwhinauxx5n::::res://Final Assets/Background/background_without_overlay.PNG<>res://Scenes/pellets_manager.gd<>uid://dsur6criaqsgo::::res://Scenes/connector.tscn<>uid://b5h15q0ipqsgy::::res://Assets/Sounds/movement.wav<>uid://ds0fu884eoi02::::res://Assets/Sounds/squeak1.wav<>uid://db1ysgbqygw35::::res://Assets/Sounds/chomp.wav<>uid://rywgvii006be::::res://Assets/Sounds/powerup1.wav
+main_s.tscn::PackedScene::5665444587561139788::1738882590::0::1::::<><>::uid://drpdpip3qludd::::res://Assets/Walls/wall_atlas_test.png<>uid://cvlap2s66h85y::::res://map_sketch.jpg<>uid://4vvoc508yu65::::res://Scenes/pacman.tscn<>uid://chgwhinauxx5n::::res://Final Assets/Background/background_without_overlay.PNG<>uid://23uepjxoqfxk::::res://Scenes/ghost.tscn<>uid://cvql6usga5o7h::::res://Scenes/pellet.tscn<>uid://rnv2xlnlcmuq::::res://Scenes/large_pellet.tscn
+pacman.gd::GDScript::-1::1738886822::0::1::::Player<>CharacterBody2D<>::
+pacman.tscn::PackedScene::2080128608872743676::1738886822::0::1::::<><>::res://Scenes/pacman.gd<>uid://djjjcf5x4gywp::::res://Final Assets/Sprites/Small Sprite, Mouse Non-Animated/Small_Sprite_nonAnim_moveup.png<>uid://i3goqyd5udbg::::res://Final Assets/Mouse Sprite Sheet.png<>uid://c8s0sptkuqhfj::::res://Final Assets/Sprites/Small Sprite, Mouse Non-Animated/Small_Sprite_normal_nonanim_movingdown.png
+pellet.gd::GDScript::-1::1738886822::0::1::::Pellet<>Area2D<>::
+pellet.tscn::PackedScene::6280561452928612783::1738886817::0::1::::<><>::res://Scenes/pellet.gd<>uid://eap8ncvpkwew::::res://Final Assets/Collectables/collectables sprite sheet.png
+pellets_manager.gd::GDScript::-1::1738886835::0::1::::<>Node<>::
+::res://Scenes/enemy/::1738886822
+chase.gd::GDScript::-1::1738886822::0::1::::<>CharacterBody2D<>::
+chase.tscn::PackedScene::6822875497137478638::1738886822::0::1::::<><>::res://Scenes/enemy/chase.gd<>uid://d24ee8s5dwva0::::res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_moveup.png
+scatter.gd::GDScript::-1::1738886822::0::1::::<>Area2D<>::
+scatter.tscn::PackedScene::1954123641189347756::1738886822::0::1::::<><>::res://Scenes/enemy/scatter.gd<>uid://q7cs2sjryst::::res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_nonAnim_Movedown.png<>uid://bprpyks8orbpo::::res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_MoveLeft.png<>uid://bsfht1pq1qqot::::res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_MoveRight.png<>uid://d24ee8s5dwva0::::res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_moveup.png
+::res://Script/::1738886822
+event_handler.gd::GDScript::-1::1738886822::0::1::::<>Node<>::
