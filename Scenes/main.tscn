@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://cb57d5h41nkfm"]
+[gd_scene load_steps=67 format=3 uid="uid://cb57d5h41nkfm"]
 
 [ext_resource type="Texture2D" uid="uid://drpdpip3qludd" path="res://Assets/Walls/wall_atlas_test.png" id="1_fh24l"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_nap10"]
@@ -44,6 +44,8 @@
 [ext_resource type="Texture2D" uid="uid://6p3ek8pietwx" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-22.png" id="42_cnbu0"]
 [ext_resource type="Texture2D" uid="uid://blto5sgm327s4" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-23.png" id="43_yrnex"]
 [ext_resource type="Texture2D" uid="uid://c6ibeke2dovgn" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-24.png" id="44_s6y1q"]
+[ext_resource type="Texture2D" uid="uid://c3663ul00ouho" path="res://Final Assets/buttons and health bars.PNG" id="45_iqnqy"]
+[ext_resource type="Texture2D" uid="uid://dn2nke01mkodj" path="res://Final Assets/Rat Battle/good, better, best.PNG" id="46_mks16"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_yeael"]
 vertices = PackedVector2Array(1.5, -0.75, 12, -0.75, 12, 0.75, 1.5, 0.75, 1.5, 12, 0, 12, 0, 0.75, 0, -0.75, -12, 0.75, -12, -0.75, 1.5, -12, 0, -12)
@@ -1409,6 +1411,13 @@ libraries = {
 "": SubResource("AnimationLibrary_xxwtf")
 }
 
+[node name="MashSpacebar" type="Sprite2D" parent="CanvasLayer/battle_scene"]
+position = Vector2(602, 346.5)
+scale = Vector2(1.24407, 1.32288)
+texture = ExtResource("45_iqnqy")
+region_enabled = true
+region_rect = Rect2(951.885, 82.2566, 717.548, 542.342)
+
 [node name="CatFightSprite" type="Sprite2D" parent="CanvasLayer/battle_scene"]
 position = Vector2(1041, 347)
 texture = ExtResource("17_cfc05")
@@ -1426,6 +1435,27 @@ scale = Vector2(0.977691, 0.977691)
 sprite_frames = SubResource("SpriteFrames_7n032")
 animation = &"fight"
 frame_progress = 0.55289
+
+[node name="GOOD" type="Sprite2D" parent="CanvasLayer/battle_scene"]
+position = Vector2(1305, 4419)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("46_mks16")
+region_enabled = true
+region_rect = Rect2(43.1434, 16.8228, 408.548, 121.335)
+
+[node name="BEST" type="Sprite2D" parent="CanvasLayer/battle_scene"]
+position = Vector2(3448, 1506)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("46_mks16")
+region_enabled = true
+region_rect = Rect2(33.1688, 259.467, 385.453, 136.979)
+
+[node name="BETTER" type="Sprite2D" parent="CanvasLayer/battle_scene"]
+position = Vector2(809, 1102)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("46_mks16")
+region_enabled = true
+region_rect = Rect2(45.7823, 135.374, 469.568, 125.279)
 
 [connection signal="body_entered" from="Enemys/Scatter_cat" to="Enemys/Scatter_cat" method="_on_body_entered"]
 [connection signal="pellet_eaten" from="Pellets/Large Pellet" to="." method="_on_LargePellet_pellet_eaten"]
