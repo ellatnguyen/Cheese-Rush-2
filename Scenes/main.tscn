@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://cb57d5h41nkfm"]
+[gd_scene load_steps=70 format=3 uid="uid://cb57d5h41nkfm"]
 
 [ext_resource type="Texture2D" uid="uid://drpdpip3qludd" path="res://Assets/Walls/wall_atlas_test.png" id="1_fh24l"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_nap10"]
@@ -48,6 +48,7 @@
 [ext_resource type="Texture2D" uid="uid://c6ibeke2dovgn" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-24.png" id="44_s6y1q"]
 [ext_resource type="Texture2D" uid="uid://courl4mbn5mgl" path="res://win screen.PNG" id="46_n13uo"]
 [ext_resource type="Texture2D" uid="uid://dn2nke01mkodj" path="res://Final Assets/Rat Battle/good, better, best.PNG" id="47_o2l8e"]
+[ext_resource type="Texture2D" uid="uid://dje8jfsl4bmwc" path="res://Final Assets/labels/ratman_labels.png" id="49_nj1yg"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_yeael"]
 vertices = PackedVector2Array(1.5, -0.75, 12, -0.75, 12, 0.75, 1.5, 0.75, 1.5, 12, 0, 12, 0, 0.75, 0, -0.75, -12, 0.75, -12, -0.75, 1.5, -12, 0, -12)
@@ -338,7 +339,7 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSet" id="TileSet_kmh2q"]
 tile_size = Vector2i(24, 24)
-physics_layer_0/collision_layer = 2
+physics_layer_0/collision_layer = 8
 navigation_layer_0/layers = 1
 sources/0 = SubResource("TileSetAtlasSource_ymes1")
 
@@ -498,12 +499,6 @@ position = Vector2(8, 160)
 scale = Vector2(0.239997, 0.239997)
 texture = ExtResource("2_vfua3")
 
-[node name="Player(Demo)" parent="." instance=ExtResource("3_elt41")]
-visible = false
-position = Vector2(82, 68)
-scale = Vector2(2, 2)
-collision_mask = 14
-
 [node name="BackgroundWithTunnels" type="Sprite2D" parent="."]
 position = Vector2(309, -2)
 scale = Vector2(0.923437, 0.930556)
@@ -516,7 +511,7 @@ scale = Vector2(0.923437, 0.930556)
 texture = ExtResource("7_21s03")
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("3_elt41")]
-position = Vector2(82, 73)
+position = Vector2(82, 68)
 scale = Vector2(3.5, 3.512)
 collision_mask = 14
 
@@ -1490,6 +1485,11 @@ process_mode = 2
 libraries = {
 "": SubResource("AnimationLibrary_0crgi")
 }
+
+[node name="RatmanLabels" type="Sprite2D" parent="."]
+position = Vector2(651, -187)
+scale = Vector2(0.385156, 0.420833)
+texture = ExtResource("49_nj1yg")
 
 [connection signal="body_entered" from="Enemys/Scatter_cat" to="Enemys/Scatter_cat" method="_on_body_entered"]
 [connection signal="pellet_eaten" from="Pellets/Large Pellet" to="." method="_on_LargePellet_pellet_eaten"]
