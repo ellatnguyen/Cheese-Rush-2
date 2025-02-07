@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://cb57d5h41nkfm"]
+[gd_scene load_steps=67 format=3 uid="uid://cb57d5h41nkfm"]
 
 [ext_resource type="Texture2D" uid="uid://drpdpip3qludd" path="res://Assets/Walls/wall_atlas_test.png" id="1_fh24l"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_nap10"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://2df3jevr5rey" path="res://lose screen.PNG" id="7_33q76"]
 [ext_resource type="PackedScene" uid="uid://dsur6criaqsgo" path="res://Scenes/connector.tscn" id="9_co04s"]
 [ext_resource type="PackedScene" uid="uid://c4hb06tmg4hva" path="res://Scenes/enemy/chase.tscn" id="11_q2hgy"]
+[ext_resource type="PackedScene" uid="uid://ckflrfkih80qb" path="res://Scenes/knife.tscn" id="13_fyaic"]
 [ext_resource type="Script" path="res://Scenes/pellets_manager.gd" id="14_rv7aq"]
 [ext_resource type="Script" path="res://Scenes/battle_scene.gd" id="16_ekqvu"]
 [ext_resource type="Texture2D" uid="uid://igk6q2ajp7jt" path="res://Final Assets/Rat Battle/cat battle/Battle Asset,CatRightOnlyAnimaiton-0.png" id="17_cfc05"]
@@ -583,7 +584,6 @@ script = ExtResource("14_rv7aq")
 
 [node name="Pellet" parent="Pellets" instance=ExtResource("5_rp5b8")]
 position = Vector2(-230, -220)
-collision_mask = 2
 
 [node name="Pellet3" parent="Pellets" instance=ExtResource("5_rp5b8")]
 position = Vector2(-134, -220)
@@ -1347,9 +1347,6 @@ position = Vector2(370, -4)
 [node name="Pellet261" parent="Pellets" instance=ExtResource("5_rp5b8")]
 position = Vector2(394, -4)
 
-[node name="Large Pellet" parent="Pellets" instance=ExtResource("6_jxehp")]
-position = Vector2(-230, -292)
-
 [node name="Large Pellet2" parent="Pellets" instance=ExtResource("6_jxehp")]
 position = Vector2(-230, 284)
 
@@ -1360,6 +1357,14 @@ position = Vector2(370, 284)
 position = Vector2(370, -292)
 
 [node name="Connector" parent="." instance=ExtResource("9_co04s")]
+
+[node name="Knife" type="Node" parent="."]
+
+[node name="Area2D" parent="Knife" instance=ExtResource("13_fyaic")]
+position = Vector2(-230, -291)
+rotation = -0.232129
+scale = Vector2(8, 8)
+collision_mask = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -1480,5 +1485,5 @@ scale = Vector2(0.385156, 0.420833)
 texture = ExtResource("49_nj1yg")
 
 [connection signal="body_entered" from="Enemys/Scatter_cat" to="Enemys/Scatter_cat" method="_on_body_entered"]
-[connection signal="pellet_eaten" from="Pellets/Large Pellet" to="." method="_on_LargePellet_pellet_eaten"]
+[connection signal="body_entered" from="Knife/Area2D" to="Knife/Area2D" method="_on_body_entered"]
 [connection signal="timeout" from="CanvasLayer/battle_scene/MashTimer" to="CanvasLayer/battle_scene" method="_on_mash_timer_timeout"]
