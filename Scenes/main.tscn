@@ -482,6 +482,7 @@ cage_position_node = NodePath("../../CagePosition")
 
 [node name="Pellet" parent="Pellets" instance=ExtResource("5_rp5b8")]
 position = Vector2(-230, -220)
+collision_mask = 2
 
 [node name="Pellet3" parent="Pellets" instance=ExtResource("5_rp5b8")]
 position = Vector2(-134, -220)
