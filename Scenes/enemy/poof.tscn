@@ -1,0 +1,96 @@
+[gd_scene load_steps=22 format=3 uid="uid://b65p1osl35f2j"]
+
+[ext_resource type="Texture2D" uid="uid://d2vm4ppivmvdq" path="res://Final Assets/cat_defeat_frames/AnimationDefeatedCatPoof-0.png" id="1_2bjnk"]
+[ext_resource type="Texture2D" uid="uid://bj54iyy4u24jx" path="res://Final Assets/cat_defeat_frames/AnimationDefeatedCatPoof-1.png" id="2_cj8bp"]
+[ext_resource type="Texture2D" uid="uid://dbvuqek7wxnm1" path="res://Final Assets/cat_defeat_frames/AnimationDefeatedCatPoof-2.png" id="3_ktcwp"]
+[ext_resource type="Texture2D" uid="uid://dfeycmh0kf73e" path="res://Final Assets/cat_defeat_frames/AnimationDefeatedCatPoof-3.png" id="4_sdqgr"]
+[ext_resource type="Texture2D" uid="uid://cb5jx8chbm6du" path="res://Final Assets/cat_defeat_frames/AnimationDefeatedCatPoof-4.png" id="5_3hb70"]
+[ext_resource type="Texture2D" uid="uid://cmw6bulhoeruh" path="res://Final Assets/cat_defeat_frames/AnimationDefeatedCatPoof-5.png" id="6_m1eak"]
+[ext_resource type="Texture2D" uid="uid://dlh80vysk0wd3" path="res://Final Assets/cat_defeat_frames/AnimationDefeatedCatPoof-6.png" id="7_jdk18"]
+[ext_resource type="Texture2D" uid="uid://cw0nl3idy3gpu" path="res://Final Assets/cat_defeat_frames/AnimationDefeatedCatPoof-7.png" id="8_7wvtd"]
+[ext_resource type="Texture2D" uid="uid://bjq6hkdtcc8w8" path="res://Final Assets/cat_defeat_frames/AnimationDefeatedCatPoof-8.png" id="9_r8jxh"]
+[ext_resource type="Texture2D" uid="uid://ckw3cg522yeew" path="res://Final Assets/cat_defeat_frames/AnimationDefeatedCatPoof-9.png" id="10_txkyk"]
+[ext_resource type="Texture2D" uid="uid://bpeiee1bloiav" path="res://Final Assets/cat_defeat_frames/AnimationDefeatedCatPoof-10.png" id="11_tv7u7"]
+[ext_resource type="Texture2D" uid="uid://bsbbkg0ycdr3t" path="res://Final Assets/cat_defeat_frames/AnimationDefeatedCatPoof-11.png" id="12_3llc7"]
+[ext_resource type="Texture2D" uid="uid://bcroeyp10j7rr" path="res://Final Assets/cat_defeat_frames/AnimationDefeatedCatPoof-12.png" id="13_1pwwb"]
+[ext_resource type="Texture2D" uid="uid://db00aflh5cc33" path="res://Final Assets/cat_defeat_frames/AnimationDefeatedCatPoof-13.png" id="14_vmnab"]
+[ext_resource type="Texture2D" uid="uid://bfl3yumml2032" path="res://Final Assets/cat_defeat_frames/AnimationDefeatedCatPoof-14.png" id="15_3uyw0"]
+[ext_resource type="Texture2D" uid="uid://pscwmlgyp0tj" path="res://Final Assets/cat_defeat_frames/AnimationDefeatedCatPoof-15.png" id="16_lhp1m"]
+[ext_resource type="Texture2D" uid="uid://5ks62pye6ats" path="res://Final Assets/cat_defeat_frames/AnimationDefeatedCatPoof-16.png" id="17_uk8kv"]
+[ext_resource type="Texture2D" uid="uid://22pdqq7gqlnb" path="res://Final Assets/cat_defeat_frames/AnimationDefeatedCatPoof-17.png" id="18_g0bki"]
+[ext_resource type="Texture2D" uid="uid://byrjgt2wuknic" path="res://Final Assets/cat_defeat_frames/AnimationDefeatedCatPoof-18.png" id="19_qsbq5"]
+[ext_resource type="Script" path="res://Scenes/enemy/poof.gd" id="20_opevc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kq4o4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2bjnk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_cj8bp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ktcwp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_sdqgr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3hb70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_m1eak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jdk18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7wvtd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_r8jxh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_txkyk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_tv7u7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_3llc7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_1pwwb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_vmnab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_3uyw0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_lhp1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_uk8kv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_g0bki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_qsbq5")
+}],
+"loop": false,
+"name": &"poof",
+"speed": 8.0
+}]
+
+[node name="PoofEffect" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kq4o4")
+animation = &"poof"
+script = ExtResource("20_opevc")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="AnimatedSprite2D" method="_on_animation_finished"]
