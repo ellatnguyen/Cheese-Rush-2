@@ -3,10 +3,6 @@ extends CharacterBody2D
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
 @export var target_to_chase: CharacterBody2D
 @onready var sprite: Sprite2D = $BodySprite
-@export var texture_up: Texture2D
-@export var texture_down: Texture2D
-@export var texture_left: Texture2D
-@export var texture_right: Texture2D
 const spd = 120
 const run_away_spd = 240
 @export var chase_enabled: bool = false
@@ -17,13 +13,13 @@ const PoofEffect = preload("res://Scenes/enemy/poof.tscn")
 var runaway_enabled: bool = false
 
 func _ready() -> void:
-	# Event Handler
+	# Connect event signals
 	if event_handler:
 		event_handler.best_battle.connect(_on_best_battle)
 		event_handler.better_battle.connect(_on_better_battle)
 		event_handler.good_battle.connect(_on_good_battle)
 		
-	# 10-second delay
+	# 10-second delay before chase begins
 	var chase_timer = Timer.new()
 	chase_timer.wait_time = 10.0
 	chase_timer.one_shot = true
@@ -33,28 +29,30 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if runaway_enabled:
-		# Compute the direction away from the player:
+		# Compute the direction away from the target:
 		var direction = (global_position - target_to_chase.global_position).normalized()
 		velocity = direction * run_away_spd
 		move_and_slide()
 		_update_sprite_direction(velocity)
 	elif chase_enabled:
+		# Set the navigation agent's target and move toward it.
 		navigation_agent.target_position = target_to_chase.global_position
 		velocity = global_position.direction_to(navigation_agent.get_next_path_position()) * spd
 		move_and_slide()
 		_update_sprite_direction(velocity)
+	# If neither runaway nor chase is enabled, the cat remains frozen.
 
 func _update_sprite_direction(direction: Vector2) -> void:
 	if abs(direction.x) > abs(direction.y):
 		if direction.x > 0:
-			sprite.texture = texture_right
+			$CatAnimation.play("cat_right_ani")
 		else:
-			sprite.texture = texture_left
+			$CatAnimation.play("cat_left_ani")
 	else:
 		if direction.y > 0:
-			sprite.texture = texture_down
+			$CatAnimation.play("cat_down_ani")
 		else:
-			sprite.texture = texture_up
+			$CatAnimation.play("cat_up_ani")
 
 func _on_ChaseTimer_timeout() -> void:
 	chase_enabled = true
@@ -65,9 +63,9 @@ func teleport_back_to_cage_for_7_seconds() -> void:
 		global_position = cage_position_node.global_position
 	velocity = Vector2.ZERO
 
-	# Start a cage timer
+	# Start a cage timer.
 	var cage_timer = Timer.new()
-	cage_timer.wait_time = 10
+	cage_timer.wait_time = 10.0
 	cage_timer.one_shot = true
 	cage_timer.connect("timeout", Callable(self, "_on_CageTimer_timeout"))
 	add_child(cage_timer)
@@ -78,20 +76,10 @@ func _on_CageTimer_timeout() -> void:
 
 func _on_hit_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-			was_just_hit = true
-			event_handler.emit_signal("battle_started")
-		#if false:
-			##event_handler.emit_signal("battle_started")
-			##print("Ghost hit") # Debug- delete later
-			#pass
-		#else:
-			#var anim_player = get_node("/root/main/GameOverUI/AnimationPlayer2")
-			#var full_screen_image = get_node("/root/main/GameOverUI/FullScreenImage")
-			#var color = get_node("/root/main/GameOverUI/ColorRect")
-			#color.visible=true
-			#full_screen_image.visible= true
-			#get_tree().paused=true
-			#anim_player.play("lose_screen_fade")
+		was_just_hit = true
+		event_handler.emit_signal("battle_started")
+		# Debug message:
+		#print("Chase cat hit!")
 
 func _on_best_battle():
 	show_poof_at_position(global_position)
@@ -101,24 +89,20 @@ func _on_better_battle():
 	if was_just_hit:
 		show_poof_at_position(global_position)
 		teleport_back_to_cage_for_7_seconds()
-		was_just_hit  = false
+		was_just_hit = false
 
-func _on_good_battle():
-	# When a "good battle" occurs, trigger scatter (runaway) mode.
-	print("Scatter Good battle!")
-	runaway_enabled = true
-	chase_enabled = false
-	# Start a 10-second timer to end runaway mode:
-	var scatter_timer = Timer.new()
-	scatter_timer.wait_time = 10.0
-	scatter_timer.one_shot = true
-	scatter_timer.connect("timeout", Callable(self, "_on_ScatterTimer_timeout"))
-	add_child(scatter_timer)
-	scatter_timer.start()
+func _on_good_battle() -> void:
+	print("Scatter Good battle: freezing cat for 5 seconds!")
+	chase_enabled = false  # Stop normal scatter movement.
+	# Start a timer to unfreeze after 5 seconds.
+	var freeze_timer = Timer.new()
+	freeze_timer.wait_time = 5.0
+	freeze_timer.one_shot = true
+	freeze_timer.connect("timeout", Callable(self, "_on_FreezeTimer_timeout"))
+	add_child(freeze_timer)
+	freeze_timer.start()
 
-func _on_ScatterTimer_timeout() -> void:
-	# End scatter mode and resume chase.
-	runaway_enabled = false
+func _on_FreezeTimer_timeout() -> void:
 	chase_enabled = true
 
 func show_poof_at_position(pos: Vector2) -> void:
