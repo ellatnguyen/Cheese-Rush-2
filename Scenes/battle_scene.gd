@@ -5,6 +5,7 @@ extends Control
 
 @onready var rat = $RatFightSprite  
 @onready var cat = $CatFightSprite  
+@onready var scatter_cat = $Scatter_cat
 #@onready var progress_bar = $background/Panel/MyProgressBar  
 
 var mash_count = 0  
@@ -73,10 +74,13 @@ func _on_mash_timer_timeout():
 	# Determine the outcome based on mash count
 	if mash_count >= 30:
 		print("Best Outcome!")
+		event_handler.emit_signal("best_battle")
 	elif mash_count >= 20:
-		print("Great Outcome!")
+		print("Better Outcome!")
+		event_handler.emit_signal("better_battle")
 	elif mash_count >= 10:
 		print("Good Outcome!")
+		event_handler.emit_signal("good_battle")
 	else:
 		print("Failed Outcome!")
 

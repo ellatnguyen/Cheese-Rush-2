@@ -2,3 +2,6 @@ extends Node
 
 signal battle_started()
 signal battle_finished()
+signal good_battle()
+signal better_battle()
+signal best_battle()
