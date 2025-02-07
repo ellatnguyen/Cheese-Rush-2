@@ -1,0 +1,78 @@
+[gd_scene load_steps=9 format=3 uid="uid://23uepjxoqfxk"]
+
+[ext_resource type="Script" path="res://Scenes/enemy/scatter.gd" id="1_5qkk8"]
+[ext_resource type="Texture2D" uid="uid://q7cs2sjryst" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_nonAnim_Movedown.png" id="4_tafgn"]
+[ext_resource type="Texture2D" uid="uid://bprpyks8orbpo" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_MoveLeft.png" id="5_2olsd"]
+[ext_resource type="Texture2D" uid="uid://bsfht1pq1qqot" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_MoveRight.png" id="6_cm43t"]
+[ext_resource type="Texture2D" uid="uid://d24ee8s5dwva0" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_moveup.png" id="6_l345i"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dbuu6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_tafgn")
+}],
+"loop": true,
+"name": &"running_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_2olsd")
+}],
+"loop": true,
+"name": &"running_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_cm43t")
+}],
+"loop": true,
+"name": &"running_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_l345i")
+}],
+"loop": true,
+"name": &"running_up",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_irhdr"]
+radius = 8.0
+height = 32.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rfdol"]
+radius = 0.0
+
+[node name="Ghost" type="Area2D"]
+collision_layer = 4
+script = ExtResource("1_5qkk8")
+
+[node name="BodySprite" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.043, 0.043)
+texture = ExtResource("6_l345i")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[node name="CatAnimation" type="AnimatedSprite2D" parent="."]
+visible = false
+scale = Vector2(0.019, 0.019)
+sprite_frames = SubResource("SpriteFrames_dbuu6")
+animation = &"running_down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_irhdr")
+
+[node name="HitArea" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea"]
+shape = SubResource("CapsuleShape2D_rfdol")
+
+[connection signal="body_entered" from="HitArea" to="." method="_on_hit_area_body_entered"]

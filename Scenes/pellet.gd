@@ -4,7 +4,7 @@ class_name Pellet
 
 signal pellet_eaten(pallet: Pellet)
 
-@export var should_allow_eating_ghosts = false
+@export var should_allow_eating_ghosts = true
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
