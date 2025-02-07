@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckflrfkih80qb"]
+
+[ext_resource type="Texture2D" uid="uid://3wq00d1qj1hb" path="res://Final Assets/Collectables/Pizza cutter, cheese, and pellets blue lines.png" id="1_imdjj"]
+[ext_resource type="Script" path="res://Scenes/knife.gd" id="1_wqobw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tcl2e"]
+radius = 1.0
+height = 4.5
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_wqobw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.7, -1)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("1_imdjj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 4.31794
+shape = SubResource("CapsuleShape2D_tcl2e")
+one_way_collision_margin = 0.0
