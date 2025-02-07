@@ -5,7 +5,10 @@ extends Control
 
 @onready var rat = $RatFightSprite  
 @onready var cat = $CatFightSprite  
+@onready var dark_rect = $ColorRect
 @onready var scatter_cat = $Scatter_cat
+@onready var battle_animation = $BattleAnimation
+#@onready var map = $BackgroundWithTunnels
 #@onready var progress_bar = $background/Panel/MyProgressBar  
 
 var mash_count = 0  
@@ -17,6 +20,9 @@ func _ready():
 	event_handler.battle_started.connect(init)
 
 func init(): 
+	dark_rect.position.x = 1200  
+	dark_rect.position.y = 328  
+	dark_rect.visible = true
 	
 	# Stop player movement
 	var player = get_tree().get_first_node_in_group("Player")
@@ -35,18 +41,29 @@ func init():
 	# Set initial positions for rat and cat (off-screen)
 	rat.position.x = -300  
 	cat.position.x = 1200  
+	rat.position.y = 328  
+	cat.position.y = 320  	
 
 	visible = true
+	battle_animation.visible = false
 	
 	# Create tweens for fast sliding in
 	var tween = create_tween()
-	tween.tween_property(rat, "position:x", 650, 0.8).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
-	tween.parallel().tween_property(cat, "position:x", 500, 0.8).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
-
+	tween.tween_property(rat, "position:x", 566, 0.8).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tween.parallel().tween_property(cat, "position:x", 541, 0.8).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	
 	await tween.finished  # Wait for slide-in animation
+	battle_animation.visible = true
+	
+	# Calculate the midpoint
+	#var midpoint = map.position
+
+	# Example: Positioning something at the midpoint
+	battle_animation.play("fight")
 
 	# Show battle background
-	$background.visible = true
+	cat.visible = false
+	rat.visible = false
 
 	# Start the mashing minigame
 	start_mash_minigame()
@@ -83,7 +100,11 @@ func _on_mash_timer_timeout():
 		event_handler.emit_signal("good_battle")
 	else:
 		print("Failed Outcome!")
-
+	
+	battle_animation.visible = false
+	cat.visible = true
+	rat.visible = true
+		
 	# Create tweens for sliding out
 	var tween = create_tween()
 	tween.tween_property(rat, "position:x", -300, 0.8).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
@@ -92,6 +113,7 @@ func _on_mash_timer_timeout():
 	await tween.finished  # Wait for slide-out animation
 	
 	# Hide battle UI
+	dark_rect.visible = false
 	visible = false
 	$background.visible = false
 
@@ -110,5 +132,5 @@ func _on_mash_timer_timeout():
 		enemy.set_physics_process(true)
 		enemy.set_process(true)
 		player.set_deferred("motion_mode", 1)
-
+	
 	print("Battle scene ended, resuming game.")
