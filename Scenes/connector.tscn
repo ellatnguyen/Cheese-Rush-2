@@ -26,6 +26,8 @@ offset_bottom = 21.0
 color = Color(1, 1, 1, 0)
 
 [node name="Area2D" type="Area2D" parent="RightColorRect"]
+collision_layer = 3
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightColorRect/Area2D"]
 position = Vector2(14.5, 23)
@@ -39,6 +41,7 @@ offset_bottom = 27.0
 color = Color(1, 1, 1, 0)
 
 [node name="Area2D" type="Area2D" parent="LeftColorRect"]
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftColorRect/Area2D"]
 position = Vector2(7.5, 24)
@@ -52,6 +55,7 @@ offset_bottom = -316.0
 color = Color(1, 1, 1, 0)
 
 [node name="Area2D" type="Area2D" parent="TopColorRect"]
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TopColorRect/Area2D"]
 position = Vector2(5.5, 10.5)
@@ -65,9 +69,10 @@ offset_bottom = 338.0
 color = Color(1, 1, 1, 0)
 
 [node name="Area2D" type="Area2D" parent="BottomColorRect"]
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BottomColorRect/Area2D"]
-position = Vector2(-1.5, 15)
+position = Vector2(0, 15)
 shape = SubResource("RectangleShape2D_0yc7f")
 
 [connection signal="body_entered" from="RightColorRect/Area2D" to="." method="_on_right_area_2d_body_entered"]
