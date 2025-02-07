@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://cb57d5h41nkfm"]
+[gd_scene load_steps=67 format=3 uid="uid://cb57d5h41nkfm"]
 
 [ext_resource type="Texture2D" uid="uid://drpdpip3qludd" path="res://Assets/Walls/wall_atlas_test.png" id="1_fh24l"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_nap10"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://bprpyks8orbpo" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_MoveLeft.png" id="9_esmku"]
 [ext_resource type="Texture2D" uid="uid://bsfht1pq1qqot" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_NonAnim_MoveRight.png" id="10_w6lar"]
 [ext_resource type="PackedScene" uid="uid://c4hb06tmg4hva" path="res://Scenes/enemy/chase.tscn" id="11_q2hgy"]
+[ext_resource type="Script" path="res://Scenes/pellets_manager.gd" id="14_rv7aq"]
 [ext_resource type="Script" path="res://Scenes/battle_scene.gd" id="16_ekqvu"]
 [ext_resource type="Texture2D" uid="uid://igk6q2ajp7jt" path="res://Final Assets/Rat Battle/cat battle/Battle Asset,CatRightOnlyAnimaiton-0.png" id="17_cfc05"]
 [ext_resource type="Texture2D" uid="uid://bq4ui4psbcvds" path="res://Final Assets/Rat Battle/rat battle/BattleSequinceanimaiton, RatonlyLEft-0.png" id="18_sw4vy"]
@@ -44,6 +45,7 @@
 [ext_resource type="Texture2D" uid="uid://6p3ek8pietwx" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-22.png" id="42_cnbu0"]
 [ext_resource type="Texture2D" uid="uid://blto5sgm327s4" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-23.png" id="43_yrnex"]
 [ext_resource type="Texture2D" uid="uid://c6ibeke2dovgn" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-24.png" id="44_s6y1q"]
+[ext_resource type="Texture2D" uid="uid://courl4mbn5mgl" path="res://win screen.PNG" id="46_n13uo"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_yeael"]
 vertices = PackedVector2Array(1.5, -0.75, 12, -0.75, 12, 0.75, 1.5, 0.75, 1.5, 12, 0, 12, 0, 0.75, 0, -0.75, -12, 0.75, -12, -0.75, 1.5, -12, 0, -12)
@@ -592,6 +594,7 @@ chase_enabled = true
 cage_position_node = NodePath("../../CagePosition")
 
 [node name="Pellets" type="Node" parent="."]
+script = ExtResource("14_rv7aq")
 
 [node name="Pellet" parent="Pellets" instance=ExtResource("5_rp5b8")]
 position = Vector2(-230, -220)
@@ -1426,6 +1429,37 @@ scale = Vector2(0.977691, 0.977691)
 sprite_frames = SubResource("SpriteFrames_7n032")
 animation = &"fight"
 frame_progress = 0.55289
+
+[node name="GameOverUI2" type="CanvasLayer" parent="."]
+
+[node name="FullScreenImage" type="TextureRect" parent="GameOverUI2"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.038
+anchor_top = 0.188
+anchor_right = 0.586
+anchor_bottom = 0.753
+offset_left = -45.776
+offset_top = -122.824
+offset_right = 473.928
+offset_bottom = 162.056
+texture = ExtResource("46_n13uo")
+expand_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="GameOverUI2"]
+visible = false
+visibility_layer = 2
+offset_left = -218.0
+offset_top = -277.0
+offset_right = 1158.0
+offset_bottom = 676.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="GameOverUI2"]
+process_mode = 2
+libraries = {
+"": SubResource("AnimationLibrary_0crgi")
+}
 
 [connection signal="body_entered" from="Enemys/Scatter_cat" to="Enemys/Scatter_cat" method="_on_body_entered"]
 [connection signal="pellet_eaten" from="Pellets/Large Pellet" to="." method="_on_LargePellet_pellet_eaten"]

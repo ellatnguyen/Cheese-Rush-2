@@ -2,15 +2,11 @@ extends Area2D
 
 class_name Pellet
 
-signal pellet_eaten(pallet: Pellet)
-
-@export var should_allow_eating_ghosts = true
+signal pellet_eaten
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
-		pellet_eaten.emit(self)
+		emit_signal("pellet_eaten")
 		queue_free()
-	
-	if should_allow_eating_ghosts:
-		pass
+
 		
