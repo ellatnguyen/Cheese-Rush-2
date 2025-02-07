@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://23uepjxoqfxk"]
+[gd_scene load_steps=9 format=3 uid="uid://23uepjxoqfxk"]
 
 [ext_resource type="Script" path="res://Scenes/enemy/scatter.gd" id="1_5qkk8"]
 [ext_resource type="Texture2D" uid="uid://q7cs2sjryst" path="res://Final Assets/Sprites/SmallSprite, Cat, Non-Animated/SmallSpriteCat_nonAnim_Movedown.png" id="4_tafgn"]
@@ -42,10 +42,14 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_irhdr"]
-radius = 6.0
-height = 29.87
+radius = 8.0
+height = 32.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rfdol"]
+radius = 0.0
 
 [node name="Ghost" type="Area2D"]
+collision_layer = 4
 script = ExtResource("1_5qkk8")
 
 [node name="BodySprite" type="Sprite2D" parent="."]
@@ -63,3 +67,12 @@ animation = &"running_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_irhdr")
+
+[node name="HitArea" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea"]
+shape = SubResource("CapsuleShape2D_rfdol")
+
+[connection signal="body_entered" from="HitArea" to="." method="_on_hit_area_body_entered"]

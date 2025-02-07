@@ -6,13 +6,13 @@
 size = Vector2(11, 46)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_avdbe"]
-size = Vector2(11, 46)
+size = Vector2(15, 48)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xbhfr"]
-size = Vector2(40, 13)
+size = Vector2(69, 21)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0yc7f"]
-size = Vector2(29, 13)
+size = Vector2(61, 16)
 
 [node name="Connector" type="Node2D"]
 position = Vector2(70, -5)
@@ -41,7 +41,7 @@ color = Color(1, 1, 1, 0)
 [node name="Area2D" type="Area2D" parent="LeftColorRect"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftColorRect/Area2D"]
-position = Vector2(5.5, 23)
+position = Vector2(7.5, 24)
 shape = SubResource("RectangleShape2D_avdbe")
 
 [node name="TopColorRect" type="ColorRect" parent="."]
@@ -54,7 +54,7 @@ color = Color(1, 1, 1, 0)
 [node name="Area2D" type="Area2D" parent="TopColorRect"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TopColorRect/Area2D"]
-position = Vector2(20, 6.5)
+position = Vector2(5.5, 10.5)
 shape = SubResource("RectangleShape2D_xbhfr")
 
 [node name="BottomColorRect" type="ColorRect" parent="."]
@@ -67,7 +67,7 @@ color = Color(1, 1, 1, 0)
 [node name="Area2D" type="Area2D" parent="BottomColorRect"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BottomColorRect/Area2D"]
-position = Vector2(14.5, 13.5)
+position = Vector2(-1.5, 15)
 shape = SubResource("RectangleShape2D_0yc7f")
 
 [connection signal="body_entered" from="RightColorRect/Area2D" to="." method="_on_right_area_2d_body_entered"]

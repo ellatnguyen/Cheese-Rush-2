@@ -71,7 +71,7 @@ func teleport_back_to_cage_for_7_seconds() -> void:
 func _on_CageTimer_timeout() -> void:
 	chase_enabled = true
 
-func _on_body_entered(body):
+func _on_hit_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 			event_handler.emit_signal("battle_started")
 			print("Ghost hit") # Debug- delete later
