@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://cb57d5h41nkfm"]
+[gd_scene load_steps=65 format=3 uid="uid://cb57d5h41nkfm"]
 
 [ext_resource type="Texture2D" uid="uid://drpdpip3qludd" path="res://Assets/Walls/wall_atlas_test.png" id="1_fh24l"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_nap10"]
@@ -19,6 +19,31 @@
 [ext_resource type="Script" path="res://Scenes/battle_scene.gd" id="16_ekqvu"]
 [ext_resource type="Texture2D" uid="uid://igk6q2ajp7jt" path="res://Final Assets/Rat Battle/cat battle/Battle Asset,CatRightOnlyAnimaiton-0.png" id="17_cfc05"]
 [ext_resource type="Texture2D" uid="uid://bq4ui4psbcvds" path="res://Final Assets/Rat Battle/rat battle/BattleSequinceanimaiton, RatonlyLEft-0.png" id="18_sw4vy"]
+[ext_resource type="Texture2D" uid="uid://ddng2pjuro7bm" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-0.png" id="20_ddmpr"]
+[ext_resource type="Texture2D" uid="uid://b7dygvxoodw3f" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-1.png" id="21_uruoa"]
+[ext_resource type="Texture2D" uid="uid://dsx3m3qlgj2qv" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-2.png" id="22_0d1lo"]
+[ext_resource type="Texture2D" uid="uid://dv4cvdfvx68ab" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-3.png" id="23_3mn1m"]
+[ext_resource type="Texture2D" uid="uid://d023gmh3i1ru1" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-4.png" id="24_7m0a5"]
+[ext_resource type="Texture2D" uid="uid://dhvibk4403oo8" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-5.png" id="25_qw7n4"]
+[ext_resource type="Texture2D" uid="uid://3s04et6831uc" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-6.png" id="26_h60wd"]
+[ext_resource type="Texture2D" uid="uid://u61h4ipua6up" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-7.png" id="27_1sl8v"]
+[ext_resource type="Texture2D" uid="uid://bm3wsigokbwi8" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-8.png" id="28_e734r"]
+[ext_resource type="Texture2D" uid="uid://cg12fueelxwl6" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-9.png" id="29_2o5tv"]
+[ext_resource type="Texture2D" uid="uid://phlq8oa625fy" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-10.png" id="30_augwh"]
+[ext_resource type="Texture2D" uid="uid://db0f656o55p6k" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-11.png" id="31_8f2lr"]
+[ext_resource type="Texture2D" uid="uid://b2gw8ipk2c2vp" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-12.png" id="32_2eggc"]
+[ext_resource type="Texture2D" uid="uid://ckhvkf7ykmiw0" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-13.png" id="33_tbra8"]
+[ext_resource type="Texture2D" uid="uid://b7xuiqnlkn23v" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-14.png" id="34_27yhv"]
+[ext_resource type="Texture2D" uid="uid://l7vy1fx38ps3" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-15.png" id="35_kxila"]
+[ext_resource type="Texture2D" uid="uid://d1eeo25ggx6c2" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-16.png" id="36_q7uqk"]
+[ext_resource type="Texture2D" uid="uid://cwso8dlmoxvht" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-17.png" id="37_5nv76"]
+[ext_resource type="Texture2D" uid="uid://dk1imbf1b7ds2" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-18.png" id="38_k6574"]
+[ext_resource type="Texture2D" uid="uid://1mocifaee2bb" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-19.png" id="39_nrko7"]
+[ext_resource type="Texture2D" uid="uid://baibihwnhtwt4" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-20.png" id="40_uxoex"]
+[ext_resource type="Texture2D" uid="uid://dq31uu72mh7ui" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-21.png" id="41_6jqo5"]
+[ext_resource type="Texture2D" uid="uid://6p3ek8pietwx" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-22.png" id="42_cnbu0"]
+[ext_resource type="Texture2D" uid="uid://blto5sgm327s4" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-23.png" id="43_yrnex"]
+[ext_resource type="Texture2D" uid="uid://c6ibeke2dovgn" path="res://Final Assets/Rat Battle/rat and cat battle/battlescenegifmovingwithouttext-24.png" id="44_s6y1q"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_yeael"]
 vertices = PackedVector2Array(1.5, -0.75, 12, -0.75, 12, 0.75, 1.5, 0.75, 1.5, 12, 0, 12, 0, 0.75, 0, -0.75, -12, 0.75, -12, -0.75, 1.5, -12, 0, -12)
@@ -358,6 +383,94 @@ length = 0.4
 _data = {
 "rat_slide_in": SubResource("Animation_h3at8")
 }
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7n032"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_ddmpr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_uruoa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_0d1lo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_3mn1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_7m0a5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_qw7n4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_h60wd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_1sl8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_e734r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_2o5tv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_augwh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_8f2lr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_2eggc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_tbra8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_27yhv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_kxila")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_q7uqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_5nv76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_k6574")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_nrko7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_uxoex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_6jqo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_cnbu0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_yrnex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_s6y1q")
+}],
+"loop": true,
+"name": &"fight",
+"speed": 20.0
+}]
 
 [node name="main" type="Node"]
 script = ExtResource("1_nap10")
@@ -1281,15 +1394,15 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 8.963
 anchor_right = 8.963
-offset_left = -2390.52
-offset_top = -845.0
-offset_right = -805.52
-offset_bottom = 902.0
+offset_left = -4408.52
+offset_top = -1485.0
+offset_right = -914.52
+offset_bottom = 1044.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 mouse_force_pass_scroll_events = false
-color = Color(0, 0, 0, 0.415686)
+color = Color(0, 0, 0, 0.552941)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/battle_scene"]
 libraries = {
@@ -1306,6 +1419,13 @@ texture = ExtResource("18_sw4vy")
 
 [node name="MashTimer" type="Timer" parent="CanvasLayer/battle_scene"]
 one_shot = true
+
+[node name="BattleAnimation" type="AnimatedSprite2D" parent="CanvasLayer/battle_scene"]
+position = Vector2(560.99, 330)
+scale = Vector2(0.977691, 0.977691)
+sprite_frames = SubResource("SpriteFrames_7n032")
+animation = &"fight"
+frame_progress = 0.55289
 
 [connection signal="body_entered" from="Enemys/Scatter_cat" to="Enemys/Scatter_cat" method="_on_body_entered"]
 [connection signal="pellet_eaten" from="Pellets/Large Pellet" to="." method="_on_LargePellet_pellet_eaten"]
