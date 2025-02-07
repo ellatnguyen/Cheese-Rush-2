@@ -185,4 +185,4 @@ texture = ExtResource("2_uf0yn")
 position = Vector2(1, 5.96046e-08)
 scale = Vector2(0.019, 0.019)
 sprite_frames = SubResource("SpriteFrames_ka663")
-animation = &"new_animation"
+animation = &"running_down"
