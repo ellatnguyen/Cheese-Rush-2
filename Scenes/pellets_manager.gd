@@ -1,9 +1,13 @@
 extends Node
 
+var ui: UI  # UI reference set by Main.gd
+
 var total_pellets_count 
 var pellets_eaten = 0
+var score = 0
 
 func _ready():
+	ui = get_node("/root/main/UI")
 	var pellets = self.get_children() as Array[Pellet]
 	total_pellets_count = pellets.size()
 
@@ -13,6 +17,11 @@ func _ready():
 
 func on_pellet_eaten():
 	pellets_eaten += 1
+	
+	score += 10
+	if ui:
+		ui.set_score(score)  # Update UI safely
+		print("UI updated!")
 
 	if pellets_eaten == total_pellets_count:
 
@@ -25,6 +34,13 @@ func on_pellet_eaten():
 			var anim_player = get_node(anim_player_path)
 			var full_screen_image = get_node(full_screen_image_path)
 			var color = get_node(color_path)
+			var final = get_node("/root/main/UI/FinalScore")
+			var gameplaymusic = get_node("/root/main/GameplayMusic")
+			var winmusic = get_node("/root/main/WinMusic")
+			gameplaymusic.stop()
+			winmusic.play()
+			
+			final.visible = true
 
 			color.visible = true
 			full_screen_image.visible = true

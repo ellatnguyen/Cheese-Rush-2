@@ -3,6 +3,7 @@ extends CharacterBody2D
 class_name Player
 
 @export var speed = 103
+@export var ui: UI
 var movement_direction = Vector2.ZERO
 
 func _physics_process(delta):

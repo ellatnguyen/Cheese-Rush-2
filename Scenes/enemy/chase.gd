@@ -78,6 +78,12 @@ func _on_hit_area_body_entered(body: Node2D) -> void:
 			var anim_player = get_node("/root/main/GameOverUI/AnimationPlayer2")
 			var full_screen_image = get_node("/root/main/GameOverUI/FullScreenImage")
 			var color = get_node("/root/main/GameOverUI/ColorRect")
+			var labels = get_node("/root/main/UI/MarginContainer/HBoxContainer/ScoreLabel")
+			var final = get_node("/root/main/UI/FinalScore")
+			var gameplaymusic = get_node("/root/main/GameplayMusic")
+			gameplaymusic.stop()
+			final.visible = true
+			labels.visible = false
 			color.visible = true
 			full_screen_image.visible = true
 			get_tree().paused = true
