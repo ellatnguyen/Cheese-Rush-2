@@ -9,13 +9,11 @@ extends Area2D
 @export var texture_down: Texture2D
 @export var texture_left: Texture2D
 @export var texture_right: Texture2D
-
 @export var chase_enabled: bool = false
-
-var current_target_index: int = 0
-
 @onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
 @onready var sprite: Sprite2D = $BodySprite
+var current_target_index: int = 0
+
 
 
 @export var cage_position_node: Node2D
@@ -104,7 +102,6 @@ func teleport_back_to_cage_for_7_seconds() -> void:
 	
 	# Setting the target position to the same position ensures no path
 	nav_agent.set_target_position(global_position)
-
 	var cage_timer = Timer.new()
 	cage_timer.wait_time = 7.0
 	cage_timer.one_shot = true
@@ -136,10 +133,10 @@ func _on_hit_area_body_entered(body: Node2D) -> void:
 			#anim_player.play("lose_screen_fade")
 
 func _on_best_battle():
-	print("Scatter Best battle!")  
+	teleport_back_to_cage_for_7_seconds()  
 
 func _on_better_battle():
-	print("Scatter Better battle!")  
+	pass
 
 func _on_good_battle():
 	print("Scatter Good battle!")  

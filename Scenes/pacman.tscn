@@ -83,6 +83,11 @@ region = Rect2(2560, 2160, 1280, 720)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ka663"]
 animations = [{
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("4_2ubcg")
@@ -180,4 +185,4 @@ texture = ExtResource("2_uf0yn")
 position = Vector2(1, 5.96046e-08)
 scale = Vector2(0.019, 0.019)
 sprite_frames = SubResource("SpriteFrames_ka663")
-animation = &"running_down"
+animation = &"new_animation"

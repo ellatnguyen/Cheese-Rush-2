@@ -51,18 +51,15 @@ func _update_sprite_direction(direction: Vector2) -> void:
 func _on_ChaseTimer_timeout() -> void:
 	chase_enabled = true
 
-# Teleport the ghost to the "cage" for 7 sec
-
 func teleport_back_to_cage_for_7_seconds() -> void:
 	chase_enabled = false
-	# Move ghost to cage
 	if cage_position_node:
 		global_position = cage_position_node.global_position
 	velocity = Vector2.ZERO
 
 	# Start a 7-second cage timer
 	var cage_timer = Timer.new()
-	cage_timer.wait_time = 7.0
+	cage_timer.wait_time = 10
 	cage_timer.one_shot = true
 	cage_timer.connect("timeout", Callable(self, "_on_CageTimer_timeout"))
 	add_child(cage_timer)
@@ -74,7 +71,6 @@ func _on_CageTimer_timeout() -> void:
 func _on_hit_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 			event_handler.emit_signal("battle_started")
-			print("Ghost hit") # Debug- delete later
 		#if false:
 			##event_handler.emit_signal("battle_started")
 			##print("Ghost hit") # Debug- delete later
@@ -89,10 +85,10 @@ func _on_hit_area_body_entered(body: Node2D) -> void:
 			#anim_player.play("lose_screen_fade")
 
 func _on_best_battle():
-	print("Chase Best battle!")  
+	teleport_back_to_cage_for_7_seconds()
 
 func _on_better_battle():
-	print("Chase Better battle!")  
+	pass
 
 func _on_good_battle():
-	print("Chase Good battle!")  
+	pass
