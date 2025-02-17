@@ -1,4 +1,4 @@
-[gd_scene load_steps=103 format=3 uid="uid://cb57d5h41nkfm"]
+[gd_scene load_steps=105 format=3 uid="uid://cb57d5h41nkfm"]
 
 [ext_resource type="Texture2D" uid="uid://drpdpip3qludd" path="res://Assets/Walls/wall_atlas_test.png" id="1_fh24l"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_nap10"]
@@ -81,6 +81,8 @@
 [ext_resource type="AudioStream" uid="uid://cnjmheo6s16d2" path="res://Final Assets/Music/VGM Project 1 - Gameplay - Flow 1.wav" id="79_rvoi1"]
 [ext_resource type="AudioStream" uid="uid://bh5dhswguak2i" path="res://Final Assets/Music/VGM Project 1 - Power Up Gameplay - Flow 1.wav" id="80_ktn4h"]
 [ext_resource type="AudioStream" uid="uid://nor1air300ac" path="res://Final Assets/Music/pacmanpizzeria-1.wav" id="81_nufa4"]
+[ext_resource type="AudioStream" uid="uid://rk0lstfndsjh" path="res://Final Assets/sound assets/blip1.wav" id="82_koqya"]
+[ext_resource type="AudioStream" uid="uid://b4y6ka54r0ywr" path="res://Final Assets/sound assets/ratdeath3.wav" id="86_md15j"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_yeael"]
 vertices = PackedVector2Array(1.5, -0.75, 12, -0.75, 12, 0.75, 1.5, 0.75, 1.5, 12, 0, 12, 0, 0.75, 0, -0.75, -12, 0.75, -12, -0.75, 1.5, -12, 0, -12)
@@ -1673,12 +1675,22 @@ speed_scale = 2.0
 
 [node name="GameplayMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("79_rvoi1")
+volume_db = 3.0
 
 [node name="PowerUpMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("80_ktn4h")
+volume_db = 3.0
 
 [node name="WinMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("81_nufa4")
+volume_db = 3.0
+
+[node name="PelletSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("82_koqya")
+volume_db = -30.0
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("86_md15j")
 
 [connection signal="body_entered" from="Enemys/Scatter_cat" to="Enemys/Scatter_cat" method="_on_body_entered"]
 [connection signal="body_entered" from="Knife/Area2D" to="Knife/Area2D" method="_on_body_entered"]
