@@ -123,13 +123,23 @@ func _on_hit_area_body_entered(body: Node2D) -> void:
 			event_handler.emit_signal("battle_started")
 			print("Ghost hit - attack mode active!")  # Debug; remove as needed.
 		else:
+			
 			var anim_player = get_node("/root/main/GameOverUI/AnimationPlayer2")
 			var full_screen_image = get_node("/root/main/GameOverUI/FullScreenImage")
 			var color = get_node("/root/main/GameOverUI/ColorRect")
 			var labels = get_node("/root/main/UI/MarginContainer/HBoxContainer/ScoreLabel")
 			var final = get_node("/root/main/UI/FinalScore")
+			
+			var deathsound = get_node("/root/main/DeathSound")
+			if deathsound:
+					deathsound.process_mode = Node.PROCESS_MODE_ALWAYS
+					deathsound.play()
+					await deathsound.finished 
+				
 			var gameplaymusic = get_node("/root/main/GameplayMusic")
 			gameplaymusic.stop()
+		
+				
 			final.visible = true
 			labels.visible = false
 			color.visible = true

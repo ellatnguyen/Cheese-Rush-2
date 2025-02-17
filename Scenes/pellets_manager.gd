@@ -16,6 +16,9 @@ func _ready():
 		pellet.pellet_eaten.connect(on_pellet_eaten)  # Connecting the signal
 
 func on_pellet_eaten():
+	var pelletsound = get_node("/root/main/PelletSound")
+	pelletsound.play()
+		
 	pellets_eaten += 1
 	
 	score += 10
