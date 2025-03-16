@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://55bli8gvv72x"
+path="res://.godot/imported/yippee.wav-0b882184931a01c1b6dd663dcea0a909.sample"
+
+[deps]
+
+source_file="res://Final Assets/sound assets/yippee.wav"
+dest_files=["res://.godot/imported/yippee.wav-0b882184931a01c1b6dd663dcea0a909.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

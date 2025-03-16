@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
 @export var target_to_chase: CharacterBody2D
 @onready var sprite: Sprite2D = $BodySprite
-const spd = 120
+const spd = 80
 const run_away_spd = 240
 @export var chase_enabled: bool = false
 @export var cage_position_node: Node2D
@@ -80,6 +80,13 @@ func _on_hit_area_body_entered(body: Node2D) -> void:
 			var color = get_node("/root/main/GameOverUI/ColorRect")
 			var labels = get_node("/root/main/UI/MarginContainer/HBoxContainer/ScoreLabel")
 			var final = get_node("/root/main/UI/FinalScore")
+			
+			var deathsound = get_node("/root/main/DeathSound")
+			if deathsound:
+					deathsound.process_mode = Node.PROCESS_MODE_ALWAYS
+					deathsound.play()
+					await deathsound.finished 
+					
 			var gameplaymusic = get_node("/root/main/GameplayMusic")
 			gameplaymusic.stop()
 			final.visible = true
