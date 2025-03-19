@@ -1,5 +1,6 @@
 extends Control
 
+@onready var event_handler = get_node("/root/event_handler")
 @onready var button = $Homescreen/Button
 @onready var animated_sprite = $Homescreen/AnimatedSprite2D
 @onready var homescreen = $"."
@@ -30,3 +31,4 @@ func _on_button_pressed():
 	# Hide the homescreen and reveal the main game
 	homescreen.visible = false  # Hides the MainScreen (home screen)
 	labels.visible = true
+	event_handler.emit_signal("button_pressed")
