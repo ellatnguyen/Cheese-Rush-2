@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@onready var event_handler = get_node("/root/event_handler")
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
 @export var target_to_chase: CharacterBody2D
 @onready var sprite: Sprite2D = $BodySprite
@@ -22,8 +23,9 @@ func _ready() -> void:
 		event_handler.better_battle.connect(Callable(self, "_on_better_battle"))
 		event_handler.good_battle.connect(Callable(self, "_on_good_battle"))
 		event_handler.knife_found.connect(Callable(self, "_on_knife_found"))
+	event_handler.button_pressed.connect(Callable(self,"_on_button_pressed"))
 		
-	# 10-second delay before chase begins
+func _on_button_pressed():
 	var chase_timer = Timer.new()
 	chase_timer.wait_time = 10.0
 	chase_timer.one_shot = true
